@@ -79,6 +79,15 @@
 			this.pictureBox1 = new System.Windows.Forms.PictureBox();
 			this.txt_Total = new System.Windows.Forms.TextBox();
 			this.lbl_total = new System.Windows.Forms.Label();
+			this.lbl_bonus = new System.Windows.Forms.Label();
+			this.lbl_statsperso = new System.Windows.Forms.Label();
+			this.lbl_strbon = new System.Windows.Forms.Label();
+			this.label1 = new System.Windows.Forms.Label();
+			this.label3 = new System.Windows.Forms.Label();
+			this.label4 = new System.Windows.Forms.Label();
+			this.label5 = new System.Windows.Forms.Label();
+			this.label6 = new System.Windows.Forms.Label();
+			this.label7 = new System.Windows.Forms.Label();
 			this.top.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.pct_Reduire)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.pct_Fermer)).BeginInit();
@@ -302,6 +311,16 @@
 			// 
 			// page_stats
 			// 
+			this.page_stats.Controls.Add(this.label7);
+			this.page_stats.Controls.Add(this.label6);
+			this.page_stats.Controls.Add(this.label5);
+			this.page_stats.Controls.Add(this.label4);
+			this.page_stats.Controls.Add(this.label3);
+			this.page_stats.Controls.Add(this.label1);
+			this.page_stats.Controls.Add(this.lbl_strbon);
+			this.page_stats.Controls.Add(this.txt_str);
+			this.page_stats.Controls.Add(this.lbl_statsperso);
+			this.page_stats.Controls.Add(this.lbl_bonus);
 			this.page_stats.Controls.Add(this.txt_Total);
 			this.page_stats.Controls.Add(this.lbl_total);
 			this.page_stats.Controls.Add(this.pictureBox1);
@@ -315,7 +334,6 @@
 			this.page_stats.Controls.Add(this.lbl_con);
 			this.page_stats.Controls.Add(this.txt_dex);
 			this.page_stats.Controls.Add(this.lbl_dex);
-			this.page_stats.Controls.Add(this.txt_str);
 			this.page_stats.Controls.Add(this.lbl_str);
 			this.page_stats.Location = new System.Drawing.Point(4, 22);
 			this.page_stats.Name = "page_stats";
@@ -482,15 +500,15 @@
 			// txt_str
 			// 
 			this.txt_str.CausesValidation = false;
-			this.txt_str.Location = new System.Drawing.Point(114, 44);
+			this.txt_str.Location = new System.Drawing.Point(75, 44);
 			this.txt_str.Name = "txt_str";
-			this.txt_str.Size = new System.Drawing.Size(43, 20);
+			this.txt_str.Size = new System.Drawing.Size(57, 20);
 			this.txt_str.TabIndex = 3;
 			// 
 			// lbl_str
 			// 
 			this.lbl_str.AutoSize = true;
-			this.lbl_str.Location = new System.Drawing.Point(71, 47);
+			this.lbl_str.Location = new System.Drawing.Point(32, 48);
 			this.lbl_str.Name = "lbl_str";
 			this.lbl_str.Size = new System.Drawing.Size(37, 13);
 			this.lbl_str.TabIndex = 2;
@@ -499,15 +517,15 @@
 			// txt_dex
 			// 
 			this.txt_dex.CausesValidation = false;
-			this.txt_dex.Location = new System.Drawing.Point(114, 70);
+			this.txt_dex.Location = new System.Drawing.Point(75, 70);
 			this.txt_dex.Name = "txt_dex";
-			this.txt_dex.Size = new System.Drawing.Size(43, 20);
+			this.txt_dex.Size = new System.Drawing.Size(57, 20);
 			this.txt_dex.TabIndex = 5;
 			// 
 			// lbl_dex
 			// 
 			this.lbl_dex.AutoSize = true;
-			this.lbl_dex.Location = new System.Drawing.Point(56, 73);
+			this.lbl_dex.Location = new System.Drawing.Point(17, 74);
 			this.lbl_dex.Name = "lbl_dex";
 			this.lbl_dex.Size = new System.Drawing.Size(52, 13);
 			this.lbl_dex.TabIndex = 4;
@@ -516,15 +534,15 @@
 			// txt_con
 			// 
 			this.txt_con.CausesValidation = false;
-			this.txt_con.Location = new System.Drawing.Point(114, 96);
+			this.txt_con.Location = new System.Drawing.Point(75, 96);
 			this.txt_con.Name = "txt_con";
-			this.txt_con.Size = new System.Drawing.Size(43, 20);
+			this.txt_con.Size = new System.Drawing.Size(57, 20);
 			this.txt_con.TabIndex = 7;
 			// 
 			// lbl_con
 			// 
 			this.lbl_con.AutoSize = true;
-			this.lbl_con.Location = new System.Drawing.Point(43, 99);
+			this.lbl_con.Location = new System.Drawing.Point(4, 100);
 			this.lbl_con.Name = "lbl_con";
 			this.lbl_con.Size = new System.Drawing.Size(65, 13);
 			this.lbl_con.TabIndex = 6;
@@ -533,15 +551,15 @@
 			// txt_int
 			// 
 			this.txt_int.CausesValidation = false;
-			this.txt_int.Location = new System.Drawing.Point(114, 122);
+			this.txt_int.Location = new System.Drawing.Point(75, 122);
 			this.txt_int.Name = "txt_int";
-			this.txt_int.Size = new System.Drawing.Size(43, 20);
+			this.txt_int.Size = new System.Drawing.Size(57, 20);
 			this.txt_int.TabIndex = 9;
 			// 
 			// lbl_int
 			// 
 			this.lbl_int.AutoSize = true;
-			this.lbl_int.Location = new System.Drawing.Point(44, 125);
+			this.lbl_int.Location = new System.Drawing.Point(5, 126);
 			this.lbl_int.Name = "lbl_int";
 			this.lbl_int.Size = new System.Drawing.Size(64, 13);
 			this.lbl_int.TabIndex = 8;
@@ -550,15 +568,15 @@
 			// txt_sag
 			// 
 			this.txt_sag.CausesValidation = false;
-			this.txt_sag.Location = new System.Drawing.Point(114, 148);
+			this.txt_sag.Location = new System.Drawing.Point(75, 148);
 			this.txt_sag.Name = "txt_sag";
-			this.txt_sag.Size = new System.Drawing.Size(43, 20);
+			this.txt_sag.Size = new System.Drawing.Size(57, 20);
 			this.txt_sag.TabIndex = 11;
 			// 
 			// lbl_sag
 			// 
 			this.lbl_sag.AutoSize = true;
-			this.lbl_sag.Location = new System.Drawing.Point(57, 151);
+			this.lbl_sag.Location = new System.Drawing.Point(18, 152);
 			this.lbl_sag.Name = "lbl_sag";
 			this.lbl_sag.Size = new System.Drawing.Size(51, 13);
 			this.lbl_sag.TabIndex = 10;
@@ -567,15 +585,15 @@
 			// txt_cha
 			// 
 			this.txt_cha.CausesValidation = false;
-			this.txt_cha.Location = new System.Drawing.Point(114, 174);
+			this.txt_cha.Location = new System.Drawing.Point(75, 174);
 			this.txt_cha.Name = "txt_cha";
-			this.txt_cha.Size = new System.Drawing.Size(43, 20);
+			this.txt_cha.Size = new System.Drawing.Size(57, 20);
 			this.txt_cha.TabIndex = 13;
 			// 
 			// lbl_cha
 			// 
 			this.lbl_cha.AutoSize = true;
-			this.lbl_cha.Location = new System.Drawing.Point(55, 177);
+			this.lbl_cha.Location = new System.Drawing.Point(16, 178);
 			this.lbl_cha.Name = "lbl_cha";
 			this.lbl_cha.Size = new System.Drawing.Size(53, 13);
 			this.lbl_cha.TabIndex = 12;
@@ -584,7 +602,7 @@
 			// pictureBox1
 			// 
 			this.pictureBox1.Image = global::IdleGame.Properties.Resources.dice;
-			this.pictureBox1.Location = new System.Drawing.Point(103, 226);
+			this.pictureBox1.Location = new System.Drawing.Point(78, 226);
 			this.pictureBox1.Name = "pictureBox1";
 			this.pictureBox1.Size = new System.Drawing.Size(54, 38);
 			this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -594,19 +612,100 @@
 			// txt_Total
 			// 
 			this.txt_Total.CausesValidation = false;
-			this.txt_Total.Location = new System.Drawing.Point(114, 200);
+			this.txt_Total.Location = new System.Drawing.Point(75, 200);
 			this.txt_Total.Name = "txt_Total";
-			this.txt_Total.Size = new System.Drawing.Size(43, 20);
+			this.txt_Total.Size = new System.Drawing.Size(57, 20);
 			this.txt_Total.TabIndex = 16;
 			// 
 			// lbl_total
 			// 
 			this.lbl_total.AutoSize = true;
-			this.lbl_total.Location = new System.Drawing.Point(74, 203);
+			this.lbl_total.Location = new System.Drawing.Point(35, 204);
 			this.lbl_total.Name = "lbl_total";
 			this.lbl_total.Size = new System.Drawing.Size(34, 13);
 			this.lbl_total.TabIndex = 15;
 			this.lbl_total.Text = "Total:";
+			// 
+			// lbl_bonus
+			// 
+			this.lbl_bonus.Location = new System.Drawing.Point(158, 0);
+			this.lbl_bonus.Name = "lbl_bonus";
+			this.lbl_bonus.Size = new System.Drawing.Size(57, 32);
+			this.lbl_bonus.TabIndex = 17;
+			this.lbl_bonus.Text = "Bonus de Race";
+			this.lbl_bonus.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+			// 
+			// lbl_statsperso
+			// 
+			this.lbl_statsperso.Location = new System.Drawing.Point(44, 0);
+			this.lbl_statsperso.Name = "lbl_statsperso";
+			this.lbl_statsperso.Size = new System.Drawing.Size(65, 32);
+			this.lbl_statsperso.TabIndex = 18;
+			this.lbl_statsperso.Text = "Statistiques personnage";
+			this.lbl_statsperso.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+			// 
+			// lbl_strbon
+			// 
+			this.lbl_strbon.Location = new System.Drawing.Point(162, 46);
+			this.lbl_strbon.Name = "lbl_strbon";
+			this.lbl_strbon.Size = new System.Drawing.Size(57, 13);
+			this.lbl_strbon.TabIndex = 19;
+			this.lbl_strbon.Text = "0";
+			this.lbl_strbon.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+			// 
+			// label1
+			// 
+			this.label1.Location = new System.Drawing.Point(162, 72);
+			this.label1.Name = "label1";
+			this.label1.Size = new System.Drawing.Size(57, 13);
+			this.label1.TabIndex = 20;
+			this.label1.Text = "0";
+			this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+			// 
+			// label3
+			// 
+			this.label3.Location = new System.Drawing.Point(162, 98);
+			this.label3.Name = "label3";
+			this.label3.Size = new System.Drawing.Size(57, 13);
+			this.label3.TabIndex = 21;
+			this.label3.Text = "0";
+			this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+			// 
+			// label4
+			// 
+			this.label4.Location = new System.Drawing.Point(162, 124);
+			this.label4.Name = "label4";
+			this.label4.Size = new System.Drawing.Size(57, 13);
+			this.label4.TabIndex = 22;
+			this.label4.Text = "0";
+			this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+			// 
+			// label5
+			// 
+			this.label5.Location = new System.Drawing.Point(162, 150);
+			this.label5.Name = "label5";
+			this.label5.Size = new System.Drawing.Size(57, 13);
+			this.label5.TabIndex = 23;
+			this.label5.Text = "0";
+			this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+			// 
+			// label6
+			// 
+			this.label6.Location = new System.Drawing.Point(162, 176);
+			this.label6.Name = "label6";
+			this.label6.Size = new System.Drawing.Size(57, 13);
+			this.label6.TabIndex = 24;
+			this.label6.Text = "0";
+			this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+			// 
+			// label7
+			// 
+			this.label7.Location = new System.Drawing.Point(162, 202);
+			this.label7.Name = "label7";
+			this.label7.Size = new System.Drawing.Size(57, 13);
+			this.label7.TabIndex = 25;
+			this.label7.Text = "0";
+			this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
 			// 
 			// FormCreation
 			// 
@@ -706,6 +805,15 @@
 		private System.Windows.Forms.TextBox txt_Total;
 		private System.Windows.Forms.Label lbl_total;
 		private System.Windows.Forms.PictureBox pictureBox1;
+		private System.Windows.Forms.Label label7;
+		private System.Windows.Forms.Label label6;
+		private System.Windows.Forms.Label label5;
+		private System.Windows.Forms.Label label4;
+		private System.Windows.Forms.Label label3;
+		private System.Windows.Forms.Label label1;
+		private System.Windows.Forms.Label lbl_strbon;
+		private System.Windows.Forms.Label lbl_statsperso;
+		private System.Windows.Forms.Label lbl_bonus;
 	}
 }
 
