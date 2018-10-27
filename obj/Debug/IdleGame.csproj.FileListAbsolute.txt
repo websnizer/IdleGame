@@ -8,3 +8,4 @@ E:\Session 5\bd\TP\IdleGame\bin\Debug\IdleGame.exe
 E:\Session 5\bd\TP\IdleGame\bin\Debug\IdleGame.pdb
 E:\Session 5\bd\TP\IdleGame\obj\Debug\IdleGame.exe
 E:\Session 5\bd\TP\IdleGame\obj\Debug\IdleGame.pdb
+E:\Session 5\bd\TP\IdleGame\obj\Debug\IdleGame.Blank.resources

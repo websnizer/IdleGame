@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Blank.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Blank.Designer.cs">
+      <DependentUpon>Blank.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormMenu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -54,6 +60,9 @@
     </Compile>
     <Compile Include="IdleGame.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Blank.resx">
+      <DependentUpon>Blank.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormMenu.resx">
       <DependentUpon>FormMenu.cs</DependentUpon>
     </EmbeddedResource>
@@ -123,6 +132,36 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="images\xx2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\bouton_create-character.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\bouton_exit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\bouton_generate.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\bouton_load-game.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\bouton_new-game.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\Logoo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\Banniere.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\bouton_new-game_hover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\bouton_exit_hover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\bouton_load-game_hover.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
