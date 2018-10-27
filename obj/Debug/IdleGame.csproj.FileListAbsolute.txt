@@ -1,0 +1,10 @@
+E:\Session 5\bd\TP\IdleGame\obj\Debug\IdleGame.csprojAssemblyReference.cache
+E:\Session 5\bd\TP\IdleGame\obj\Debug\IdleGame.Properties.Resources.resources
+E:\Session 5\bd\TP\IdleGame\obj\Debug\IdleGame.csproj.GenerateResource.cache
+E:\Session 5\bd\TP\IdleGame\obj\Debug\IdleGame.csproj.CoreCompileInputs.cache
+E:\Session 5\bd\TP\IdleGame\obj\Debug\IdleGame.FormMenu.resources
+E:\Session 5\bd\TP\IdleGame\bin\Debug\IdleGame.exe.config
+E:\Session 5\bd\TP\IdleGame\bin\Debug\IdleGame.exe
+E:\Session 5\bd\TP\IdleGame\bin\Debug\IdleGame.pdb
+E:\Session 5\bd\TP\IdleGame\obj\Debug\IdleGame.exe
+E:\Session 5\bd\TP\IdleGame\obj\Debug\IdleGame.pdb
