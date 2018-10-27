@@ -215,6 +215,7 @@
 			this.btn_newgame.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
 			this.btn_newgame.TabIndex = 5;
 			this.btn_newgame.TabStop = false;
+			this.btn_newgame.Click += new System.EventHandler(this.btn_newgame_Click);
 			this.btn_newgame.MouseLeave += new System.EventHandler(this.btn_newgame_MouseLeave);
 			this.btn_newgame.MouseMove += new System.Windows.Forms.MouseEventHandler(this.btn_newgame_MouseMove);
 			// 

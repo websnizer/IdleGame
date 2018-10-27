@@ -13,7 +13,7 @@ using System.Windows.Forms;
 
 namespace IdleGame
 {
-	public partial class FormMenu : Form
+	public partial class FormCreation : Form
 	{
 		IdleGame m_idlegame; //Référence au créateur
 
@@ -23,7 +23,7 @@ namespace IdleGame
 		Color darkColor = Color.FromArgb(86, 27, 27);
 
 		//Constructeur
-		public FormMenu(IdleGame p_idlegame)
+		public FormCreation(IdleGame p_idlegame)
 		{
 			m_idlegame = p_idlegame;
 			InitializeComponent();
@@ -175,35 +175,6 @@ namespace IdleGame
 		private void saveToolStripMenuItem_MouseLeave(object sender, EventArgs e)
 		{
 			//((ToolStripMenuItem)sender).ForeColor = Color.White;
-		}
-		private void btn_newgame_MouseMove(object sender, MouseEventArgs e)
-		{
-			((PictureBox)sender).Image = global::IdleGame.Properties.Resources.bouton_new_game_hover;
-		}
-		private void btn_newgame_MouseLeave(object sender, EventArgs e)
-		{
-			((PictureBox)sender).Image = global::IdleGame.Properties.Resources.bouton_new_game;
-		}
-		private void btn_loadgame_MouseLeave(object sender, EventArgs e)
-		{
-			((PictureBox)sender).Image = global::IdleGame.Properties.Resources.bouton_load_game;
-		}
-		private void btn_loadgame_MouseMove(object sender, MouseEventArgs e)
-		{
-			((PictureBox)sender).Image = global::IdleGame.Properties.Resources.bouton_load_game_hover;
-		}
-		private void btn_exit_MouseLeave(object sender, EventArgs e)
-		{
-			((PictureBox)sender).Image = global::IdleGame.Properties.Resources.bouton_exit;
-		}
-		private void btn_exit_MouseMove(object sender, MouseEventArgs e)
-		{
-			((PictureBox)sender).Image = global::IdleGame.Properties.Resources.bouton_exit_hover;
-		}
-		private void btn_newgame_Click(object sender, EventArgs e)
-		{
-			//m_idlegame.HideMenu();
-			m_idlegame.ShowCreation();
 		}
 		//Menu déroulant
 		private class MyRenderer : ToolStripProfessionalRenderer
