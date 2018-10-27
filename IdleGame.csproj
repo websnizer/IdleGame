@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FormJeu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormJeu.Designer.cs">
+      <DependentUpon>FormJeu.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormCreation.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -66,6 +72,9 @@
     </Compile>
     <Compile Include="IdleGame.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FormJeu.resx">
+      <DependentUpon>FormJeu.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormCreation.resx">
       <DependentUpon>FormCreation.cs</DependentUpon>
     </EmbeddedResource>

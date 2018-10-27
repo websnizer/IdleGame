@@ -48,6 +48,16 @@
 			this.TopLine = new System.Windows.Forms.PictureBox();
 			this.LeftLine = new System.Windows.Forms.PictureBox();
 			this.lbl_info = new System.Windows.Forms.Label();
+			this.lst_standard = new System.Windows.Forms.ListBox();
+			this.lst_hardcore = new System.Windows.Forms.ListBox();
+			this.lbl_standard = new System.Windows.Forms.Label();
+			this.lbl_hardcore = new System.Windows.Forms.Label();
+			this.txt_standard = new System.Windows.Forms.TextBox();
+			this.txt_hardcore = new System.Windows.Forms.TextBox();
+			this.pct_goStandard = new System.Windows.Forms.PictureBox();
+			this.pictureBox1 = new System.Windows.Forms.PictureBox();
+			this.lbl_cancelSC = new System.Windows.Forms.Label();
+			this.btn_cancelHC = new System.Windows.Forms.Label();
 			this.top.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.pct_Reduire)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.pct_Fermer)).BeginInit();
@@ -62,6 +72,8 @@
 			((System.ComponentModel.ISupportInitialize)(this.RightLine)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.TopLine)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.LeftLine)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.pct_goStandard)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// top
@@ -75,7 +87,7 @@
 			this.top.Dock = System.Windows.Forms.DockStyle.Top;
 			this.top.Location = new System.Drawing.Point(0, 0);
 			this.top.Name = "top";
-			this.top.Size = new System.Drawing.Size(903, 35);
+			this.top.Size = new System.Drawing.Size(854, 35);
 			this.top.TabIndex = 0;
 			this.top.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.top_MouseDoubleClick);
 			this.top.MouseDown += new System.Windows.Forms.MouseEventHandler(this.top_MouseDown);
@@ -185,7 +197,7 @@
 			// btn_exit
 			// 
 			this.btn_exit.Image = global::IdleGame.Properties.Resources.bouton_exit;
-			this.btn_exit.Location = new System.Drawing.Point(17, 225);
+			this.btn_exit.Location = new System.Drawing.Point(640, 284);
 			this.btn_exit.Name = "btn_exit";
 			this.btn_exit.Size = new System.Drawing.Size(202, 52);
 			this.btn_exit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -197,19 +209,20 @@
 			// btn_loadgame
 			// 
 			this.btn_loadgame.Image = global::IdleGame.Properties.Resources.bouton_load_game;
-			this.btn_loadgame.Location = new System.Drawing.Point(17, 167);
+			this.btn_loadgame.Location = new System.Drawing.Point(640, 208);
 			this.btn_loadgame.Name = "btn_loadgame";
 			this.btn_loadgame.Size = new System.Drawing.Size(202, 52);
 			this.btn_loadgame.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
 			this.btn_loadgame.TabIndex = 6;
 			this.btn_loadgame.TabStop = false;
+			this.btn_loadgame.Click += new System.EventHandler(this.btn_loadgame_Click);
 			this.btn_loadgame.MouseLeave += new System.EventHandler(this.btn_loadgame_MouseLeave);
 			this.btn_loadgame.MouseMove += new System.Windows.Forms.MouseEventHandler(this.btn_loadgame_MouseMove);
 			// 
 			// btn_newgame
 			// 
 			this.btn_newgame.Image = global::IdleGame.Properties.Resources.bouton_new_game;
-			this.btn_newgame.Location = new System.Drawing.Point(17, 109);
+			this.btn_newgame.Location = new System.Drawing.Point(640, 150);
 			this.btn_newgame.Name = "btn_newgame";
 			this.btn_newgame.Size = new System.Drawing.Size(202, 52);
 			this.btn_newgame.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -263,18 +276,140 @@
 			// 
 			// lbl_info
 			// 
-			this.lbl_info.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.lbl_info.Location = new System.Drawing.Point(225, 156);
+			this.lbl_info.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.lbl_info.Location = new System.Drawing.Point(18, 134);
 			this.lbl_info.Name = "lbl_info";
-			this.lbl_info.Size = new System.Drawing.Size(649, 121);
+			this.lbl_info.Size = new System.Drawing.Size(126, 163);
 			this.lbl_info.TabIndex = 9;
-			this.lbl_info.Text = "IdleGame est un projet d\'école réalisé par Laurie-Anne, Sam et Carl.";
+			this.lbl_info.Text = "Veuillez choisir un personnage dans la liste et LoadGame ou Créer une nouvelle pa" +
+    "rtie.";
+			this.lbl_info.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+			// 
+			// lst_standard
+			// 
+			this.lst_standard.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+			this.lst_standard.FormattingEnabled = true;
+			this.lst_standard.Location = new System.Drawing.Point(150, 150);
+			this.lst_standard.Name = "lst_standard";
+			this.lst_standard.ScrollAlwaysVisible = true;
+			this.lst_standard.Size = new System.Drawing.Size(237, 158);
+			this.lst_standard.TabIndex = 10;
+			// 
+			// lst_hardcore
+			// 
+			this.lst_hardcore.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+			this.lst_hardcore.FormattingEnabled = true;
+			this.lst_hardcore.Location = new System.Drawing.Point(393, 150);
+			this.lst_hardcore.Name = "lst_hardcore";
+			this.lst_hardcore.ScrollAlwaysVisible = true;
+			this.lst_hardcore.Size = new System.Drawing.Size(237, 158);
+			this.lst_hardcore.TabIndex = 11;
+			// 
+			// lbl_standard
+			// 
+			this.lbl_standard.AutoSize = true;
+			this.lbl_standard.Location = new System.Drawing.Point(150, 134);
+			this.lbl_standard.Name = "lbl_standard";
+			this.lbl_standard.Size = new System.Drawing.Size(108, 13);
+			this.lbl_standard.TabIndex = 12;
+			this.lbl_standard.Text = "Personnage standard";
+			// 
+			// lbl_hardcore
+			// 
+			this.lbl_hardcore.AutoSize = true;
+			this.lbl_hardcore.Location = new System.Drawing.Point(390, 134);
+			this.lbl_hardcore.Name = "lbl_hardcore";
+			this.lbl_hardcore.Size = new System.Drawing.Size(109, 13);
+			this.lbl_hardcore.TabIndex = 13;
+			this.lbl_hardcore.Text = "Personnage hardcore";
+			// 
+			// txt_standard
+			// 
+			this.txt_standard.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+			this.txt_standard.Location = new System.Drawing.Point(150, 311);
+			this.txt_standard.MaxLength = 50;
+			this.txt_standard.Name = "txt_standard";
+			this.txt_standard.Size = new System.Drawing.Size(195, 20);
+			this.txt_standard.TabIndex = 14;
+			this.txt_standard.Text = "Rechercher personnage standard";
+			// 
+			// txt_hardcore
+			// 
+			this.txt_hardcore.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+			this.txt_hardcore.Location = new System.Drawing.Point(393, 311);
+			this.txt_hardcore.MaxLength = 50;
+			this.txt_hardcore.Name = "txt_hardcore";
+			this.txt_hardcore.Size = new System.Drawing.Size(195, 20);
+			this.txt_hardcore.TabIndex = 15;
+			this.txt_hardcore.Text = "Rechercher personnage hardcore";
+			// 
+			// pct_goStandard
+			// 
+			this.pct_goStandard.Image = global::IdleGame.Properties.Resources.ok;
+			this.pct_goStandard.Location = new System.Drawing.Point(351, 311);
+			this.pct_goStandard.Name = "pct_goStandard";
+			this.pct_goStandard.Size = new System.Drawing.Size(36, 25);
+			this.pct_goStandard.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+			this.pct_goStandard.TabIndex = 16;
+			this.pct_goStandard.TabStop = false;
+			this.pct_goStandard.MouseLeave += new System.EventHandler(this.pct_goStandard_MouseLeave);
+			this.pct_goStandard.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pct_goStandard_MouseMove);
+			// 
+			// pictureBox1
+			// 
+			this.pictureBox1.Image = global::IdleGame.Properties.Resources.ok;
+			this.pictureBox1.Location = new System.Drawing.Point(594, 311);
+			this.pictureBox1.Name = "pictureBox1";
+			this.pictureBox1.Size = new System.Drawing.Size(36, 25);
+			this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+			this.pictureBox1.TabIndex = 17;
+			this.pictureBox1.TabStop = false;
+			this.pictureBox1.MouseLeave += new System.EventHandler(this.pct_goStandard_MouseLeave);
+			this.pictureBox1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pct_goStandard_MouseMove);
+			// 
+			// lbl_cancelSC
+			// 
+			this.lbl_cancelSC.AutoSize = true;
+			this.lbl_cancelSC.BackColor = System.Drawing.SystemColors.Window;
+			this.lbl_cancelSC.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.lbl_cancelSC.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.lbl_cancelSC.ForeColor = System.Drawing.Color.Maroon;
+			this.lbl_cancelSC.Location = new System.Drawing.Point(330, 313);
+			this.lbl_cancelSC.Name = "lbl_cancelSC";
+			this.lbl_cancelSC.Size = new System.Drawing.Size(13, 13);
+			this.lbl_cancelSC.TabIndex = 18;
+			this.lbl_cancelSC.Text = "x";
+			this.lbl_cancelSC.Click += new System.EventHandler(this.lbl_cancelSC_Click);
+			// 
+			// btn_cancelHC
+			// 
+			this.btn_cancelHC.AutoSize = true;
+			this.btn_cancelHC.BackColor = System.Drawing.SystemColors.Window;
+			this.btn_cancelHC.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.btn_cancelHC.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btn_cancelHC.ForeColor = System.Drawing.Color.Maroon;
+			this.btn_cancelHC.Location = new System.Drawing.Point(573, 313);
+			this.btn_cancelHC.Name = "btn_cancelHC";
+			this.btn_cancelHC.Size = new System.Drawing.Size(13, 13);
+			this.btn_cancelHC.TabIndex = 19;
+			this.btn_cancelHC.Text = "x";
+			this.btn_cancelHC.Click += new System.EventHandler(this.lbl_cancelHC_Click);
 			// 
 			// FormMenu
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(903, 290);
+			this.ClientSize = new System.Drawing.Size(854, 350);
+			this.Controls.Add(this.btn_cancelHC);
+			this.Controls.Add(this.lbl_cancelSC);
+			this.Controls.Add(this.pictureBox1);
+			this.Controls.Add(this.pct_goStandard);
+			this.Controls.Add(this.txt_hardcore);
+			this.Controls.Add(this.txt_standard);
+			this.Controls.Add(this.lbl_hardcore);
+			this.Controls.Add(this.lbl_standard);
+			this.Controls.Add(this.lst_hardcore);
+			this.Controls.Add(this.lst_standard);
 			this.Controls.Add(this.lbl_info);
 			this.Controls.Add(this.btn_exit);
 			this.Controls.Add(this.btn_loadgame);
@@ -305,6 +440,8 @@
 			((System.ComponentModel.ISupportInitialize)(this.RightLine)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.TopLine)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.LeftLine)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.pct_goStandard)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
 			this.ResumeLayout(false);
 			this.PerformLayout();
 
@@ -330,6 +467,16 @@
 		private System.Windows.Forms.PictureBox btn_exit;
 		private System.Windows.Forms.PictureBox pictureBox4;
 		private System.Windows.Forms.Label lbl_info;
+		private System.Windows.Forms.ListBox lst_standard;
+		private System.Windows.Forms.ListBox lst_hardcore;
+		private System.Windows.Forms.Label lbl_standard;
+		private System.Windows.Forms.Label lbl_hardcore;
+		private System.Windows.Forms.TextBox txt_standard;
+		private System.Windows.Forms.TextBox txt_hardcore;
+		private System.Windows.Forms.PictureBox pct_goStandard;
+		private System.Windows.Forms.PictureBox pictureBox1;
+		private System.Windows.Forms.Label lbl_cancelSC;
+		private System.Windows.Forms.Label btn_cancelHC;
 	}
 }
 

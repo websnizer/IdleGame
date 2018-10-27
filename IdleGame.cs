@@ -10,6 +10,7 @@ namespace IdleGame
 	{
 		FormMenu m_menu; //Form du menu principal
 		FormCreation m_creation; //Form de création de personnage
+		FormJeu m_jeu; //Form du jeu
 
 		[STAThread]
 		static void Main()
@@ -32,6 +33,14 @@ namespace IdleGame
 			m_creation = new FormCreation(this);
 			m_creation.ShowDialog();
 		}
+
+		//Affichage de la form de création
+		public void ShowJeu()
+		{
+			m_jeu = new FormJeu(this);
+			m_jeu.Show();
+		}
+
 
 		//Cacher le menu
 		public void HideMenu()

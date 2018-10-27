@@ -10,3 +10,4 @@ E:\Session 5\bd\TP\IdleGame\obj\Debug\IdleGame.exe
 E:\Session 5\bd\TP\IdleGame\obj\Debug\IdleGame.pdb
 E:\Session 5\bd\TP\IdleGame\obj\Debug\IdleGame.Blank.resources
 E:\Session 5\bd\TP\IdleGame\obj\Debug\IdleGame.FormCreation.resources
+E:\Session 5\bd\TP\IdleGame\obj\Debug\IdleGame.FormJeu.resources
