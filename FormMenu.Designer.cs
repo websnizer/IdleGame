@@ -31,6 +31,10 @@
 			this.components = new System.ComponentModel.Container();
 			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMenu));
 			this.top = new System.Windows.Forms.Panel();
+			this.pct_Reduire = new System.Windows.Forms.PictureBox();
+			this.pct_Fermer = new System.Windows.Forms.PictureBox();
+			this.pct_Agrandir = new System.Windows.Forms.PictureBox();
+			this.pct_icon = new System.Windows.Forms.PictureBox();
 			this.lbl_title = new System.Windows.Forms.Label();
 			this.mnu_main = new System.Windows.Forms.ContextMenuStrip(this.components);
 			this.mnu_about = new System.Windows.Forms.ToolStripMenuItem();
@@ -43,12 +47,12 @@
 			this.RightLine = new System.Windows.Forms.PictureBox();
 			this.TopLine = new System.Windows.Forms.PictureBox();
 			this.LeftLine = new System.Windows.Forms.PictureBox();
-			this.pct_Reduire = new System.Windows.Forms.PictureBox();
-			this.pct_Fermer = new System.Windows.Forms.PictureBox();
-			this.pct_Agrandir = new System.Windows.Forms.PictureBox();
-			this.pct_icon = new System.Windows.Forms.PictureBox();
 			this.lbl_info = new System.Windows.Forms.Label();
 			this.top.SuspendLayout();
+			((System.ComponentModel.ISupportInitialize)(this.pct_Reduire)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.pct_Fermer)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.pct_Agrandir)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.pct_icon)).BeginInit();
 			this.mnu_main.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.btn_exit)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.btn_loadgame)).BeginInit();
@@ -58,10 +62,6 @@
 			((System.ComponentModel.ISupportInitialize)(this.RightLine)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.TopLine)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.LeftLine)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.pct_Reduire)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.pct_Fermer)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.pct_Agrandir)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.pct_icon)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// top
@@ -80,6 +80,59 @@
 			this.top.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.top_MouseDoubleClick);
 			this.top.MouseDown += new System.Windows.Forms.MouseEventHandler(this.top_MouseDown);
 			this.top.MouseMove += new System.Windows.Forms.MouseEventHandler(this.top_MouseMove);
+			// 
+			// pct_Reduire
+			// 
+			this.pct_Reduire.Image = ((System.Drawing.Image)(resources.GetObject("pct_Reduire.Image")));
+			this.pct_Reduire.Location = new System.Drawing.Point(196, 0);
+			this.pct_Reduire.Name = "pct_Reduire";
+			this.pct_Reduire.Size = new System.Drawing.Size(30, 36);
+			this.pct_Reduire.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+			this.pct_Reduire.TabIndex = 1;
+			this.pct_Reduire.TabStop = false;
+			this.pct_Reduire.Click += new System.EventHandler(this.pct_Reduire_Click);
+			this.pct_Reduire.MouseLeave += new System.EventHandler(this.pct_Reduire_MouseLeave);
+			this.pct_Reduire.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pct_Reduire_MouseMove);
+			// 
+			// pct_Fermer
+			// 
+			this.pct_Fermer.Image = ((System.Drawing.Image)(resources.GetObject("pct_Fermer.Image")));
+			this.pct_Fermer.Location = new System.Drawing.Point(268, -1);
+			this.pct_Fermer.Name = "pct_Fermer";
+			this.pct_Fermer.Size = new System.Drawing.Size(30, 36);
+			this.pct_Fermer.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+			this.pct_Fermer.TabIndex = 1;
+			this.pct_Fermer.TabStop = false;
+			this.pct_Fermer.Click += new System.EventHandler(this.pct_Fermer_Click);
+			this.pct_Fermer.MouseLeave += new System.EventHandler(this.pct_Fermer_MouseLeave);
+			this.pct_Fermer.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pct_Fermer_MouseMove);
+			// 
+			// pct_Agrandir
+			// 
+			this.pct_Agrandir.Image = ((System.Drawing.Image)(resources.GetObject("pct_Agrandir.Image")));
+			this.pct_Agrandir.Location = new System.Drawing.Point(232, -1);
+			this.pct_Agrandir.Name = "pct_Agrandir";
+			this.pct_Agrandir.Size = new System.Drawing.Size(30, 36);
+			this.pct_Agrandir.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+			this.pct_Agrandir.TabIndex = 1;
+			this.pct_Agrandir.TabStop = false;
+			this.pct_Agrandir.Click += new System.EventHandler(this.pct_Agrandir_Click);
+			this.pct_Agrandir.MouseLeave += new System.EventHandler(this.pct_Agrandir_MouseLeave);
+			this.pct_Agrandir.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pct_Agrandir_MouseMove);
+			// 
+			// pct_icon
+			// 
+			this.pct_icon.ErrorImage = null;
+			this.pct_icon.Image = ((System.Drawing.Image)(resources.GetObject("pct_icon.Image")));
+			this.pct_icon.Location = new System.Drawing.Point(3, 7);
+			this.pct_icon.Name = "pct_icon";
+			this.pct_icon.Size = new System.Drawing.Size(20, 20);
+			this.pct_icon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+			this.pct_icon.TabIndex = 1;
+			this.pct_icon.TabStop = false;
+			this.pct_icon.Click += new System.EventHandler(this.pct_icon_Click);
+			this.pct_icon.MouseLeave += new System.EventHandler(this.pct_icon_MouseLeave);
+			this.pct_icon.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pct_icon_MouseMove);
 			// 
 			// lbl_title
 			// 
@@ -207,65 +260,12 @@
 			this.LeftLine.TabIndex = 1;
 			this.LeftLine.TabStop = false;
 			// 
-			// pct_Reduire
-			// 
-			this.pct_Reduire.Image = ((System.Drawing.Image)(resources.GetObject("pct_Reduire.Image")));
-			this.pct_Reduire.Location = new System.Drawing.Point(196, 0);
-			this.pct_Reduire.Name = "pct_Reduire";
-			this.pct_Reduire.Size = new System.Drawing.Size(30, 36);
-			this.pct_Reduire.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-			this.pct_Reduire.TabIndex = 1;
-			this.pct_Reduire.TabStop = false;
-			this.pct_Reduire.Click += new System.EventHandler(this.pct_Reduire_Click);
-			this.pct_Reduire.MouseLeave += new System.EventHandler(this.pct_Reduire_MouseLeave);
-			this.pct_Reduire.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pct_Reduire_MouseMove);
-			// 
-			// pct_Fermer
-			// 
-			this.pct_Fermer.Image = ((System.Drawing.Image)(resources.GetObject("pct_Fermer.Image")));
-			this.pct_Fermer.Location = new System.Drawing.Point(268, -1);
-			this.pct_Fermer.Name = "pct_Fermer";
-			this.pct_Fermer.Size = new System.Drawing.Size(30, 36);
-			this.pct_Fermer.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-			this.pct_Fermer.TabIndex = 1;
-			this.pct_Fermer.TabStop = false;
-			this.pct_Fermer.Click += new System.EventHandler(this.pct_Fermer_Click);
-			this.pct_Fermer.MouseLeave += new System.EventHandler(this.pct_Fermer_MouseLeave);
-			this.pct_Fermer.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pct_Fermer_MouseMove);
-			// 
-			// pct_Agrandir
-			// 
-			this.pct_Agrandir.Image = ((System.Drawing.Image)(resources.GetObject("pct_Agrandir.Image")));
-			this.pct_Agrandir.Location = new System.Drawing.Point(232, -1);
-			this.pct_Agrandir.Name = "pct_Agrandir";
-			this.pct_Agrandir.Size = new System.Drawing.Size(30, 36);
-			this.pct_Agrandir.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-			this.pct_Agrandir.TabIndex = 1;
-			this.pct_Agrandir.TabStop = false;
-			this.pct_Agrandir.Click += new System.EventHandler(this.pct_Agrandir_Click);
-			this.pct_Agrandir.MouseLeave += new System.EventHandler(this.pct_Agrandir_MouseLeave);
-			this.pct_Agrandir.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pct_Agrandir_MouseMove);
-			// 
-			// pct_icon
-			// 
-			this.pct_icon.ErrorImage = null;
-			this.pct_icon.Image = ((System.Drawing.Image)(resources.GetObject("pct_icon.Image")));
-			this.pct_icon.Location = new System.Drawing.Point(3, 7);
-			this.pct_icon.Name = "pct_icon";
-			this.pct_icon.Size = new System.Drawing.Size(20, 20);
-			this.pct_icon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-			this.pct_icon.TabIndex = 1;
-			this.pct_icon.TabStop = false;
-			this.pct_icon.Click += new System.EventHandler(this.pct_icon_Click);
-			this.pct_icon.MouseLeave += new System.EventHandler(this.pct_icon_MouseLeave);
-			this.pct_icon.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pct_icon_MouseMove);
-			// 
 			// lbl_info
 			// 
 			this.lbl_info.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.lbl_info.Location = new System.Drawing.Point(225, 156);
 			this.lbl_info.Name = "lbl_info";
-			this.lbl_info.Size = new System.Drawing.Size(649, 142);
+			this.lbl_info.Size = new System.Drawing.Size(649, 121);
 			this.lbl_info.TabIndex = 9;
 			this.lbl_info.Text = "IdleGame est un projet d\'école réalisé par Laurie-Anne, Sam et Carl.";
 			// 
@@ -278,12 +278,12 @@
 			this.Controls.Add(this.btn_exit);
 			this.Controls.Add(this.btn_loadgame);
 			this.Controls.Add(this.btn_newgame);
-			this.Controls.Add(this.pictureBox4);
 			this.Controls.Add(this.BottomLine);
 			this.Controls.Add(this.RightLine);
 			this.Controls.Add(this.TopLine);
 			this.Controls.Add(this.LeftLine);
 			this.Controls.Add(this.top);
+			this.Controls.Add(this.pictureBox4);
 			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
 			this.Name = "FormMenu";
 			this.Text = "IdleGame";
@@ -291,6 +291,10 @@
 			this.Resize += new System.EventHandler(this.CharForm_Resize);
 			this.top.ResumeLayout(false);
 			this.top.PerformLayout();
+			((System.ComponentModel.ISupportInitialize)(this.pct_Reduire)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.pct_Fermer)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.pct_Agrandir)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.pct_icon)).EndInit();
 			this.mnu_main.ResumeLayout(false);
 			((System.ComponentModel.ISupportInitialize)(this.btn_exit)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.btn_loadgame)).EndInit();
@@ -300,10 +304,6 @@
 			((System.ComponentModel.ISupportInitialize)(this.RightLine)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.TopLine)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.LeftLine)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.pct_Reduire)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.pct_Fermer)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.pct_Agrandir)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.pct_icon)).EndInit();
 			this.ResumeLayout(false);
 			this.PerformLayout();
 
