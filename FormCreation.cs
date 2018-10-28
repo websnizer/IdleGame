@@ -171,12 +171,12 @@ namespace IdleGame
 		private void saveToolStripMenuItem_MouseEnter(object sender, EventArgs e)
 		{
 			//((ToolStripMenuItem)sender).ForeColor = offColor;
-		}
+		}//Bouton save
 		private void saveToolStripMenuItem_MouseLeave(object sender, EventArgs e)
 		{
 			//((ToolStripMenuItem)sender).ForeColor = Color.White;
-		}
-		//Menu déroulant
+		}//Bouton save
+		 //Menu déroulant
 		private class MyRenderer : ToolStripProfessionalRenderer
 		{
 			public MyRenderer() : base(new MyColors()) { }

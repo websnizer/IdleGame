@@ -181,5 +181,110 @@
   <ItemGroup>
     <None Include="images\bouton_load-game_hover.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="images\bar1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\bar2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\bar3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\bar4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\bar5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\bar6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\bar7.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\bar8.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\bar9.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\bar10.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\bar11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\bar12.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\bar13.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\bar14.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\bar15.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\bar16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\bar17.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\bar18.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\bar19.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\bar20.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\bar21.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\bar22.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\bar23.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\bar24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\bar25.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\bar26.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\bar27.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\bar28.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\bar29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\bar30.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\bar31.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\bar32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\bar33.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\bar34.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\barempty.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

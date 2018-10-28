@@ -1,14 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Data.SqlClient;
 using System.Drawing;
-using System.Linq;
-using System.Net;
-using System.Text;
 using System.Threading;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace IdleGame
@@ -16,11 +9,12 @@ namespace IdleGame
 	public partial class FormJeu : Form
 	{
 		IdleGame m_idlegame; //Référence au créateur
-
+		List<Bitmap> m_allstatusbar;
 		//Colors
 		Color offColor = Color.FromArgb(255, 70, 131);
 		Color mainColor = Color.FromArgb(178, 34, 34);
 		Color darkColor = Color.FromArgb(86, 27, 27);
+		int indimg; //Indice de l'image actuel
 
 		//Constructeur
 		public FormJeu(IdleGame p_idlegame)
@@ -28,10 +22,67 @@ namespace IdleGame
 			m_idlegame = p_idlegame;
 			InitializeComponent();
 			mnu_main.Renderer = new MyRenderer();
+			m_allstatusbar = new List<Bitmap>();
+			indimg = 0;
+			RemplirListeStatusBar();
+			AvancementBarre();
 		}
 
+		private void RemplirListeStatusBar()
+		{
+			m_allstatusbar.Add(global::IdleGame.Properties.Resources.bar1);
+			m_allstatusbar.Add(global::IdleGame.Properties.Resources.bar2);
+			m_allstatusbar.Add(global::IdleGame.Properties.Resources.bar3);
+			m_allstatusbar.Add(global::IdleGame.Properties.Resources.bar4);
+			m_allstatusbar.Add(global::IdleGame.Properties.Resources.bar5);
+			m_allstatusbar.Add(global::IdleGame.Properties.Resources.bar6);
+			m_allstatusbar.Add(global::IdleGame.Properties.Resources.bar7);
+			m_allstatusbar.Add(global::IdleGame.Properties.Resources.bar8);
+			m_allstatusbar.Add(global::IdleGame.Properties.Resources.bar9);
+			m_allstatusbar.Add(global::IdleGame.Properties.Resources.bar10);
+			m_allstatusbar.Add(global::IdleGame.Properties.Resources.bar11);
+			m_allstatusbar.Add(global::IdleGame.Properties.Resources.bar12);
+			m_allstatusbar.Add(global::IdleGame.Properties.Resources.bar13);
+			m_allstatusbar.Add(global::IdleGame.Properties.Resources.bar14);
+			m_allstatusbar.Add(global::IdleGame.Properties.Resources.bar15);
+			m_allstatusbar.Add(global::IdleGame.Properties.Resources.bar16);
+			m_allstatusbar.Add(global::IdleGame.Properties.Resources.bar17);
+			m_allstatusbar.Add(global::IdleGame.Properties.Resources.bar18);
+			m_allstatusbar.Add(global::IdleGame.Properties.Resources.bar19);
+			m_allstatusbar.Add(global::IdleGame.Properties.Resources.bar20);
+			m_allstatusbar.Add(global::IdleGame.Properties.Resources.bar21);
+			m_allstatusbar.Add(global::IdleGame.Properties.Resources.bar22);
+			m_allstatusbar.Add(global::IdleGame.Properties.Resources.bar23);
+			m_allstatusbar.Add(global::IdleGame.Properties.Resources.bar24);
+			m_allstatusbar.Add(global::IdleGame.Properties.Resources.bar25);
+			m_allstatusbar.Add(global::IdleGame.Properties.Resources.bar26);
+			m_allstatusbar.Add(global::IdleGame.Properties.Resources.bar27);
+			m_allstatusbar.Add(global::IdleGame.Properties.Resources.bar28);
+			m_allstatusbar.Add(global::IdleGame.Properties.Resources.bar29);
+			m_allstatusbar.Add(global::IdleGame.Properties.Resources.bar30);
+			m_allstatusbar.Add(global::IdleGame.Properties.Resources.bar31);
+			m_allstatusbar.Add(global::IdleGame.Properties.Resources.bar32);
+			m_allstatusbar.Add(global::IdleGame.Properties.Resources.bar33);
+			m_allstatusbar.Add(global::IdleGame.Properties.Resources.bar34);
+			m_allstatusbar.Add(global::IdleGame.Properties.Resources.barempty);
+		}
+		
+		//Changer d'image à tous les X milisecondes
+		private void tick(object sender, EventArgs e)
+		{
+			img_statusbar.Image = m_allstatusbar[indimg];
+			if (indimg == 34)
+				indimg = 0;
+			else
+				indimg++;
+		}
 
-
+		//Thread:Timer qui débute
+		private void AvancementBarre()
+		{
+			time_statusbar.Tick += new EventHandler(this.tick);
+			time_statusbar.Start();
+		}
 
 
 
@@ -62,29 +113,29 @@ namespace IdleGame
 		//Lignes
 		private void PlacerLignes()
 		{
-			LeftLine.BackColor = offColor;
-			LeftLine.Left = 0;
-			LeftLine.Top = 0;
-			LeftLine.Height = this.Height;
-			LeftLine.Width = 1;
+			line_LeftLine.BackColor = offColor;
+			line_LeftLine.Left = 0;
+			line_LeftLine.Top = 0;
+			line_LeftLine.Height = this.Height;
+			line_LeftLine.Width = 1;
 
-			RightLine.BackColor = offColor;
-			RightLine.Left = this.Width - 1;
-			RightLine.Top = 0;
-			RightLine.Height = this.Height;
-			RightLine.Width = 1;
+			line_RightLine.BackColor = offColor;
+			line_RightLine.Left = this.Width - 1;
+			line_RightLine.Top = 0;
+			line_RightLine.Height = this.Height;
+			line_RightLine.Width = 1;
 
-			TopLine.BackColor = offColor;
-			TopLine.Left = 0;
-			TopLine.Top = 0;
-			TopLine.Width = this.Width;
-			TopLine.Height = 1;
+			line_TopLine.BackColor = offColor;
+			line_TopLine.Left = 0;
+			line_TopLine.Top = 0;
+			line_TopLine.Width = this.Width;
+			line_TopLine.Height = 1;
 
-			BottomLine.BackColor = offColor;
-			BottomLine.Left = 0;
-			BottomLine.Top = this.Height - 1;
-			BottomLine.Width = this.Width;
-			TopLine.Height = 1;
+			line_BottomLine.BackColor = offColor;
+			line_BottomLine.Left = 0;
+			line_BottomLine.Top = this.Height - 1;
+			line_BottomLine.Width = this.Width;
+			line_TopLine.Height = 1;
 
 		}
 		//Barre TOP
@@ -176,7 +227,30 @@ namespace IdleGame
 		{
 			//((ToolStripMenuItem)sender).ForeColor = Color.White;
 		}
-		//Menu déroulant
+		//Pannels
+		private void ColumnWidthChanging(object sender, ColumnWidthChangingEventArgs e)
+		{
+			e.Cancel = true;
+			ListView listview = (ListView)sender;
+			e.NewWidth = listview.Columns[e.ColumnIndex].Width;
+		}//Column change size
+		private void spl_feuillePerso_Panel1_SizeChanged(object sender, EventArgs e)
+		{
+			lst_persoInfo.Height = ((Panel)sender).Height - 17;
+		}//PannelChange
+		private void splitContainer1_Panel1_SizeChanged(object sender, EventArgs e)
+		{
+			lst_persoStats.Height = ((Panel)sender).Height - 20;
+		}//Pannel change size
+		private void spl_statscompetences_Panel2_SizeChanged(object sender, EventArgs e)
+		{
+			lst_persoCompetences.Height = ((Panel)sender).Height - 20;
+		}//Pannel change size
+		private void spl_feuillePerso_Panel2_SizeChanged(object sender, EventArgs e)
+		{
+			spl_statscompetences.Height = (spl_feuillePerso.Height - spl_feuillePerso.Panel1.Height);
+		}//Pannel change size
+		 //Menu déroulant
 		private class MyRenderer : ToolStripProfessionalRenderer
 		{
 			public MyRenderer() : base(new MyColors()) { }
