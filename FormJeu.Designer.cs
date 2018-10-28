@@ -31,6 +31,10 @@
 			this.components = new System.ComponentModel.Container();
 			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormJeu));
 			this.top = new System.Windows.Forms.Panel();
+			this.pct_Reduire = new System.Windows.Forms.PictureBox();
+			this.pct_Fermer = new System.Windows.Forms.PictureBox();
+			this.pct_Agrandir = new System.Windows.Forms.PictureBox();
+			this.pct_icon = new System.Windows.Forms.PictureBox();
 			this.lbl_title = new System.Windows.Forms.Label();
 			this.mnu_main = new System.Windows.Forms.ContextMenuStrip(this.components);
 			this.mnu_about = new System.Windows.Forms.ToolStripMenuItem();
@@ -50,6 +54,10 @@
 			this.lbl_compet = new System.Windows.Forms.Label();
 			this.grp_right = new System.Windows.Forms.GroupBox();
 			this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+			this.lst_historique = new System.Windows.Forms.ListBox();
+			this.lbl_historique = new System.Windows.Forms.Label();
+			this.lst_quetes = new System.Windows.Forms.ListBox();
+			this.lbl_quetes = new System.Windows.Forms.Label();
 			this.lst_equipements = new System.Windows.Forms.ListView();
 			this.ch_piece = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
 			this.ch_piecenom = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -58,23 +66,21 @@
 			this.ch_inventaire = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
 			this.ch_inventairenom = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
 			this.lbl_inventaire = new System.Windows.Forms.Label();
-			this.lbl_quetes = new System.Windows.Forms.Label();
-			this.lst_quetes = new System.Windows.Forms.ListBox();
-			this.lst_historique = new System.Windows.Forms.ListBox();
-			this.lbl_historique = new System.Windows.Forms.Label();
 			this.grp_top = new System.Windows.Forms.GroupBox();
-			this.grp_bottom = new System.Windows.Forms.GroupBox();
+			this.pictureBox1 = new System.Windows.Forms.PictureBox();
 			this.img_statusbar = new System.Windows.Forms.PictureBox();
+			this.grp_bottom = new System.Windows.Forms.GroupBox();
 			this.line_BottomLine = new System.Windows.Forms.PictureBox();
 			this.line_RightLine = new System.Windows.Forms.PictureBox();
 			this.line_TopLine = new System.Windows.Forms.PictureBox();
 			this.line_LeftLine = new System.Windows.Forms.PictureBox();
-			this.pct_Reduire = new System.Windows.Forms.PictureBox();
-			this.pct_Fermer = new System.Windows.Forms.PictureBox();
-			this.pct_Agrandir = new System.Windows.Forms.PictureBox();
-			this.pct_icon = new System.Windows.Forms.PictureBox();
 			this.time_statusbar = new System.Windows.Forms.Timer(this.components);
+			this.lbl_info = new System.Windows.Forms.Label();
 			this.top.SuspendLayout();
+			((System.ComponentModel.ISupportInitialize)(this.pct_Reduire)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.pct_Fermer)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.pct_Agrandir)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.pct_icon)).BeginInit();
 			this.mnu_main.SuspendLayout();
 			this.grp_left.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.spl_feuillePerso)).BeginInit();
@@ -91,16 +97,13 @@
 			this.splitContainer1.Panel2.SuspendLayout();
 			this.splitContainer1.SuspendLayout();
 			this.grp_top.SuspendLayout();
-			this.grp_bottom.SuspendLayout();
+			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.img_statusbar)).BeginInit();
+			this.grp_bottom.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.line_BottomLine)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.line_RightLine)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.line_TopLine)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.line_LeftLine)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.pct_Reduire)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.pct_Fermer)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.pct_Agrandir)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.pct_icon)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// top
@@ -119,6 +122,59 @@
 			this.top.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.top_MouseDoubleClick);
 			this.top.MouseDown += new System.Windows.Forms.MouseEventHandler(this.top_MouseDown);
 			this.top.MouseMove += new System.Windows.Forms.MouseEventHandler(this.top_MouseMove);
+			// 
+			// pct_Reduire
+			// 
+			this.pct_Reduire.Image = ((System.Drawing.Image)(resources.GetObject("pct_Reduire.Image")));
+			this.pct_Reduire.Location = new System.Drawing.Point(196, 0);
+			this.pct_Reduire.Name = "pct_Reduire";
+			this.pct_Reduire.Size = new System.Drawing.Size(30, 36);
+			this.pct_Reduire.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+			this.pct_Reduire.TabIndex = 1;
+			this.pct_Reduire.TabStop = false;
+			this.pct_Reduire.Click += new System.EventHandler(this.pct_Reduire_Click);
+			this.pct_Reduire.MouseLeave += new System.EventHandler(this.pct_Reduire_MouseLeave);
+			this.pct_Reduire.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pct_Reduire_MouseMove);
+			// 
+			// pct_Fermer
+			// 
+			this.pct_Fermer.Image = ((System.Drawing.Image)(resources.GetObject("pct_Fermer.Image")));
+			this.pct_Fermer.Location = new System.Drawing.Point(268, -1);
+			this.pct_Fermer.Name = "pct_Fermer";
+			this.pct_Fermer.Size = new System.Drawing.Size(30, 36);
+			this.pct_Fermer.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+			this.pct_Fermer.TabIndex = 1;
+			this.pct_Fermer.TabStop = false;
+			this.pct_Fermer.Click += new System.EventHandler(this.pct_Fermer_Click);
+			this.pct_Fermer.MouseLeave += new System.EventHandler(this.pct_Fermer_MouseLeave);
+			this.pct_Fermer.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pct_Fermer_MouseMove);
+			// 
+			// pct_Agrandir
+			// 
+			this.pct_Agrandir.Image = ((System.Drawing.Image)(resources.GetObject("pct_Agrandir.Image")));
+			this.pct_Agrandir.Location = new System.Drawing.Point(232, -1);
+			this.pct_Agrandir.Name = "pct_Agrandir";
+			this.pct_Agrandir.Size = new System.Drawing.Size(30, 36);
+			this.pct_Agrandir.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+			this.pct_Agrandir.TabIndex = 1;
+			this.pct_Agrandir.TabStop = false;
+			this.pct_Agrandir.Click += new System.EventHandler(this.pct_Agrandir_Click);
+			this.pct_Agrandir.MouseLeave += new System.EventHandler(this.pct_Agrandir_MouseLeave);
+			this.pct_Agrandir.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pct_Agrandir_MouseMove);
+			// 
+			// pct_icon
+			// 
+			this.pct_icon.ErrorImage = null;
+			this.pct_icon.Image = ((System.Drawing.Image)(resources.GetObject("pct_icon.Image")));
+			this.pct_icon.Location = new System.Drawing.Point(3, 7);
+			this.pct_icon.Name = "pct_icon";
+			this.pct_icon.Size = new System.Drawing.Size(20, 20);
+			this.pct_icon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+			this.pct_icon.TabIndex = 1;
+			this.pct_icon.TabStop = false;
+			this.pct_icon.Click += new System.EventHandler(this.pct_icon_Click);
+			this.pct_icon.MouseLeave += new System.EventHandler(this.pct_icon_MouseLeave);
+			this.pct_icon.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pct_icon_MouseMove);
 			// 
 			// lbl_title
 			// 
@@ -200,7 +256,7 @@
 			this.spl_feuillePerso.Panel2.SizeChanged += new System.EventHandler(this.spl_feuillePerso_Panel2_SizeChanged);
 			this.spl_feuillePerso.Panel2MinSize = 350;
 			this.spl_feuillePerso.Size = new System.Drawing.Size(205, 624);
-			this.spl_feuillePerso.SplitterDistance = 143;
+			this.spl_feuillePerso.SplitterDistance = 209;
 			this.spl_feuillePerso.SplitterWidth = 1;
 			this.spl_feuillePerso.TabIndex = 6;
 			// 
@@ -358,6 +414,42 @@
 			this.splitContainer1.SplitterWidth = 1;
 			this.splitContainer1.TabIndex = 6;
 			// 
+			// lst_historique
+			// 
+			this.lst_historique.FormattingEnabled = true;
+			this.lst_historique.Location = new System.Drawing.Point(0, 23);
+			this.lst_historique.Name = "lst_historique";
+			this.lst_historique.Size = new System.Drawing.Size(204, 186);
+			this.lst_historique.TabIndex = 11;
+			// 
+			// lbl_historique
+			// 
+			this.lbl_historique.AutoSize = true;
+			this.lbl_historique.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.lbl_historique.Location = new System.Drawing.Point(3, 3);
+			this.lbl_historique.Name = "lbl_historique";
+			this.lbl_historique.Size = new System.Drawing.Size(73, 15);
+			this.lbl_historique.TabIndex = 12;
+			this.lbl_historique.Text = "Historique";
+			// 
+			// lst_quetes
+			// 
+			this.lst_quetes.FormattingEnabled = true;
+			this.lst_quetes.Location = new System.Drawing.Point(1, 26);
+			this.lst_quetes.Name = "lst_quetes";
+			this.lst_quetes.Size = new System.Drawing.Size(204, 381);
+			this.lst_quetes.TabIndex = 8;
+			// 
+			// lbl_quetes
+			// 
+			this.lbl_quetes.AutoSize = true;
+			this.lbl_quetes.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.lbl_quetes.Location = new System.Drawing.Point(3, 7);
+			this.lbl_quetes.Name = "lbl_quetes";
+			this.lbl_quetes.Size = new System.Drawing.Size(52, 15);
+			this.lbl_quetes.TabIndex = 10;
+			this.lbl_quetes.Text = "Quetes";
+			// 
 			// lst_equipements
 			// 
 			this.lst_equipements.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -430,50 +522,36 @@
 			this.lbl_inventaire.TabIndex = 12;
 			this.lbl_inventaire.Text = "Inventaire";
 			// 
-			// lbl_quetes
-			// 
-			this.lbl_quetes.AutoSize = true;
-			this.lbl_quetes.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.lbl_quetes.Location = new System.Drawing.Point(3, 7);
-			this.lbl_quetes.Name = "lbl_quetes";
-			this.lbl_quetes.Size = new System.Drawing.Size(52, 15);
-			this.lbl_quetes.TabIndex = 10;
-			this.lbl_quetes.Text = "Quetes";
-			// 
-			// lst_quetes
-			// 
-			this.lst_quetes.FormattingEnabled = true;
-			this.lst_quetes.Location = new System.Drawing.Point(1, 26);
-			this.lst_quetes.Name = "lst_quetes";
-			this.lst_quetes.Size = new System.Drawing.Size(204, 381);
-			this.lst_quetes.TabIndex = 8;
-			// 
-			// lst_historique
-			// 
-			this.lst_historique.FormattingEnabled = true;
-			this.lst_historique.Location = new System.Drawing.Point(0, 23);
-			this.lst_historique.Name = "lst_historique";
-			this.lst_historique.Size = new System.Drawing.Size(204, 186);
-			this.lst_historique.TabIndex = 11;
-			// 
-			// lbl_historique
-			// 
-			this.lbl_historique.AutoSize = true;
-			this.lbl_historique.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.lbl_historique.Location = new System.Drawing.Point(3, 3);
-			this.lbl_historique.Name = "lbl_historique";
-			this.lbl_historique.Size = new System.Drawing.Size(73, 15);
-			this.lbl_historique.TabIndex = 12;
-			this.lbl_historique.Text = "Historique";
-			// 
 			// grp_top
 			// 
+			this.grp_top.Controls.Add(this.lbl_info);
+			this.grp_top.Controls.Add(this.pictureBox1);
 			this.grp_top.Controls.Add(this.img_statusbar);
 			this.grp_top.Location = new System.Drawing.Point(215, 37);
 			this.grp_top.Name = "grp_top";
-			this.grp_top.Size = new System.Drawing.Size(735, 390);
+			this.grp_top.Size = new System.Drawing.Size(735, 409);
 			this.grp_top.TabIndex = 13;
 			this.grp_top.TabStop = false;
+			// 
+			// pictureBox1
+			// 
+			this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+			this.pictureBox1.Location = new System.Drawing.Point(-1, 5);
+			this.pictureBox1.Name = "pictureBox1";
+			this.pictureBox1.Size = new System.Drawing.Size(730, 305);
+			this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+			this.pictureBox1.TabIndex = 1;
+			this.pictureBox1.TabStop = false;
+			// 
+			// img_statusbar
+			// 
+			this.img_statusbar.Image = global::IdleGame.Properties.Resources.barempty;
+			this.img_statusbar.Location = new System.Drawing.Point(2, 367);
+			this.img_statusbar.Name = "img_statusbar";
+			this.img_statusbar.Size = new System.Drawing.Size(733, 39);
+			this.img_statusbar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+			this.img_statusbar.TabIndex = 0;
+			this.img_statusbar.TabStop = false;
 			// 
 			// grp_bottom
 			// 
@@ -486,16 +564,6 @@
 			this.grp_bottom.Size = new System.Drawing.Size(735, 240);
 			this.grp_bottom.TabIndex = 14;
 			this.grp_bottom.TabStop = false;
-			// 
-			// img_statusbar
-			// 
-			this.img_statusbar.Image = global::IdleGame.Properties.Resources.barempty;
-			this.img_statusbar.Location = new System.Drawing.Point(2, 346);
-			this.img_statusbar.Name = "img_statusbar";
-			this.img_statusbar.Size = new System.Drawing.Size(733, 39);
-			this.img_statusbar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-			this.img_statusbar.TabIndex = 0;
-			this.img_statusbar.TabStop = false;
 			// 
 			// line_BottomLine
 			// 
@@ -529,58 +597,14 @@
 			this.line_LeftLine.TabIndex = 1;
 			this.line_LeftLine.TabStop = false;
 			// 
-			// pct_Reduire
+			// lbl_info
 			// 
-			this.pct_Reduire.Image = ((System.Drawing.Image)(resources.GetObject("pct_Reduire.Image")));
-			this.pct_Reduire.Location = new System.Drawing.Point(196, 0);
-			this.pct_Reduire.Name = "pct_Reduire";
-			this.pct_Reduire.Size = new System.Drawing.Size(30, 36);
-			this.pct_Reduire.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-			this.pct_Reduire.TabIndex = 1;
-			this.pct_Reduire.TabStop = false;
-			this.pct_Reduire.Click += new System.EventHandler(this.pct_Reduire_Click);
-			this.pct_Reduire.MouseLeave += new System.EventHandler(this.pct_Reduire_MouseLeave);
-			this.pct_Reduire.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pct_Reduire_MouseMove);
-			// 
-			// pct_Fermer
-			// 
-			this.pct_Fermer.Image = ((System.Drawing.Image)(resources.GetObject("pct_Fermer.Image")));
-			this.pct_Fermer.Location = new System.Drawing.Point(268, -1);
-			this.pct_Fermer.Name = "pct_Fermer";
-			this.pct_Fermer.Size = new System.Drawing.Size(30, 36);
-			this.pct_Fermer.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-			this.pct_Fermer.TabIndex = 1;
-			this.pct_Fermer.TabStop = false;
-			this.pct_Fermer.Click += new System.EventHandler(this.pct_Fermer_Click);
-			this.pct_Fermer.MouseLeave += new System.EventHandler(this.pct_Fermer_MouseLeave);
-			this.pct_Fermer.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pct_Fermer_MouseMove);
-			// 
-			// pct_Agrandir
-			// 
-			this.pct_Agrandir.Image = ((System.Drawing.Image)(resources.GetObject("pct_Agrandir.Image")));
-			this.pct_Agrandir.Location = new System.Drawing.Point(232, -1);
-			this.pct_Agrandir.Name = "pct_Agrandir";
-			this.pct_Agrandir.Size = new System.Drawing.Size(30, 36);
-			this.pct_Agrandir.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-			this.pct_Agrandir.TabIndex = 1;
-			this.pct_Agrandir.TabStop = false;
-			this.pct_Agrandir.Click += new System.EventHandler(this.pct_Agrandir_Click);
-			this.pct_Agrandir.MouseLeave += new System.EventHandler(this.pct_Agrandir_MouseLeave);
-			this.pct_Agrandir.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pct_Agrandir_MouseMove);
-			// 
-			// pct_icon
-			// 
-			this.pct_icon.ErrorImage = null;
-			this.pct_icon.Image = ((System.Drawing.Image)(resources.GetObject("pct_icon.Image")));
-			this.pct_icon.Location = new System.Drawing.Point(3, 7);
-			this.pct_icon.Name = "pct_icon";
-			this.pct_icon.Size = new System.Drawing.Size(20, 20);
-			this.pct_icon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-			this.pct_icon.TabIndex = 1;
-			this.pct_icon.TabStop = false;
-			this.pct_icon.Click += new System.EventHandler(this.pct_icon_Click);
-			this.pct_icon.MouseLeave += new System.EventHandler(this.pct_icon_MouseLeave);
-			this.pct_icon.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pct_icon_MouseMove);
+			this.lbl_info.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.lbl_info.Location = new System.Drawing.Point(3, 313);
+			this.lbl_info.Name = "lbl_info";
+			this.lbl_info.Size = new System.Drawing.Size(727, 52);
+			this.lbl_info.TabIndex = 2;
+			this.lbl_info.Text = "Action en cours............";
 			// 
 			// FormJeu
 			// 
@@ -603,6 +627,10 @@
 			this.Resize += new System.EventHandler(this.CharForm_Resize);
 			this.top.ResumeLayout(false);
 			this.top.PerformLayout();
+			((System.ComponentModel.ISupportInitialize)(this.pct_Reduire)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.pct_Fermer)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.pct_Agrandir)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.pct_icon)).EndInit();
 			this.mnu_main.ResumeLayout(false);
 			this.grp_left.ResumeLayout(false);
 			this.spl_feuillePerso.Panel1.ResumeLayout(false);
@@ -624,17 +652,14 @@
 			((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
 			this.splitContainer1.ResumeLayout(false);
 			this.grp_top.ResumeLayout(false);
+			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.img_statusbar)).EndInit();
 			this.grp_bottom.ResumeLayout(false);
 			this.grp_bottom.PerformLayout();
-			((System.ComponentModel.ISupportInitialize)(this.img_statusbar)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.line_BottomLine)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.line_RightLine)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.line_TopLine)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.line_LeftLine)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.pct_Reduire)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.pct_Fermer)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.pct_Agrandir)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.pct_icon)).EndInit();
 			this.ResumeLayout(false);
 
 		}
@@ -685,6 +710,8 @@
 		private System.Windows.Forms.GroupBox grp_bottom;
 		private System.Windows.Forms.PictureBox img_statusbar;
 		private System.Windows.Forms.Timer time_statusbar;
+		private System.Windows.Forms.PictureBox pictureBox1;
+		private System.Windows.Forms.Label lbl_info;
 	}
 }
 
