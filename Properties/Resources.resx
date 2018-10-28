@@ -298,4 +298,166 @@
   <data name="barempty" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\images\barempty.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="city1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\images\city1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="city10" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\images\city10.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="city11" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\images\city11.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="city12" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\images\city12.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="city13" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\images\city13.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="city14" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\images\city14.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="city15" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\images\city15.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="city16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\images\city16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="city17" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\images\city17.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="city18" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\images\city18.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="city19" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\images\city19.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="city2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\images\city2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="city20" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\images\city20.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="city21" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\images\city21.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="city22" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\images\city22.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="city23" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\images\city23.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="city24" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\images\city24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="city25" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\images\city25.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="city26" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\images\city26.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="city27" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\images\city27.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="city28" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\images\city28.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="city29" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\images\city29.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="city3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\images\city3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="city30" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\images\city30.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="city31" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\images\city31.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="city32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\images\city32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="city33" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\images\city33.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="city34" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\images\city34.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="city35" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\images\city35.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="city36" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\images\city36.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="city37" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\images\city37.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="city38" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\images\city38.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="city39" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\images\city39.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="city4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\images\city4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="city40" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\images\city40.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="city41" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\images\city41.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="city42" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\images\city42.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="city43" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\images\city43.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="city44" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\images\city44.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="city45" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\images\city45.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="city46" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\images\city46.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="city47" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\images\city47.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="city48" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\images\city48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="city49" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\images\city49.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="city5" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\images\city5.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="city50" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\images\city50.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="city6" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\images\city6.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="city7" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\images\city7.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="city8" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\images\city8.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="city9" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\images\city9.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="DARKMAP" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\images\DARKMAP.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MAP" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\images\MAP.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="monstre" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\images\monstre.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="todel" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\images\todel.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>

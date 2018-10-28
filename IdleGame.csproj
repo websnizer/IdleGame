@@ -286,5 +286,167 @@
   <ItemGroup>
     <None Include="images\barempty.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="images\city1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\city2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\city3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\city4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\city5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\city6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\city7.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\city8.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\city9.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\city10.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\city11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\city12.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\city13.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\city14.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\city15.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\city16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\city17.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\city18.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\city19.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\city20.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\city21.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\city22.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\city23.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\city24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\city25.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\city26.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\city27.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\city28.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\city29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\city30.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\city31.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\city32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\city33.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\city34.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\city35.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\city36.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\city37.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\city38.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\city39.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\city40.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\city41.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\city42.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\city43.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\city44.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\city45.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\city46.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\city47.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\city48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\city49.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\city50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\DARKMAP.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\MAP.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\monstre.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\todel.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

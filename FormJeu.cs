@@ -10,11 +10,16 @@ namespace IdleGame
 	{
 		IdleGame m_idlegame; //Référence au créateur
 		List<Bitmap> m_allstatusbar;
+		List<Bitmap> m_allcities;
+		List<Bitmap> m_allcartes;
 		//Colors
 		Color offColor = Color.FromArgb(255, 70, 131);
 		Color mainColor = Color.FromArgb(178, 34, 34);
 		Color darkColor = Color.FromArgb(86, 27, 27);
 		int indimg; //Indice de l'image actuel
+		int compteurtick;
+		int indcity;
+		int indcarte;
 
 		//Constructeur
 		public FormJeu(IdleGame p_idlegame)
@@ -23,9 +28,66 @@ namespace IdleGame
 			InitializeComponent();
 			mnu_main.Renderer = new MyRenderer();
 			m_allstatusbar = new List<Bitmap>();
+			m_allcities = new List<Bitmap>();
+			m_allcartes = new List<Bitmap>();
+			compteurtick = 0;
 			indimg = 0;
+			indcity = 0;
+			indcarte = 0;
 			RemplirListeStatusBar();
+			RemplirListeCartes();
+			RemplirListeVilles();
 			AvancementBarre();
+		}
+
+		private void RemplirListeCartes()
+		{
+			m_allcartes.Add(global::IdleGame.Properties.Resources.MAP);
+			m_allcartes.Add(global::IdleGame.Properties.Resources.DARKMAP);
+			m_allcartes.Add(global::IdleGame.Properties.Resources.monstre);
+		}
+
+		private void RemplirListeVilles()
+		{
+			m_allcities.Add(global::IdleGame.Properties.Resources.city1);
+			m_allcities.Add(global::IdleGame.Properties.Resources.city2);
+			m_allcities.Add(global::IdleGame.Properties.Resources.city3);
+			m_allcities.Add(global::IdleGame.Properties.Resources.city4);
+			m_allcities.Add(global::IdleGame.Properties.Resources.city5);
+			m_allcities.Add(global::IdleGame.Properties.Resources.city6);
+			m_allcities.Add(global::IdleGame.Properties.Resources.city7);
+			m_allcities.Add(global::IdleGame.Properties.Resources.city8);
+			m_allcities.Add(global::IdleGame.Properties.Resources.city9);
+			m_allcities.Add(global::IdleGame.Properties.Resources.city10);
+			m_allcities.Add(global::IdleGame.Properties.Resources.city11);
+			m_allcities.Add(global::IdleGame.Properties.Resources.city12);
+			m_allcities.Add(global::IdleGame.Properties.Resources.city13);
+			m_allcities.Add(global::IdleGame.Properties.Resources.city14);
+			m_allcities.Add(global::IdleGame.Properties.Resources.city15);
+			m_allcities.Add(global::IdleGame.Properties.Resources.city16);
+			m_allcities.Add(global::IdleGame.Properties.Resources.city17);
+			m_allcities.Add(global::IdleGame.Properties.Resources.city18);
+			m_allcities.Add(global::IdleGame.Properties.Resources.city19);
+			m_allcities.Add(global::IdleGame.Properties.Resources.city20);
+			m_allcities.Add(global::IdleGame.Properties.Resources.city21);
+			m_allcities.Add(global::IdleGame.Properties.Resources.city22);
+			m_allcities.Add(global::IdleGame.Properties.Resources.city23);
+			m_allcities.Add(global::IdleGame.Properties.Resources.city24);
+			m_allcities.Add(global::IdleGame.Properties.Resources.city25);
+			m_allcities.Add(global::IdleGame.Properties.Resources.city26);
+			m_allcities.Add(global::IdleGame.Properties.Resources.city27);
+			m_allcities.Add(global::IdleGame.Properties.Resources.city28);
+			m_allcities.Add(global::IdleGame.Properties.Resources.city29);
+			m_allcities.Add(global::IdleGame.Properties.Resources.city30);
+			m_allcities.Add(global::IdleGame.Properties.Resources.city31);
+			m_allcities.Add(global::IdleGame.Properties.Resources.city32);
+			m_allcities.Add(global::IdleGame.Properties.Resources.city33);
+			m_allcities.Add(global::IdleGame.Properties.Resources.city34);
+			m_allcities.Add(global::IdleGame.Properties.Resources.city35);
+			m_allcities.Add(global::IdleGame.Properties.Resources.city36);
+			m_allcities.Add(global::IdleGame.Properties.Resources.city37);
+			m_allcities.Add(global::IdleGame.Properties.Resources.city38);
+			m_allcities.Add(global::IdleGame.Properties.Resources.city39);
 		}
 
 		//Remplir la liste des images pour la status bar
@@ -76,6 +138,28 @@ namespace IdleGame
 				indimg = 0;
 			else
 				indimg++;
+
+			compteurtick++;
+
+			if(compteurtick == 50)
+			{
+				img_bg.Image = global::IdleGame.Properties.Resources.monstre;
+			}
+			else if (compteurtick == 150)
+			{
+				img_bg.Image = m_allcities[indcity];
+				indcity++;
+				compteurtick = 0;
+				if (indcity == m_allcities.Count)
+					indcity = 0;
+			}
+			else if (compteurtick == 100)
+			{
+				img_bg.Image = m_allcartes[indcarte];
+				indcarte++;
+				if (indcarte == m_allcartes.Count)
+					indcarte = 0;
+			}
 		}
 
 		//Thread:Timer qui débute
