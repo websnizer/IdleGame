@@ -28,6 +28,7 @@ namespace IdleGame
 			AvancementBarre();
 		}
 
+		//Remplir la liste des images pour la status bar
 		private void RemplirListeStatusBar()
 		{
 			m_allstatusbar.Add(global::IdleGame.Properties.Resources.bar1);
@@ -110,7 +111,35 @@ namespace IdleGame
 			pct_Reduire.Left = this.Width - 90;
 			PlacerLignes();
 		}//Resize
-		//Lignes
+		private void FormJeu_SizeChanged(object sender, EventArgs e)
+		{
+			grp_top.Width = this.Width - grp_top.Left - (grp_right.Width + 4);
+			grp_right.Left = this.Width - grp_right.Width - 1;
+			img_bg.Width = grp_top.Width;
+
+			if (this.WindowState == FormWindowState.Maximized)
+			{
+				grp_top.Height = this.Height * 69/100;
+				grp_historique.Width = (this.Width - grp_top.Left - (grp_right.Width + 4)) / 2;
+				grp_bottom.Width = (this.Width - grp_top.Left - (grp_right.Width + 4)) / 2;
+				grp_historique.Left = this.Width - grp_right.Width - grp_bottom.Width;
+				grp_historique.Visible = true;
+			}
+			else
+			{
+				grp_historique.Visible = false;
+				grp_historique.Width = 735;
+				grp_bottom.Width = 735;
+				grp_top.Height = 348;
+			}
+
+			grp_left.Height = this.Height - grp_left.Top - 2;
+			grp_right.Height = this.Height - grp_right.Top - 2;
+			grp_historique.Top = grp_top.Height + grp_top.Top + 3;
+			grp_bottom.Top = grp_top.Height + grp_top.Top + 3;
+			img_bg.Height = grp_top.Height + grp_top.Top;
+		}//On change size
+		 //Lignes
 		private void PlacerLignes()
 		{
 			line_LeftLine.BackColor = offColor;
@@ -156,7 +185,7 @@ namespace IdleGame
 		private void pct_Agrandir_Click(object sender, EventArgs e)
 		{
 			this.WindowState = (this.WindowState == FormWindowState.Normal) ? FormWindowState.Maximized : FormWindowState.Normal;
-		}//Agrandir
+		}//Agrandir7
 		private void pct_Reduire_Click(object sender, EventArgs e)
 		{
 			this.WindowState = FormWindowState.Minimized;
@@ -250,11 +279,20 @@ namespace IdleGame
 		{
 			spl_statscompetences.Height = (spl_feuillePerso.Height - spl_feuillePerso.Panel1.Height);
 		}//Pannel change size
+		private void splitContainer1_Panel1_SizeChanged_1(object sender, EventArgs e)
+		{
+			lst_histoire.Height = ((Panel)sender).Height - 20;
+		}//Pannel change size
+		private void spl_histoquetes_Panel2_SizeChanged(object sender, EventArgs e)
+		{
+			lst_quetes.Height = ((Panel)sender).Height - 20;
+		}//Pannel change size
 		 //Menu déroulant
 		private class MyRenderer : ToolStripProfessionalRenderer
 		{
 			public MyRenderer() : base(new MyColors()) { }
 		}//Override des menus par défaut
+
 		private class MyColors : ProfessionalColorTable
 		{
 			public override Color MenuItemSelected

@@ -53,9 +53,9 @@
 			this.lst_persoCompetences = new System.Windows.Forms.ListBox();
 			this.lbl_compet = new System.Windows.Forms.Label();
 			this.grp_right = new System.Windows.Forms.GroupBox();
-			this.splitContainer1 = new System.Windows.Forms.SplitContainer();
-			this.lst_historique = new System.Windows.Forms.ListBox();
-			this.lbl_historique = new System.Windows.Forms.Label();
+			this.spl_histoquetes = new System.Windows.Forms.SplitContainer();
+			this.lst_histoire = new System.Windows.Forms.ListBox();
+			this.lbl_histoire = new System.Windows.Forms.Label();
 			this.lst_quetes = new System.Windows.Forms.ListBox();
 			this.lbl_quetes = new System.Windows.Forms.Label();
 			this.lst_equipements = new System.Windows.Forms.ListView();
@@ -67,15 +67,18 @@
 			this.ch_inventairenom = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
 			this.lbl_inventaire = new System.Windows.Forms.Label();
 			this.grp_top = new System.Windows.Forms.GroupBox();
-			this.pictureBox1 = new System.Windows.Forms.PictureBox();
+			this.img_bg = new System.Windows.Forms.PictureBox();
 			this.img_statusbar = new System.Windows.Forms.PictureBox();
-			this.grp_bottom = new System.Windows.Forms.GroupBox();
 			this.line_BottomLine = new System.Windows.Forms.PictureBox();
 			this.line_RightLine = new System.Windows.Forms.PictureBox();
 			this.line_TopLine = new System.Windows.Forms.PictureBox();
 			this.line_LeftLine = new System.Windows.Forms.PictureBox();
 			this.time_statusbar = new System.Windows.Forms.Timer(this.components);
 			this.lbl_info = new System.Windows.Forms.Label();
+			this.grp_bottom = new System.Windows.Forms.GroupBox();
+			this.grp_historique = new System.Windows.Forms.GroupBox();
+			this.lst_historique = new System.Windows.Forms.ListBox();
+			this.lbl_historique = new System.Windows.Forms.Label();
 			this.top.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.pct_Reduire)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.pct_Fermer)).BeginInit();
@@ -92,18 +95,19 @@
 			this.spl_statscompetences.Panel2.SuspendLayout();
 			this.spl_statscompetences.SuspendLayout();
 			this.grp_right.SuspendLayout();
-			((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
-			this.splitContainer1.Panel1.SuspendLayout();
-			this.splitContainer1.Panel2.SuspendLayout();
-			this.splitContainer1.SuspendLayout();
+			((System.ComponentModel.ISupportInitialize)(this.spl_histoquetes)).BeginInit();
+			this.spl_histoquetes.Panel1.SuspendLayout();
+			this.spl_histoquetes.Panel2.SuspendLayout();
+			this.spl_histoquetes.SuspendLayout();
 			this.grp_top.SuspendLayout();
-			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.img_bg)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.img_statusbar)).BeginInit();
-			this.grp_bottom.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.line_BottomLine)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.line_RightLine)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.line_TopLine)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.line_LeftLine)).BeginInit();
+			this.grp_bottom.SuspendLayout();
+			this.grp_historique.SuspendLayout();
 			this.SuspendLayout();
 			// 
 			// top
@@ -227,9 +231,9 @@
 			// grp_left
 			// 
 			this.grp_left.Controls.Add(this.spl_feuillePerso);
-			this.grp_left.Location = new System.Drawing.Point(0, 37);
+			this.grp_left.Location = new System.Drawing.Point(1, 37);
 			this.grp_left.Name = "grp_left";
-			this.grp_left.Size = new System.Drawing.Size(211, 643);
+			this.grp_left.Size = new System.Drawing.Size(211, 640);
 			this.grp_left.TabIndex = 5;
 			this.grp_left.TabStop = false;
 			// 
@@ -255,8 +259,8 @@
 			this.spl_feuillePerso.Panel2.Controls.Add(this.spl_statscompetences);
 			this.spl_feuillePerso.Panel2.SizeChanged += new System.EventHandler(this.spl_feuillePerso_Panel2_SizeChanged);
 			this.spl_feuillePerso.Panel2MinSize = 350;
-			this.spl_feuillePerso.Size = new System.Drawing.Size(205, 624);
-			this.spl_feuillePerso.SplitterDistance = 209;
+			this.spl_feuillePerso.Size = new System.Drawing.Size(205, 621);
+			this.spl_feuillePerso.SplitterDistance = 207;
 			this.spl_feuillePerso.SplitterWidth = 1;
 			this.spl_feuillePerso.TabIndex = 6;
 			// 
@@ -380,64 +384,65 @@
 			// 
 			// grp_right
 			// 
-			this.grp_right.Controls.Add(this.splitContainer1);
-			this.grp_right.Location = new System.Drawing.Point(956, 37);
+			this.grp_right.Controls.Add(this.spl_histoquetes);
+			this.grp_right.Location = new System.Drawing.Point(953, 37);
 			this.grp_right.Name = "grp_right";
-			this.grp_right.Size = new System.Drawing.Size(211, 643);
+			this.grp_right.Size = new System.Drawing.Size(211, 640);
 			this.grp_right.TabIndex = 7;
 			this.grp_right.TabStop = false;
 			// 
-			// splitContainer1
+			// spl_histoquetes
 			// 
-			this.splitContainer1.BackColor = System.Drawing.Color.Black;
-			this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.splitContainer1.Location = new System.Drawing.Point(3, 16);
-			this.splitContainer1.Name = "splitContainer1";
-			this.splitContainer1.Orientation = System.Windows.Forms.Orientation.Horizontal;
+			this.spl_histoquetes.BackColor = System.Drawing.Color.Black;
+			this.spl_histoquetes.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.spl_histoquetes.Location = new System.Drawing.Point(3, 16);
+			this.spl_histoquetes.Name = "spl_histoquetes";
+			this.spl_histoquetes.Orientation = System.Windows.Forms.Orientation.Horizontal;
 			// 
-			// splitContainer1.Panel1
+			// spl_histoquetes.Panel1
 			// 
-			this.splitContainer1.Panel1.BackColor = System.Drawing.SystemColors.Control;
-			this.splitContainer1.Panel1.Controls.Add(this.lst_historique);
-			this.splitContainer1.Panel1.Controls.Add(this.lbl_historique);
-			this.splitContainer1.Panel1MinSize = 125;
+			this.spl_histoquetes.Panel1.BackColor = System.Drawing.SystemColors.Control;
+			this.spl_histoquetes.Panel1.Controls.Add(this.lst_histoire);
+			this.spl_histoquetes.Panel1.Controls.Add(this.lbl_histoire);
+			this.spl_histoquetes.Panel1.SizeChanged += new System.EventHandler(this.splitContainer1_Panel1_SizeChanged_1);
+			this.spl_histoquetes.Panel1MinSize = 125;
 			// 
-			// splitContainer1.Panel2
+			// spl_histoquetes.Panel2
 			// 
-			this.splitContainer1.Panel2.BackColor = System.Drawing.SystemColors.Control;
-			this.splitContainer1.Panel2.Controls.Add(this.lst_quetes);
-			this.splitContainer1.Panel2.Controls.Add(this.lbl_quetes);
-			this.splitContainer1.Panel2.SizeChanged += new System.EventHandler(this.spl_feuillePerso_Panel2_SizeChanged);
-			this.splitContainer1.Panel2MinSize = 350;
-			this.splitContainer1.Size = new System.Drawing.Size(205, 624);
-			this.splitContainer1.SplitterDistance = 209;
-			this.splitContainer1.SplitterWidth = 1;
-			this.splitContainer1.TabIndex = 6;
+			this.spl_histoquetes.Panel2.BackColor = System.Drawing.SystemColors.Control;
+			this.spl_histoquetes.Panel2.Controls.Add(this.lst_quetes);
+			this.spl_histoquetes.Panel2.Controls.Add(this.lbl_quetes);
+			this.spl_histoquetes.Panel2.SizeChanged += new System.EventHandler(this.spl_histoquetes_Panel2_SizeChanged);
+			this.spl_histoquetes.Panel2MinSize = 350;
+			this.spl_histoquetes.Size = new System.Drawing.Size(205, 621);
+			this.spl_histoquetes.SplitterDistance = 206;
+			this.spl_histoquetes.SplitterWidth = 1;
+			this.spl_histoquetes.TabIndex = 6;
 			// 
-			// lst_historique
+			// lst_histoire
 			// 
-			this.lst_historique.FormattingEnabled = true;
-			this.lst_historique.Location = new System.Drawing.Point(0, 23);
-			this.lst_historique.Name = "lst_historique";
-			this.lst_historique.Size = new System.Drawing.Size(204, 186);
-			this.lst_historique.TabIndex = 11;
+			this.lst_histoire.FormattingEnabled = true;
+			this.lst_histoire.Location = new System.Drawing.Point(0, 23);
+			this.lst_histoire.Name = "lst_histoire";
+			this.lst_histoire.Size = new System.Drawing.Size(204, 186);
+			this.lst_histoire.TabIndex = 11;
 			// 
-			// lbl_historique
+			// lbl_histoire
 			// 
-			this.lbl_historique.AutoSize = true;
-			this.lbl_historique.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.lbl_historique.Location = new System.Drawing.Point(3, 3);
-			this.lbl_historique.Name = "lbl_historique";
-			this.lbl_historique.Size = new System.Drawing.Size(73, 15);
-			this.lbl_historique.TabIndex = 12;
-			this.lbl_historique.Text = "Historique";
+			this.lbl_histoire.AutoSize = true;
+			this.lbl_histoire.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.lbl_histoire.Location = new System.Drawing.Point(3, 3);
+			this.lbl_histoire.Name = "lbl_histoire";
+			this.lbl_histoire.Size = new System.Drawing.Size(57, 15);
+			this.lbl_histoire.TabIndex = 12;
+			this.lbl_histoire.Text = "Histoire";
 			// 
 			// lst_quetes
 			// 
 			this.lst_quetes.FormattingEnabled = true;
 			this.lst_quetes.Location = new System.Drawing.Point(1, 26);
 			this.lst_quetes.Name = "lst_quetes";
-			this.lst_quetes.Size = new System.Drawing.Size(204, 381);
+			this.lst_quetes.Size = new System.Drawing.Size(204, 394);
 			this.lst_quetes.TabIndex = 8;
 			// 
 			// lbl_quetes
@@ -457,11 +462,11 @@
             this.ch_piece,
             this.ch_piecenom});
 			this.lst_equipements.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
-			this.lst_equipements.Location = new System.Drawing.Point(2, 28);
+			this.lst_equipements.Location = new System.Drawing.Point(0, 95);
 			this.lst_equipements.MultiSelect = false;
 			this.lst_equipements.Name = "lst_equipements";
 			this.lst_equipements.ShowItemToolTips = true;
-			this.lst_equipements.Size = new System.Drawing.Size(346, 203);
+			this.lst_equipements.Size = new System.Drawing.Size(361, 193);
 			this.lst_equipements.TabIndex = 9;
 			this.lst_equipements.UseCompatibleStateImageBehavior = false;
 			this.lst_equipements.View = System.Windows.Forms.View.Details;
@@ -474,13 +479,13 @@
 			// ch_piecenom
 			// 
 			this.ch_piecenom.Text = "Nom";
-			this.ch_piecenom.Width = 220;
+			this.ch_piecenom.Width = 216;
 			// 
 			// lbl_equipements
 			// 
 			this.lbl_equipements.AutoSize = true;
 			this.lbl_equipements.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.lbl_equipements.Location = new System.Drawing.Point(5, 9);
+			this.lbl_equipements.Location = new System.Drawing.Point(2, 76);
 			this.lbl_equipements.Name = "lbl_equipements";
 			this.lbl_equipements.Size = new System.Drawing.Size(91, 15);
 			this.lbl_equipements.TabIndex = 10;
@@ -493,11 +498,11 @@
             this.ch_inventaire,
             this.ch_inventairenom});
 			this.lst_inventaire.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
-			this.lst_inventaire.Location = new System.Drawing.Point(383, 28);
+			this.lst_inventaire.Location = new System.Drawing.Point(373, 95);
 			this.lst_inventaire.MultiSelect = false;
 			this.lst_inventaire.Name = "lst_inventaire";
 			this.lst_inventaire.ShowItemToolTips = true;
-			this.lst_inventaire.Size = new System.Drawing.Size(346, 203);
+			this.lst_inventaire.Size = new System.Drawing.Size(361, 193);
 			this.lst_inventaire.TabIndex = 11;
 			this.lst_inventaire.UseCompatibleStateImageBehavior = false;
 			this.lst_inventaire.View = System.Windows.Forms.View.Details;
@@ -505,18 +510,18 @@
 			// ch_inventaire
 			// 
 			this.ch_inventaire.Text = "Quantité";
-			this.ch_inventaire.Width = 81;
+			this.ch_inventaire.Width = 55;
 			// 
 			// ch_inventairenom
 			// 
 			this.ch_inventairenom.Text = "Nom";
-			this.ch_inventairenom.Width = 261;
+			this.ch_inventairenom.Width = 247;
 			// 
 			// lbl_inventaire
 			// 
 			this.lbl_inventaire.AutoSize = true;
 			this.lbl_inventaire.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.lbl_inventaire.Location = new System.Drawing.Point(386, 9);
+			this.lbl_inventaire.Location = new System.Drawing.Point(663, 76);
 			this.lbl_inventaire.Name = "lbl_inventaire";
 			this.lbl_inventaire.Size = new System.Drawing.Size(70, 15);
 			this.lbl_inventaire.TabIndex = 12;
@@ -524,46 +529,32 @@
 			// 
 			// grp_top
 			// 
-			this.grp_top.Controls.Add(this.lbl_info);
-			this.grp_top.Controls.Add(this.pictureBox1);
-			this.grp_top.Controls.Add(this.img_statusbar);
+			this.grp_top.Controls.Add(this.img_bg);
 			this.grp_top.Location = new System.Drawing.Point(215, 37);
 			this.grp_top.Name = "grp_top";
-			this.grp_top.Size = new System.Drawing.Size(735, 409);
+			this.grp_top.Size = new System.Drawing.Size(735, 348);
 			this.grp_top.TabIndex = 13;
 			this.grp_top.TabStop = false;
 			// 
-			// pictureBox1
+			// img_bg
 			// 
-			this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-			this.pictureBox1.Location = new System.Drawing.Point(-1, 5);
-			this.pictureBox1.Name = "pictureBox1";
-			this.pictureBox1.Size = new System.Drawing.Size(730, 305);
-			this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-			this.pictureBox1.TabIndex = 1;
-			this.pictureBox1.TabStop = false;
+			this.img_bg.Image = ((System.Drawing.Image)(resources.GetObject("img_bg.Image")));
+			this.img_bg.Location = new System.Drawing.Point(2, 5);
+			this.img_bg.Name = "img_bg";
+			this.img_bg.Size = new System.Drawing.Size(733, 348);
+			this.img_bg.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+			this.img_bg.TabIndex = 1;
+			this.img_bg.TabStop = false;
 			// 
 			// img_statusbar
 			// 
 			this.img_statusbar.Image = global::IdleGame.Properties.Resources.barempty;
-			this.img_statusbar.Location = new System.Drawing.Point(2, 367);
+			this.img_statusbar.Location = new System.Drawing.Point(-1, 10);
 			this.img_statusbar.Name = "img_statusbar";
-			this.img_statusbar.Size = new System.Drawing.Size(733, 39);
+			this.img_statusbar.Size = new System.Drawing.Size(735, 39);
 			this.img_statusbar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
 			this.img_statusbar.TabIndex = 0;
 			this.img_statusbar.TabStop = false;
-			// 
-			// grp_bottom
-			// 
-			this.grp_bottom.Controls.Add(this.lbl_equipements);
-			this.grp_bottom.Controls.Add(this.lst_inventaire);
-			this.grp_bottom.Controls.Add(this.lst_equipements);
-			this.grp_bottom.Controls.Add(this.lbl_inventaire);
-			this.grp_bottom.Location = new System.Drawing.Point(215, 440);
-			this.grp_bottom.Name = "grp_bottom";
-			this.grp_bottom.Size = new System.Drawing.Size(735, 240);
-			this.grp_bottom.TabIndex = 14;
-			this.grp_bottom.TabStop = false;
 			// 
 			// line_BottomLine
 			// 
@@ -599,18 +590,62 @@
 			// 
 			// lbl_info
 			// 
-			this.lbl_info.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.lbl_info.Location = new System.Drawing.Point(3, 313);
+			this.lbl_info.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.lbl_info.Location = new System.Drawing.Point(1, 52);
 			this.lbl_info.Name = "lbl_info";
-			this.lbl_info.Size = new System.Drawing.Size(727, 52);
+			this.lbl_info.Size = new System.Drawing.Size(728, 27);
 			this.lbl_info.TabIndex = 2;
 			this.lbl_info.Text = "Action en cours............";
+			this.lbl_info.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+			// 
+			// grp_bottom
+			// 
+			this.grp_bottom.Controls.Add(this.lst_inventaire);
+			this.grp_bottom.Controls.Add(this.lbl_info);
+			this.grp_bottom.Controls.Add(this.lbl_inventaire);
+			this.grp_bottom.Controls.Add(this.img_statusbar);
+			this.grp_bottom.Controls.Add(this.lst_equipements);
+			this.grp_bottom.Controls.Add(this.lbl_equipements);
+			this.grp_bottom.Location = new System.Drawing.Point(214, 394);
+			this.grp_bottom.Name = "grp_bottom";
+			this.grp_bottom.Size = new System.Drawing.Size(735, 289);
+			this.grp_bottom.TabIndex = 14;
+			this.grp_bottom.TabStop = false;
+			// 
+			// grp_historique
+			// 
+			this.grp_historique.Controls.Add(this.lst_historique);
+			this.grp_historique.Controls.Add(this.lbl_historique);
+			this.grp_historique.Location = new System.Drawing.Point(215, 682);
+			this.grp_historique.Name = "grp_historique";
+			this.grp_historique.Size = new System.Drawing.Size(735, 289);
+			this.grp_historique.TabIndex = 15;
+			this.grp_historique.TabStop = false;
+			// 
+			// lst_historique
+			// 
+			this.lst_historique.FormattingEnabled = true;
+			this.lst_historique.Location = new System.Drawing.Point(0, 34);
+			this.lst_historique.Name = "lst_historique";
+			this.lst_historique.Size = new System.Drawing.Size(321, 251);
+			this.lst_historique.TabIndex = 11;
+			// 
+			// lbl_historique
+			// 
+			this.lbl_historique.AutoSize = true;
+			this.lbl_historique.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.lbl_historique.Location = new System.Drawing.Point(6, 16);
+			this.lbl_historique.Name = "lbl_historique";
+			this.lbl_historique.Size = new System.Drawing.Size(73, 15);
+			this.lbl_historique.TabIndex = 12;
+			this.lbl_historique.Text = "Historique";
 			// 
 			// FormJeu
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(1167, 683);
+			this.ClientSize = new System.Drawing.Size(1167, 681);
+			this.Controls.Add(this.grp_historique);
 			this.Controls.Add(this.grp_bottom);
 			this.Controls.Add(this.grp_top);
 			this.Controls.Add(this.grp_right);
@@ -624,6 +659,7 @@
 			this.Name = "FormJeu";
 			this.Text = "IdleGame";
 			this.Load += new System.EventHandler(this.CharForm_Load);
+			this.SizeChanged += new System.EventHandler(this.FormJeu_SizeChanged);
 			this.Resize += new System.EventHandler(this.CharForm_Resize);
 			this.top.ResumeLayout(false);
 			this.top.PerformLayout();
@@ -645,21 +681,23 @@
 			((System.ComponentModel.ISupportInitialize)(this.spl_statscompetences)).EndInit();
 			this.spl_statscompetences.ResumeLayout(false);
 			this.grp_right.ResumeLayout(false);
-			this.splitContainer1.Panel1.ResumeLayout(false);
-			this.splitContainer1.Panel1.PerformLayout();
-			this.splitContainer1.Panel2.ResumeLayout(false);
-			this.splitContainer1.Panel2.PerformLayout();
-			((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
-			this.splitContainer1.ResumeLayout(false);
+			this.spl_histoquetes.Panel1.ResumeLayout(false);
+			this.spl_histoquetes.Panel1.PerformLayout();
+			this.spl_histoquetes.Panel2.ResumeLayout(false);
+			this.spl_histoquetes.Panel2.PerformLayout();
+			((System.ComponentModel.ISupportInitialize)(this.spl_histoquetes)).EndInit();
+			this.spl_histoquetes.ResumeLayout(false);
 			this.grp_top.ResumeLayout(false);
-			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.img_bg)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.img_statusbar)).EndInit();
-			this.grp_bottom.ResumeLayout(false);
-			this.grp_bottom.PerformLayout();
 			((System.ComponentModel.ISupportInitialize)(this.line_BottomLine)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.line_RightLine)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.line_TopLine)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.line_LeftLine)).EndInit();
+			this.grp_bottom.ResumeLayout(false);
+			this.grp_bottom.PerformLayout();
+			this.grp_historique.ResumeLayout(false);
+			this.grp_historique.PerformLayout();
 			this.ResumeLayout(false);
 
 		}
@@ -693,7 +731,7 @@
 		private System.Windows.Forms.SplitContainer spl_statscompetences;
 		private System.Windows.Forms.Label lbl_compet;
 		private System.Windows.Forms.GroupBox grp_right;
-		private System.Windows.Forms.SplitContainer splitContainer1;
+		private System.Windows.Forms.SplitContainer spl_histoquetes;
 		private System.Windows.Forms.ListView lst_equipements;
 		private System.Windows.Forms.ColumnHeader ch_piece;
 		private System.Windows.Forms.ColumnHeader ch_piecenom;
@@ -702,16 +740,19 @@
 		private System.Windows.Forms.ColumnHeader ch_inventaire;
 		private System.Windows.Forms.ColumnHeader ch_inventairenom;
 		private System.Windows.Forms.Label lbl_inventaire;
-		private System.Windows.Forms.ListBox lst_historique;
-		private System.Windows.Forms.Label lbl_historique;
+		private System.Windows.Forms.ListBox lst_histoire;
+		private System.Windows.Forms.Label lbl_histoire;
 		private System.Windows.Forms.ListBox lst_quetes;
 		private System.Windows.Forms.Label lbl_quetes;
 		private System.Windows.Forms.GroupBox grp_top;
-		private System.Windows.Forms.GroupBox grp_bottom;
 		private System.Windows.Forms.PictureBox img_statusbar;
 		private System.Windows.Forms.Timer time_statusbar;
-		private System.Windows.Forms.PictureBox pictureBox1;
+		private System.Windows.Forms.PictureBox img_bg;
 		private System.Windows.Forms.Label lbl_info;
+		private System.Windows.Forms.GroupBox grp_bottom;
+		private System.Windows.Forms.GroupBox grp_historique;
+		private System.Windows.Forms.ListBox lst_historique;
+		private System.Windows.Forms.Label lbl_historique;
 	}
 }
 
