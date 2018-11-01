@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data.SqlClient;
 using System.Data;
+using System.Diagnostics;
 
 namespace IdleGame
 {
@@ -40,8 +41,9 @@ namespace IdleGame
                 p_cnxTest.Open();
                 p_cnxTest.Close();
             }
-            catch (SqlException)
+            catch (SqlException ex)
             {
+                Debug.WriteLine(ex);
                 return false;
             }
             return true;
@@ -55,21 +57,10 @@ namespace IdleGame
 
             SqlCommand cmd = new SqlCommand(requete, m_cnx);
             cmd.CommandType = CommandType.Text;
+
             SqlDataReader reader = cmd.ExecuteReader();
 
-            DataTable table = new DataTable();
-            int nbCols = reader.FieldCount;
-            for (int i = 0; i < nbCols; i++) 
-            {
-                table.Columns.Add(reader.GetName(i));
-            }
-
-            Object[] resultats = new Object[nbCols];
-            while (reader.Read()) //Lire les données
-            {
-                reader.GetValues(resultats);
-                table.Rows.Add(resultats);
-            }
+            DataTable table = organiserResultats(reader);
 
             int rows = table.Rows.Count;
             string nom = table.Rows[0].Field<string>("PerNom");
@@ -122,21 +113,10 @@ namespace IdleGame
 
             SqlCommand cmd = new SqlCommand(p_proc, m_cnx); //Créer la commande
             cmd.CommandType = CommandType.StoredProcedure; //Commande type procédure
+
             SqlDataReader reader = cmd.ExecuteReader(); //Exécuter la procédure
 
-            DataTable table = new DataTable(); //Table à retourner
-            int nbCols = reader.FieldCount; //Nombre de colonnes
-            for (int i = 0; i < nbCols; i++) //Colonnes
-            {
-                table.Columns.Add(reader.GetName(i));
-            }
-
-            Object[] resultats = new Object[nbCols]; //Tableau des résultats
-            while (reader.Read()) //Lire les données
-            {
-                reader.GetValues(resultats);
-                table.Rows.Add(resultats);
-            }
+            DataTable table = organiserResultats(reader);
 
             reader.Close();
             m_cnx.Close();
@@ -151,21 +131,10 @@ namespace IdleGame
             SqlCommand cmd = new SqlCommand(p_proc, m_cnx); //Créer la commande
             cmd.CommandType = CommandType.StoredProcedure; //Commande de type procédure
             cmd.Parameters.AddWithValue(p_param, p_value); //Ajouter le paramètre
+
             SqlDataReader reader = cmd.ExecuteReader(); //Exécuter la procédure
 
-            DataTable table = new DataTable(); //Table à retourner
-            int nbCols = reader.FieldCount; //Nombre de colonnes
-            for (int i = 0; i < nbCols; i++) //Colonnes
-            {
-                table.Columns.Add(reader.GetName(i));
-            }
-
-            Object[] resultats = new Object[nbCols]; //Tableau des résultats
-            while (reader.Read()) //Lire les données
-            {
-                reader.GetValues(resultats);
-                table.Rows.Add(resultats);
-            }
+            DataTable table = organiserResultats(reader);
 
             reader.Close();
             m_cnx.Close();
@@ -183,24 +152,34 @@ namespace IdleGame
             {
                 cmd.Parameters.AddWithValue(p_params[i], p_values[i]);
             }
+
             SqlDataReader reader = cmd.ExecuteReader(); //Exécuter la procédure
 
-            DataTable table = new DataTable(); //Table à retourner
-            int nbCols = reader.FieldCount; //Nombre de colonnes
-            for (int i = 0; i < nbCols; i++) //Colonnes
-            {
-                table.Columns.Add(reader.GetName(i));
-            }
-
-            Object[] resultats = new Object[nbCols]; //Tableau des résultats
-            while (reader.Read()) //Lire les données
-            {
-                reader.GetValues(resultats);
-                table.Rows.Add(resultats);
-            }
+            DataTable table = organiserResultats(reader);
 
             reader.Close();
             m_cnx.Close();
+
+            return table;
+        }
+
+        private DataTable organiserResultats(SqlDataReader p_reader) //Former une table avec les données
+        {
+            DataTable table = new DataTable(); //Table à retourner
+            int nbCols = p_reader.FieldCount; //Nombre de colonnes
+
+            for (int i = 0; i < nbCols; i++) //Colonnes
+            {
+                table.Columns.Add(p_reader.GetName(i)); //Les noms des champs
+            }
+
+            Object[] resultats = new Object[nbCols]; //Tableau des résultats
+
+            while (p_reader.Read()) //Lire les données
+            {
+                p_reader.GetValues(resultats); //Stocker les valeurs de la rangée
+                table.Rows.Add(resultats); //Ajouter la rangée à la table
+            }
 
             return table;
         }
