@@ -49,118 +49,143 @@ namespace IdleGame
             return true;
         }
 
-        public void test()
-        {
-            m_cnx.Open();
-
-            string requete = "SELECT * FROM dbo.Personnages WHERE PerNiv = 0;";
-
-            SqlCommand cmd = new SqlCommand(requete, m_cnx);
-            cmd.CommandType = CommandType.Text;
-
-            SqlDataReader reader = cmd.ExecuteReader();
-
-            DataTable table = organiserResultats(reader);
-
-            int rows = table.Rows.Count;
-            string nom = table.Rows[0].Field<string>("PerNom");
-
-            reader.Close();
-            m_cnx.Close();
-        }
-
         public void executerProc(string p_proc) //Exécuter une procédure sans paramètres
         {
-            m_cnx.Open();
+            try
+            {
+                m_cnx.Open();
 
-            SqlCommand cmd = new SqlCommand(p_proc, m_cnx); //Créer la commande
-            cmd.CommandType = CommandType.StoredProcedure; //Commande type procédure
-            cmd.ExecuteNonQuery(); //Exécuter la procédure
+                SqlCommand cmd = new SqlCommand(p_proc, m_cnx); //Créer la commande
+                cmd.CommandType = CommandType.StoredProcedure; //Commande type procédure
+                cmd.ExecuteNonQuery(); //Exécuter la procédure
 
-            m_cnx.Close();
+                m_cnx.Close();
+            }
+            catch (SqlException ex)
+            {
+                Debug.WriteLine(ex);
+            }
         }
 
         public void executerProc(string p_proc, string p_param, Object p_value) //Exécuter une procédure avec un paramètre
         {
-            m_cnx.Open();
+            try
+            {
+                m_cnx.Open();
 
-            SqlCommand cmd = new SqlCommand(p_proc, m_cnx); //Créer la commande
-            cmd.CommandType = CommandType.StoredProcedure; //Commande de type procédure
-            cmd.Parameters.AddWithValue(p_param, p_value); //Ajouter le paramètre
-            cmd.ExecuteNonQuery();
+                SqlCommand cmd = new SqlCommand(p_proc, m_cnx); //Créer la commande
+                cmd.CommandType = CommandType.StoredProcedure; //Commande de type procédure
+                cmd.Parameters.AddWithValue(p_param, p_value); //Ajouter le paramètre
+                cmd.ExecuteNonQuery();
 
-            m_cnx.Close();
+                m_cnx.Close();
+            }
+            catch (SqlException ex)
+            {
+                Debug.WriteLine(ex);
+            }
         }
 
         public void executerProc(string p_proc, string[] p_params, Object[] p_values) //Exécuter une procédure avec des paramètres
         {
-            m_cnx.Open();
-
-            SqlCommand cmd = new SqlCommand(p_proc, m_cnx); //Créer la commande
-            cmd.CommandType = CommandType.StoredProcedure; //Commande de type procédure
-            for (int i = 0; i < p_params.Length; i++) //Ajouter les paramètres
+            try
             {
-                cmd.Parameters.AddWithValue(p_params[i], p_values[i]);
-            }
-            cmd.ExecuteNonQuery();
+                m_cnx.Open();
 
-            m_cnx.Close();
+                SqlCommand cmd = new SqlCommand(p_proc, m_cnx); //Créer la commande
+                cmd.CommandType = CommandType.StoredProcedure; //Commande de type procédure
+                for (int i = 0; i < p_params.Length; i++) //Ajouter les paramètres
+                {
+                    cmd.Parameters.AddWithValue(p_params[i], p_values[i]);
+                }
+                cmd.ExecuteNonQuery();
+
+                m_cnx.Close();
+            }
+            catch (SqlException ex)
+            {
+                Debug.WriteLine(ex);
+            }
         }
 
         public DataTable executerProcData(string p_proc) //Exécuter une procédure sans paramètres qui retourne des données
         {
-            m_cnx.Open();
+            try
+            {
+                m_cnx.Open();
 
-            SqlCommand cmd = new SqlCommand(p_proc, m_cnx); //Créer la commande
-            cmd.CommandType = CommandType.StoredProcedure; //Commande type procédure
+                SqlCommand cmd = new SqlCommand(p_proc, m_cnx); //Créer la commande
+                cmd.CommandType = CommandType.StoredProcedure; //Commande type procédure
 
-            SqlDataReader reader = cmd.ExecuteReader(); //Exécuter la procédure
+                SqlDataReader reader = cmd.ExecuteReader(); //Exécuter la procédure
 
-            DataTable table = organiserResultats(reader);
+                DataTable table = organiserResultats(reader);
 
-            reader.Close();
-            m_cnx.Close();
+                reader.Close();
+                m_cnx.Close();
 
-            return table;
+                return table;
+            }
+            catch (SqlException ex)
+            {
+                Debug.WriteLine(ex);
+                return null;
+            }
         }
 
         public DataTable executerProcData(string p_proc, string p_param, Object p_value) //Exécuter une procédure avec un paramètre qui retourne des données
         {
-            m_cnx.Open();
+            try
+            {
+                m_cnx.Open();
 
-            SqlCommand cmd = new SqlCommand(p_proc, m_cnx); //Créer la commande
-            cmd.CommandType = CommandType.StoredProcedure; //Commande de type procédure
-            cmd.Parameters.AddWithValue(p_param, p_value); //Ajouter le paramètre
+                SqlCommand cmd = new SqlCommand(p_proc, m_cnx); //Créer la commande
+                cmd.CommandType = CommandType.StoredProcedure; //Commande de type procédure
+                cmd.Parameters.AddWithValue(p_param, p_value); //Ajouter le paramètre
 
-            SqlDataReader reader = cmd.ExecuteReader(); //Exécuter la procédure
+                SqlDataReader reader = cmd.ExecuteReader(); //Exécuter la procédure
 
-            DataTable table = organiserResultats(reader);
+                DataTable table = organiserResultats(reader);
 
-            reader.Close();
-            m_cnx.Close();
+                reader.Close();
+                m_cnx.Close();
 
-            return table;
+                return table;
+            }
+            catch (SqlException ex)
+            {
+                Debug.WriteLine(ex);
+                return null;
+            }
         }
 
         public DataTable executerProcData(string p_proc, string[] p_params, Object[] p_values) //Exécuter une procédure avec des paramètres qui retourne des données
         {
-            m_cnx.Open();
-
-            SqlCommand cmd = new SqlCommand(p_proc, m_cnx); //Créer la commande
-            cmd.CommandType = CommandType.StoredProcedure; //Commande de type procédure
-            for (int i = 0; i < p_params.Length; i++) //Ajouter les paramètres
+            try
             {
-                cmd.Parameters.AddWithValue(p_params[i], p_values[i]);
+                m_cnx.Open();
+
+                SqlCommand cmd = new SqlCommand(p_proc, m_cnx); //Créer la commande
+                cmd.CommandType = CommandType.StoredProcedure; //Commande de type procédure
+                for (int i = 0; i < p_params.Length; i++) //Ajouter les paramètres
+                {
+                    cmd.Parameters.AddWithValue(p_params[i], p_values[i]);
+                }
+
+                SqlDataReader reader = cmd.ExecuteReader(); //Exécuter la procédure
+
+                DataTable table = organiserResultats(reader);
+
+                reader.Close();
+                m_cnx.Close();
+
+                return table;
             }
-
-            SqlDataReader reader = cmd.ExecuteReader(); //Exécuter la procédure
-
-            DataTable table = organiserResultats(reader);
-
-            reader.Close();
-            m_cnx.Close();
-
-            return table;
+            catch (SqlException ex)
+            {
+                Debug.WriteLine(ex);
+                return null;
+            }
         }
 
         private DataTable organiserResultats(SqlDataReader p_reader) //Former une table avec les données
@@ -182,6 +207,7 @@ namespace IdleGame
             }
 
             return table;
+            //Pour accéder aux données de la table : table.Rows[0].Field<string>("PerNom");
         }
     }
 }
