@@ -1,0 +1,24 @@
+DÉROULEMENT PARTIE:
+
+EN VILLE:
+	-Healing
+	-Confirmer quêtes ?
+	-Vendre
+	-Acheter
+	-Choisir lieux départ
+	
+HORS VILLE:
+	-Combat jusqu'a ce que les HP < 15% OU que l'inventaire soit plein...
+		-Tour? qui commence? %
+		-Competences / Attaque
+			-Damage
+			-Ajuster HP
+	-Calcul XP
+		-Lvl up?
+		-Nouvelle compétence?
+	-Généré Loot
+	
+	
+	
+	
+GÉRER DIFFICULTÉ?

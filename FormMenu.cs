@@ -16,6 +16,8 @@ namespace IdleGame
 	public partial class FormMenu : Form
 	{
 		IdleGame m_idlegame; //Référence au créateur
+        ExecIdleGame m_executeur;
+        int m_ID; //ID du joueur selectionné dans un des listbox
 
 		//Colors
 		Color offColor = Color.FromArgb(255, 70, 131);
@@ -25,12 +27,44 @@ namespace IdleGame
 		//Constructeur
 		public FormMenu(IdleGame p_idlegame)
 		{
-			m_idlegame = p_idlegame;
+            m_executeur = new ExecIdleGame();
+            m_idlegame = p_idlegame;
 			InitializeComponent();
 			mnu_main.Renderer = new MyRenderer();
+            m_ID = 0;
 		}
 
 
+        public void InitialiseJoueur()
+        {
+            DataTable joueurHC = m_executeur.joueurHardcore();  
+            lst_hardcore.ValueMember = "PerID";
+            lst_hardcore.DisplayMember = "PerNom";
+            lst_hardcore.DataSource = joueurHC;
+
+            DataTable joueurSC = m_executeur.joueurStandard();
+            lst_standard.ValueMember = "PerID";
+            lst_standard.DisplayMember = "PerNom";
+            lst_standard.DataSource = joueurSC;
+        }
+
+        private void rechercheHardcore(object sender, EventArgs e)
+        {
+            m_ID = 0;
+            DataTable joueurHC = m_executeur.rechercheJoueurHardcore(txt_hardcore.Text);
+            lst_hardcore.ValueMember = "PerID";
+            lst_hardcore.DisplayMember = "PerNom";
+            lst_hardcore.DataSource = joueurHC;
+        }
+
+        private void rechercheStandard(object sender, EventArgs e)
+        {
+            m_ID = 0;
+            DataTable joueurSC = m_executeur.rechercheJoueurStandard(txt_standard.Text);
+            lst_standard.ValueMember = "PerID";
+            lst_standard.DisplayMember = "PerNom";
+            lst_standard.DataSource = joueurSC;
+        }
 
 
 
@@ -40,9 +74,8 @@ namespace IdleGame
 
 
 
-
-		// Interface //
-		private System.Drawing.Point newpoint;
+        // Interface //
+        private System.Drawing.Point newpoint;
 		private int x, y;
 		private void CharForm_Load(object sender, EventArgs e)
 		{
@@ -51,7 +84,8 @@ namespace IdleGame
 			pct_Reduire.Left = this.Width - 90;
 			PlacerLignes();
 			mnu_main.BackColor = mainColor;
-		}//Form Load
+            InitialiseJoueur();
+        }//Form Load
 		private void CharForm_Resize(object sender, EventArgs e)
 		{
 			pct_Agrandir.Left = this.Width - 60;
@@ -213,7 +247,10 @@ namespace IdleGame
 
 		private void btn_loadgame_Click(object sender, EventArgs e)
 		{
-			m_idlegame.ShowJeu();
+            if (m_ID > 0)
+                m_idlegame.ShowJeu(m_ID);            
+            else
+                MessageBox.Show("Veuillez selectionner un joueur avant.");
 		}
 
 		private void lbl_cancelSC_Click(object sender, EventArgs e)
@@ -236,7 +273,32 @@ namespace IdleGame
 			((PictureBox)sender).Image = global::IdleGame.Properties.Resources.ok;
 		}
 
-		private class MyColors : ProfessionalColorTable
+		private void btn_exit_Click(object sender, EventArgs e)
+		{
+			Application.Exit();
+		}
+
+        private void txt_standard_Enter(object sender, EventArgs e)
+        {
+            TextBox snd = (TextBox)sender;
+            snd.Clear();
+        }
+
+        private void lst_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            ListBox snd = (ListBox)sender;
+            if (snd.SelectedIndex >= 0)
+                Int32.TryParse(snd.SelectedValue.ToString(), out m_ID);
+        }
+
+        private void lst_Click(object sender, EventArgs e)
+        {
+            ListBox snd = (ListBox)sender;
+            ListBox otherbox = (snd == lst_hardcore) ? lst_standard : lst_hardcore;
+            otherbox.SelectedIndex = -1;
+        }
+
+        private class MyColors : ProfessionalColorTable
 		{
 			public override Color MenuItemSelected
 			{

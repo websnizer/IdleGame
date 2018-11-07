@@ -35,9 +35,9 @@ namespace IdleGame
 		}
 
 		//Affichage de la form de création
-		public void ShowJeu()
+		public void ShowJeu(int p_id)
 		{
-			m_jeu = new FormJeu(this);
+			m_jeu = new FormJeu(this, p_id);
 			m_jeu.Show();
 		}
 

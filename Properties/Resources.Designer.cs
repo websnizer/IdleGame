@@ -22,7 +22,7 @@ namespace IdleGame.Properties {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "15.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    internal class Resources {
+    public class Resources {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
@@ -36,7 +36,7 @@ namespace IdleGame.Properties {
         ///   Returns the cached ResourceManager instance used by this class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Resources.ResourceManager ResourceManager {
+        public static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
                     global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("IdleGame.Properties.Resources", typeof(Resources).Assembly);
@@ -51,7 +51,7 @@ namespace IdleGame.Properties {
         ///   resource lookups using this strongly typed resource class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Globalization.CultureInfo Culture {
+        public static global::System.Globalization.CultureInfo Culture {
             get {
                 return resourceCulture;
             }
@@ -63,7 +63,7 @@ namespace IdleGame.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Banniere {
+        public static System.Drawing.Bitmap Banniere {
             get {
                 object obj = ResourceManager.GetObject("Banniere", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -73,7 +73,7 @@ namespace IdleGame.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap bar1 {
+        public static System.Drawing.Bitmap bar1 {
             get {
                 object obj = ResourceManager.GetObject("bar1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -83,7 +83,7 @@ namespace IdleGame.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap bar10 {
+        public static System.Drawing.Bitmap bar10 {
             get {
                 object obj = ResourceManager.GetObject("bar10", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -93,7 +93,7 @@ namespace IdleGame.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap bar11 {
+        public static System.Drawing.Bitmap bar11 {
             get {
                 object obj = ResourceManager.GetObject("bar11", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -103,7 +103,7 @@ namespace IdleGame.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap bar12 {
+        public static System.Drawing.Bitmap bar12 {
             get {
                 object obj = ResourceManager.GetObject("bar12", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -113,7 +113,7 @@ namespace IdleGame.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap bar13 {
+        public static System.Drawing.Bitmap bar13 {
             get {
                 object obj = ResourceManager.GetObject("bar13", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -123,7 +123,7 @@ namespace IdleGame.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap bar14 {
+        public static System.Drawing.Bitmap bar14 {
             get {
                 object obj = ResourceManager.GetObject("bar14", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -133,7 +133,7 @@ namespace IdleGame.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap bar15 {
+        public static System.Drawing.Bitmap bar15 {
             get {
                 object obj = ResourceManager.GetObject("bar15", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -143,7 +143,7 @@ namespace IdleGame.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap bar16 {
+        public static System.Drawing.Bitmap bar16 {
             get {
                 object obj = ResourceManager.GetObject("bar16", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -153,7 +153,7 @@ namespace IdleGame.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap bar17 {
+        public static System.Drawing.Bitmap bar17 {
             get {
                 object obj = ResourceManager.GetObject("bar17", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -163,7 +163,7 @@ namespace IdleGame.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap bar18 {
+        public static System.Drawing.Bitmap bar18 {
             get {
                 object obj = ResourceManager.GetObject("bar18", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -173,7 +173,7 @@ namespace IdleGame.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap bar19 {
+        public static System.Drawing.Bitmap bar19 {
             get {
                 object obj = ResourceManager.GetObject("bar19", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -183,7 +183,7 @@ namespace IdleGame.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap bar2 {
+        public static System.Drawing.Bitmap bar2 {
             get {
                 object obj = ResourceManager.GetObject("bar2", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -193,7 +193,7 @@ namespace IdleGame.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap bar20 {
+        public static System.Drawing.Bitmap bar20 {
             get {
                 object obj = ResourceManager.GetObject("bar20", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -203,7 +203,7 @@ namespace IdleGame.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap bar21 {
+        public static System.Drawing.Bitmap bar21 {
             get {
                 object obj = ResourceManager.GetObject("bar21", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -213,7 +213,7 @@ namespace IdleGame.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap bar22 {
+        public static System.Drawing.Bitmap bar22 {
             get {
                 object obj = ResourceManager.GetObject("bar22", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -223,7 +223,7 @@ namespace IdleGame.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap bar23 {
+        public static System.Drawing.Bitmap bar23 {
             get {
                 object obj = ResourceManager.GetObject("bar23", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -233,7 +233,7 @@ namespace IdleGame.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap bar24 {
+        public static System.Drawing.Bitmap bar24 {
             get {
                 object obj = ResourceManager.GetObject("bar24", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -243,7 +243,7 @@ namespace IdleGame.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap bar25 {
+        public static System.Drawing.Bitmap bar25 {
             get {
                 object obj = ResourceManager.GetObject("bar25", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -253,7 +253,7 @@ namespace IdleGame.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap bar26 {
+        public static System.Drawing.Bitmap bar26 {
             get {
                 object obj = ResourceManager.GetObject("bar26", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -263,7 +263,7 @@ namespace IdleGame.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap bar27 {
+        public static System.Drawing.Bitmap bar27 {
             get {
                 object obj = ResourceManager.GetObject("bar27", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -273,7 +273,7 @@ namespace IdleGame.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap bar28 {
+        public static System.Drawing.Bitmap bar28 {
             get {
                 object obj = ResourceManager.GetObject("bar28", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -283,7 +283,7 @@ namespace IdleGame.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap bar29 {
+        public static System.Drawing.Bitmap bar29 {
             get {
                 object obj = ResourceManager.GetObject("bar29", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -293,7 +293,7 @@ namespace IdleGame.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap bar3 {
+        public static System.Drawing.Bitmap bar3 {
             get {
                 object obj = ResourceManager.GetObject("bar3", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -303,7 +303,7 @@ namespace IdleGame.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap bar30 {
+        public static System.Drawing.Bitmap bar30 {
             get {
                 object obj = ResourceManager.GetObject("bar30", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -313,7 +313,7 @@ namespace IdleGame.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap bar31 {
+        public static System.Drawing.Bitmap bar31 {
             get {
                 object obj = ResourceManager.GetObject("bar31", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -323,7 +323,7 @@ namespace IdleGame.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap bar32 {
+        public static System.Drawing.Bitmap bar32 {
             get {
                 object obj = ResourceManager.GetObject("bar32", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -333,7 +333,7 @@ namespace IdleGame.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap bar33 {
+        public static System.Drawing.Bitmap bar33 {
             get {
                 object obj = ResourceManager.GetObject("bar33", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -343,7 +343,7 @@ namespace IdleGame.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap bar34 {
+        public static System.Drawing.Bitmap bar34 {
             get {
                 object obj = ResourceManager.GetObject("bar34", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -353,7 +353,7 @@ namespace IdleGame.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap bar4 {
+        public static System.Drawing.Bitmap bar4 {
             get {
                 object obj = ResourceManager.GetObject("bar4", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -363,7 +363,7 @@ namespace IdleGame.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap bar5 {
+        public static System.Drawing.Bitmap bar5 {
             get {
                 object obj = ResourceManager.GetObject("bar5", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -373,7 +373,7 @@ namespace IdleGame.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap bar6 {
+        public static System.Drawing.Bitmap bar6 {
             get {
                 object obj = ResourceManager.GetObject("bar6", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -383,7 +383,7 @@ namespace IdleGame.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap bar7 {
+        public static System.Drawing.Bitmap bar7 {
             get {
                 object obj = ResourceManager.GetObject("bar7", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -393,7 +393,7 @@ namespace IdleGame.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap bar8 {
+        public static System.Drawing.Bitmap bar8 {
             get {
                 object obj = ResourceManager.GetObject("bar8", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -403,7 +403,7 @@ namespace IdleGame.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap bar9 {
+        public static System.Drawing.Bitmap bar9 {
             get {
                 object obj = ResourceManager.GetObject("bar9", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -413,7 +413,7 @@ namespace IdleGame.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap barempty {
+        public static System.Drawing.Bitmap barempty {
             get {
                 object obj = ResourceManager.GetObject("barempty", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -423,9 +423,9 @@ namespace IdleGame.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap bouton_create_character {
+        public static System.Drawing.Bitmap bouton_create_character {
             get {
-                object obj = ResourceManager.GetObject("bouton_create-character", resourceCulture);
+                object obj = ResourceManager.GetObject("bouton_create_character", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -433,7 +433,7 @@ namespace IdleGame.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap bouton_exit {
+        public static System.Drawing.Bitmap bouton_exit {
             get {
                 object obj = ResourceManager.GetObject("bouton_exit", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -443,7 +443,7 @@ namespace IdleGame.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap bouton_exit_hover {
+        public static System.Drawing.Bitmap bouton_exit_hover {
             get {
                 object obj = ResourceManager.GetObject("bouton_exit_hover", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -453,7 +453,7 @@ namespace IdleGame.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap bouton_generate {
+        public static System.Drawing.Bitmap bouton_generate {
             get {
                 object obj = ResourceManager.GetObject("bouton_generate", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -463,9 +463,9 @@ namespace IdleGame.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap bouton_load_game {
+        public static System.Drawing.Bitmap bouton_load_game {
             get {
-                object obj = ResourceManager.GetObject("bouton_load-game", resourceCulture);
+                object obj = ResourceManager.GetObject("bouton_load_game", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -473,7 +473,7 @@ namespace IdleGame.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap bouton_load_game_hover {
+        public static System.Drawing.Bitmap bouton_load_game_hover {
             get {
                 object obj = ResourceManager.GetObject("bouton_load_game_hover", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -483,9 +483,9 @@ namespace IdleGame.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap bouton_new_game {
+        public static System.Drawing.Bitmap bouton_new_game {
             get {
-                object obj = ResourceManager.GetObject("bouton_new-game", resourceCulture);
+                object obj = ResourceManager.GetObject("bouton_new_game", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -493,7 +493,7 @@ namespace IdleGame.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap bouton_new_game_hover {
+        public static System.Drawing.Bitmap bouton_new_game_hover {
             get {
                 object obj = ResourceManager.GetObject("bouton_new_game_hover", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -503,7 +503,7 @@ namespace IdleGame.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap cancel {
+        public static System.Drawing.Bitmap cancel {
             get {
                 object obj = ResourceManager.GetObject("cancel", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -513,7 +513,7 @@ namespace IdleGame.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap cancelhover {
+        public static System.Drawing.Bitmap cancelhover {
             get {
                 object obj = ResourceManager.GetObject("cancelhover", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -523,7 +523,7 @@ namespace IdleGame.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap city1 {
+        public static System.Drawing.Bitmap city1 {
             get {
                 object obj = ResourceManager.GetObject("city1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -533,7 +533,7 @@ namespace IdleGame.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap city10 {
+        public static System.Drawing.Bitmap city10 {
             get {
                 object obj = ResourceManager.GetObject("city10", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -543,7 +543,7 @@ namespace IdleGame.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap city11 {
+        public static System.Drawing.Bitmap city11 {
             get {
                 object obj = ResourceManager.GetObject("city11", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -553,7 +553,7 @@ namespace IdleGame.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap city12 {
+        public static System.Drawing.Bitmap city12 {
             get {
                 object obj = ResourceManager.GetObject("city12", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -563,7 +563,7 @@ namespace IdleGame.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap city13 {
+        public static System.Drawing.Bitmap city13 {
             get {
                 object obj = ResourceManager.GetObject("city13", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -573,7 +573,7 @@ namespace IdleGame.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap city14 {
+        public static System.Drawing.Bitmap city14 {
             get {
                 object obj = ResourceManager.GetObject("city14", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -583,7 +583,7 @@ namespace IdleGame.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap city15 {
+        public static System.Drawing.Bitmap city15 {
             get {
                 object obj = ResourceManager.GetObject("city15", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -593,7 +593,7 @@ namespace IdleGame.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap city16 {
+        public static System.Drawing.Bitmap city16 {
             get {
                 object obj = ResourceManager.GetObject("city16", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -603,7 +603,7 @@ namespace IdleGame.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap city17 {
+        public static System.Drawing.Bitmap city17 {
             get {
                 object obj = ResourceManager.GetObject("city17", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -613,7 +613,7 @@ namespace IdleGame.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap city18 {
+        public static System.Drawing.Bitmap city18 {
             get {
                 object obj = ResourceManager.GetObject("city18", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -623,7 +623,7 @@ namespace IdleGame.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap city19 {
+        public static System.Drawing.Bitmap city19 {
             get {
                 object obj = ResourceManager.GetObject("city19", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -633,7 +633,7 @@ namespace IdleGame.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap city2 {
+        public static System.Drawing.Bitmap city2 {
             get {
                 object obj = ResourceManager.GetObject("city2", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -643,7 +643,7 @@ namespace IdleGame.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap city20 {
+        public static System.Drawing.Bitmap city20 {
             get {
                 object obj = ResourceManager.GetObject("city20", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -653,7 +653,7 @@ namespace IdleGame.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap city21 {
+        public static System.Drawing.Bitmap city21 {
             get {
                 object obj = ResourceManager.GetObject("city21", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -663,7 +663,7 @@ namespace IdleGame.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap city22 {
+        public static System.Drawing.Bitmap city22 {
             get {
                 object obj = ResourceManager.GetObject("city22", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -673,7 +673,7 @@ namespace IdleGame.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap city23 {
+        public static System.Drawing.Bitmap city23 {
             get {
                 object obj = ResourceManager.GetObject("city23", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -683,7 +683,7 @@ namespace IdleGame.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap city24 {
+        public static System.Drawing.Bitmap city24 {
             get {
                 object obj = ResourceManager.GetObject("city24", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -693,7 +693,7 @@ namespace IdleGame.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap city25 {
+        public static System.Drawing.Bitmap city25 {
             get {
                 object obj = ResourceManager.GetObject("city25", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -703,7 +703,7 @@ namespace IdleGame.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap city26 {
+        public static System.Drawing.Bitmap city26 {
             get {
                 object obj = ResourceManager.GetObject("city26", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -713,7 +713,7 @@ namespace IdleGame.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap city27 {
+        public static System.Drawing.Bitmap city27 {
             get {
                 object obj = ResourceManager.GetObject("city27", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -723,7 +723,7 @@ namespace IdleGame.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap city28 {
+        public static System.Drawing.Bitmap city28 {
             get {
                 object obj = ResourceManager.GetObject("city28", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -733,7 +733,7 @@ namespace IdleGame.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap city29 {
+        public static System.Drawing.Bitmap city29 {
             get {
                 object obj = ResourceManager.GetObject("city29", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -743,7 +743,7 @@ namespace IdleGame.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap city3 {
+        public static System.Drawing.Bitmap city3 {
             get {
                 object obj = ResourceManager.GetObject("city3", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -753,7 +753,7 @@ namespace IdleGame.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap city30 {
+        public static System.Drawing.Bitmap city30 {
             get {
                 object obj = ResourceManager.GetObject("city30", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -763,7 +763,7 @@ namespace IdleGame.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap city31 {
+        public static System.Drawing.Bitmap city31 {
             get {
                 object obj = ResourceManager.GetObject("city31", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -773,7 +773,7 @@ namespace IdleGame.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap city32 {
+        public static System.Drawing.Bitmap city32 {
             get {
                 object obj = ResourceManager.GetObject("city32", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -783,7 +783,7 @@ namespace IdleGame.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap city33 {
+        public static System.Drawing.Bitmap city33 {
             get {
                 object obj = ResourceManager.GetObject("city33", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -793,7 +793,7 @@ namespace IdleGame.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap city34 {
+        public static System.Drawing.Bitmap city34 {
             get {
                 object obj = ResourceManager.GetObject("city34", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -803,7 +803,7 @@ namespace IdleGame.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap city35 {
+        public static System.Drawing.Bitmap city35 {
             get {
                 object obj = ResourceManager.GetObject("city35", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -813,7 +813,7 @@ namespace IdleGame.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap city36 {
+        public static System.Drawing.Bitmap city36 {
             get {
                 object obj = ResourceManager.GetObject("city36", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -823,7 +823,7 @@ namespace IdleGame.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap city37 {
+        public static System.Drawing.Bitmap city37 {
             get {
                 object obj = ResourceManager.GetObject("city37", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -833,7 +833,7 @@ namespace IdleGame.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap city38 {
+        public static System.Drawing.Bitmap city38 {
             get {
                 object obj = ResourceManager.GetObject("city38", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -843,7 +843,7 @@ namespace IdleGame.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap city39 {
+        public static System.Drawing.Bitmap city39 {
             get {
                 object obj = ResourceManager.GetObject("city39", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -853,7 +853,7 @@ namespace IdleGame.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap city4 {
+        public static System.Drawing.Bitmap city4 {
             get {
                 object obj = ResourceManager.GetObject("city4", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -863,7 +863,7 @@ namespace IdleGame.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap city40 {
+        public static System.Drawing.Bitmap city40 {
             get {
                 object obj = ResourceManager.GetObject("city40", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -873,7 +873,7 @@ namespace IdleGame.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap city41 {
+        public static System.Drawing.Bitmap city41 {
             get {
                 object obj = ResourceManager.GetObject("city41", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -883,7 +883,7 @@ namespace IdleGame.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap city42 {
+        public static System.Drawing.Bitmap city42 {
             get {
                 object obj = ResourceManager.GetObject("city42", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -893,7 +893,7 @@ namespace IdleGame.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap city43 {
+        public static System.Drawing.Bitmap city43 {
             get {
                 object obj = ResourceManager.GetObject("city43", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -903,7 +903,7 @@ namespace IdleGame.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap city44 {
+        public static System.Drawing.Bitmap city44 {
             get {
                 object obj = ResourceManager.GetObject("city44", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -913,7 +913,7 @@ namespace IdleGame.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap city45 {
+        public static System.Drawing.Bitmap city45 {
             get {
                 object obj = ResourceManager.GetObject("city45", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -923,7 +923,7 @@ namespace IdleGame.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap city46 {
+        public static System.Drawing.Bitmap city46 {
             get {
                 object obj = ResourceManager.GetObject("city46", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -933,7 +933,7 @@ namespace IdleGame.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap city47 {
+        public static System.Drawing.Bitmap city47 {
             get {
                 object obj = ResourceManager.GetObject("city47", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -943,7 +943,7 @@ namespace IdleGame.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap city48 {
+        public static System.Drawing.Bitmap city48 {
             get {
                 object obj = ResourceManager.GetObject("city48", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -953,7 +953,7 @@ namespace IdleGame.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap city49 {
+        public static System.Drawing.Bitmap city49 {
             get {
                 object obj = ResourceManager.GetObject("city49", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -963,7 +963,7 @@ namespace IdleGame.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap city5 {
+        public static System.Drawing.Bitmap city5 {
             get {
                 object obj = ResourceManager.GetObject("city5", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -973,7 +973,7 @@ namespace IdleGame.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap city50 {
+        public static System.Drawing.Bitmap city50 {
             get {
                 object obj = ResourceManager.GetObject("city50", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -983,7 +983,7 @@ namespace IdleGame.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap city6 {
+        public static System.Drawing.Bitmap city6 {
             get {
                 object obj = ResourceManager.GetObject("city6", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -993,7 +993,7 @@ namespace IdleGame.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap city7 {
+        public static System.Drawing.Bitmap city7 {
             get {
                 object obj = ResourceManager.GetObject("city7", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -1003,7 +1003,7 @@ namespace IdleGame.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap city8 {
+        public static System.Drawing.Bitmap city8 {
             get {
                 object obj = ResourceManager.GetObject("city8", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -1013,7 +1013,7 @@ namespace IdleGame.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap city9 {
+        public static System.Drawing.Bitmap city9 {
             get {
                 object obj = ResourceManager.GetObject("city9", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -1023,7 +1023,7 @@ namespace IdleGame.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap copy {
+        public static System.Drawing.Bitmap copy {
             get {
                 object obj = ResourceManager.GetObject("copy", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -1033,7 +1033,7 @@ namespace IdleGame.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap DARKMAP {
+        public static System.Drawing.Bitmap DARKMAP {
             get {
                 object obj = ResourceManager.GetObject("DARKMAP", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -1043,7 +1043,7 @@ namespace IdleGame.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap dice {
+        public static System.Drawing.Bitmap dice {
             get {
                 object obj = ResourceManager.GetObject("dice", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -1053,7 +1053,17 @@ namespace IdleGame.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap dicehover {
+        public static System.Drawing.Bitmap dice1 {
+            get {
+                object obj = ResourceManager.GetObject("dice1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap dicehover {
             get {
                 object obj = ResourceManager.GetObject("dicehover", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -1063,7 +1073,7 @@ namespace IdleGame.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap icon {
+        public static System.Drawing.Bitmap icon {
             get {
                 object obj = ResourceManager.GetObject("icon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -1073,7 +1083,7 @@ namespace IdleGame.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap icon2 {
+        public static System.Drawing.Bitmap icon2 {
             get {
                 object obj = ResourceManager.GetObject("icon2", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -1083,17 +1093,7 @@ namespace IdleGame.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Logoo {
-            get {
-                object obj = ResourceManager.GetObject("Logoo", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap MAP {
+        public static System.Drawing.Bitmap MAP {
             get {
                 object obj = ResourceManager.GetObject("MAP", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -1103,7 +1103,7 @@ namespace IdleGame.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap monstre {
+        public static System.Drawing.Bitmap monstre {
             get {
                 object obj = ResourceManager.GetObject("monstre", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -1113,7 +1113,7 @@ namespace IdleGame.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap ok {
+        public static System.Drawing.Bitmap ok {
             get {
                 object obj = ResourceManager.GetObject("ok", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -1123,7 +1123,7 @@ namespace IdleGame.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap okhover {
+        public static System.Drawing.Bitmap okhover {
             get {
                 object obj = ResourceManager.GetObject("okhover", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -1133,7 +1133,7 @@ namespace IdleGame.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap ss {
+        public static System.Drawing.Bitmap ss {
             get {
                 object obj = ResourceManager.GetObject("ss", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -1143,7 +1143,7 @@ namespace IdleGame.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap ss2 {
+        public static System.Drawing.Bitmap ss2 {
             get {
                 object obj = ResourceManager.GetObject("ss2", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -1153,7 +1153,17 @@ namespace IdleGame.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap todel {
+        public static System.Drawing.Bitmap sword {
+            get {
+                object obj = ResourceManager.GetObject("sword", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap todel {
             get {
                 object obj = ResourceManager.GetObject("todel", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -1163,7 +1173,7 @@ namespace IdleGame.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap underscore {
+        public static System.Drawing.Bitmap underscore {
             get {
                 object obj = ResourceManager.GetObject("underscore", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -1173,7 +1183,7 @@ namespace IdleGame.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap underscore2 {
+        public static System.Drawing.Bitmap underscore2 {
             get {
                 object obj = ResourceManager.GetObject("underscore2", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -1183,7 +1193,7 @@ namespace IdleGame.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap xx {
+        public static System.Drawing.Bitmap xx {
             get {
                 object obj = ResourceManager.GetObject("xx", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -1193,7 +1203,7 @@ namespace IdleGame.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap xx2 {
+        public static System.Drawing.Bitmap xx2 {
             get {
                 object obj = ResourceManager.GetObject("xx2", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));

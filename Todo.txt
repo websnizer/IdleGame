@@ -1,0 +1,35 @@
+Menu
+	->Query qui retourne tous les personnages standard
+	->Query qui retourne tous les personnages hardcore
+	->Query qui retourne tous les personnages standard avec un nom LIKE '%%'
+	->Query qui retourne tous les personnages hardcore avec un nom LIKE '%%'
+		(Ajouter standard/hardcore?)
+	
+Creation
+	->Query qui retourne toutes les races possibles
+	->Query qui retourne toutes les classes possibles
+	->Query qui retourne toutes les races possible selon la classes
+	->Query qui retourne toutes les classes possibles selon la race
+	->Query qui retourne toutes les difficultés
+		(Ajouter difficultés?)
+	->Query qui retourne les races avec un nom LIKE '%%'
+	->Query qui retourne les classes avec un nom LIKE '%%'
+	->Query qui retourne les races avec un nom LIKE '%%' selon la classe selectionné
+	->Query qui retourne les classes avec un nom LIKE '%%' selon la race selectionné
+	->Query qui retourne les bonus de race selectionné
+	
+	
+Jeu
+	->Query qui retourne les informations du perso (nom, difficulte, level, experience, race, classe)
+	->Query qui retourne les statistiques du perso (str, dex, con, int, sag, cha)
+	->Query qui retourne les compétences acquises du perso
+	->Query qui retourne les equipements d'un perso
+	->Query qui retourne les items d'un perso dans son inventaire
+	->Query qui retourne toutes les quêtes d'un perso
+	->Histoire/Act 100% simulé dans l'interface selon le nb de quetes + level ?
+	->Historique = Toutes les dernières actions...
+	->Statistiques = Tout l'or récupéré, le nb d'item vendus, le nb d'item acheté, l'exp... (pendant la session actuelle)
+	
+	
+	https://gyazo.com/00b6eb145f158264155bf6145688ffc7
+	https://gyazo.com/21f93bd78719efb7e8819db81e15f5eb

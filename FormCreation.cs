@@ -16,11 +16,13 @@ namespace IdleGame
 	public partial class FormCreation : Form
 	{
 		IdleGame m_idlegame; //Référence au créateur
+        ExecIdleGame m_executeur;
 
 		//Colors
 		Color offColor = Color.FromArgb(255, 70, 131);
 		Color mainColor = Color.FromArgb(178, 34, 34);
 		Color darkColor = Color.FromArgb(86, 27, 27);
+
 
 		//Constructeur
 		public FormCreation(IdleGame p_idlegame)
@@ -28,21 +30,140 @@ namespace IdleGame
 			m_idlegame = p_idlegame;
 			InitializeComponent();
 			mnu_main.Renderer = new MyRenderer();
+            m_executeur = new ExecIdleGame();
+            RemplirRaces();
+            RemplirClasses(); 
 		}
 
 
+        private void RemplirRaces()
+        {
+            //Récupéré les donnes dans la database
+            DataTable Races = m_executeur.toutesRaces();
+            cmb_race.ValueMember = "RacID";
+            cmb_race.DisplayMember = "RacNom";
+            cmb_race.DataSource = Races;
+
+            cmb_race.SelectedIndex = 0;
+        }
+
+        private void RemplirClasses()
+        {
+            //Récupéré les donnes dans la database
+            int idRace; //id de la race
+            Int32.TryParse(cmb_race.SelectedValue.ToString(), out idRace);
+
+            DataTable ClassesPossibles = m_executeur.toutesClassesPossibles(idRace);
+            cmb_classe.ValueMember = "ClaPosClasseID";
+            cmb_classe.DisplayMember = "ClaNom";
+            cmb_classe.DataSource = ClassesPossibles;
+        }
+
+        private void RemplirBonusRaces()
+        {
+            if (cmb_race.Items.Count >= 1)
+            {
+                int idRace;
+                Int32.TryParse(cmb_race.SelectedValue.ToString(), out idRace);
+
+                DataTable bonusRace = m_executeur.bonusRaces(idRace);
+                DataRow row = bonusRace.Rows[0];
+
+                lbl_strbon.Text = (string)row["RacFor"];
+                lbl_dexbon.Text = (string)row["RacDex"];    
+                lbl_conbon.Text = (string)row["RacCon"];
+                lbl_intbon.Text = (string)row["RacInt"];
+                lbl_sagbon.Text = (string)row["RacSag"];
+                lbl_chabon.Text = (string)row["RacCha"];
+
+                int str;
+                int dex;
+                int con;
+                int intel;
+                int sag;
+                int cha;
+                Int32.TryParse(lbl_strbon.Text, out str);
+                Int32.TryParse(lbl_dexbon.Text, out dex);
+                Int32.TryParse(lbl_conbon.Text, out con);
+                Int32.TryParse(lbl_intbon.Text, out intel);
+                Int32.TryParse(lbl_sagbon.Text, out sag);
+                Int32.TryParse(lbl_chabon.Text, out cha);
+                int total = str + dex + con + intel + sag + cha;
+                lbl_totbon.Text = total.ToString();
+            }
+        }
+
+        private void GenererStats()
+        {
+            Random rng = new Random();
+            int force = rng.Next(7, 19);
+            int dexterite = rng.Next(7, 19);
+            int constitution = rng.Next(7, 19);
+            int intelligence = rng.Next(7, 19);
+            int sagesse = rng.Next(7, 19);
+            int charisme = rng.Next(7, 19);
+            int total = force + dexterite + constitution + intelligence + sagesse + charisme;
+
+            txt_str.Text = force.ToString();
+            txt_dex.Text = dexterite.ToString();
+            txt_con.Text = constitution.ToString();
+            txt_int.Text = intelligence.ToString();
+            txt_sag.Text = sagesse.ToString();
+            txt_cha.Text = charisme.ToString();
+
+            if (total > 85)
+                txt_totalstat.ForeColor = Color.Red;
+            else if (total > 71)
+                txt_totalstat.ForeColor = Color.Orange;
+            else
+                txt_totalstat.ForeColor = Color.Black;
+
+            txt_totalstat.Text = total.ToString();
+
+        }
+
+        private void btn_recherche_Click(object sender, EventArgs e)
+        {
+            if (cmb_champ.SelectedIndex == 0)
+            {
+                DataTable RacesPossibles = m_executeur.rechercheRace(txt_recheche.Text);
+                cmb_race.ValueMember = "RacID";
+                cmb_race.DisplayMember = "RacNom";
+                cmb_race.DataSource = RacesPossibles;
+            }
+            else
+            {
+                if (cmb_race.SelectedIndex >= 0)
+                {
+                    int raceID;
+                    Int32.TryParse(cmb_race.SelectedValue.ToString(), out raceID);
+                    DataTable ClassesPossibles = m_executeur.rechercheClassePossible(txt_recheche.Text, raceID);
+                    cmb_classe.ValueMember = "ClaID";
+                    cmb_classe.DisplayMember = "ClaNom";
+                    cmb_classe.DataSource = ClassesPossibles;
+                }
+            }
+        }
+
+        private void cmb_race_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            RemplirClasses();
+            RemplirBonusRaces();
+        }
+
+        private void cmb_difficulte_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            ComboBox snd = (ComboBox)sender;
+            lbl_info.Visible = (snd.SelectedIndex == 0) ? false : true;
+        }
 
 
 
 
 
 
-
-
-
-
-		// Interface //
-		private System.Drawing.Point newpoint;
+        // Interface //
+        private System.Drawing.Point newpoint;
 		private int x, y;
 		private void CharForm_Load(object sender, EventArgs e)
 		{
@@ -51,6 +172,7 @@ namespace IdleGame
 			pct_Reduire.Left = this.Width - 90;
 			PlacerLignes();
 			mnu_main.BackColor = mainColor;
+            cmb_difficulte.SelectedIndex = 0;
 		}//Form Load
 		private void CharForm_Resize(object sender, EventArgs e)
 		{
@@ -181,7 +303,50 @@ namespace IdleGame
 		{
 			public MyRenderer() : base(new MyColors()) { }
 		}//Override des menus par défaut
-		private class MyColors : ProfessionalColorTable
+
+        private void btn_cancelRecherche_Click(object sender, EventArgs e)
+        {
+            RemplirRaces();
+        }
+
+        private void txt_Nom_Enter(object sender, EventArgs e)
+        {
+            txt_Nom.Clear();
+        }
+
+        private void pictureBox1_MouseDown(object sender, MouseEventArgs e)
+        {
+            GenererStats();
+        }
+
+        private void btn_ok_Click(object sender, EventArgs e)
+        {
+            int str;
+            int dex;
+            int con;
+            int intel;
+            int sag;
+            int cha;
+            int idRace;
+            int idClasse;
+            int diff;
+            string nom;
+            Int32.TryParse(txt_str.Text, out str);
+            Int32.TryParse(txt_dex.Text, out dex);
+            Int32.TryParse(txt_con.Text, out con);
+            Int32.TryParse(txt_int.Text, out intel);
+            Int32.TryParse(txt_sag.Text, out sag);
+            Int32.TryParse(txt_cha.Text, out cha);
+            Int32.TryParse(cmb_race.SelectedValue.ToString(), out idRace);
+            Int32.TryParse(cmb_classe.SelectedValue.ToString(), out idClasse);
+            Int32.TryParse(cmb_difficulte.SelectedIndex.ToString(), out diff);
+            nom = txt_Nom.Text;
+            int idPersoCreer;
+            idPersoCreer = m_executeur.creationPersonnage(nom, idRace, idClasse, str, dex, con, intel, sag, cha, diff + 1);
+            m_idlegame.ShowJeu(idPersoCreer);
+        }
+
+        private class MyColors : ProfessionalColorTable
 		{
 			public override Color MenuItemSelected
 			{
