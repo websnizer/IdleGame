@@ -76,18 +76,7 @@
             this.time_statusbar = new System.Windows.Forms.Timer(this.components);
             this.lbl_info = new System.Windows.Forms.Label();
             this.grp_bottom = new System.Windows.Forms.GroupBox();
-            this.grp_historique = new System.Windows.Forms.GroupBox();
-            this.lbl_expacquis = new System.Windows.Forms.Label();
-            this.lbl_itemsacquis = new System.Windows.Forms.Label();
-            this.lbl_depense = new System.Windows.Forms.Label();
-            this.lbl_gold = new System.Windows.Forms.Label();
-            this.lbl_statistiquessession = new System.Windows.Forms.Label();
-            this.lst_historique = new System.Windows.Forms.ListBox();
-            this.lbl_historique = new System.Windows.Forms.Label();
-            this.lbl_expGagne = new System.Windows.Forms.Label();
-            this.lbl_nbItemGagne = new System.Windows.Forms.Label();
-            this.lbl_argentDepense = new System.Windows.Forms.Label();
-            this.lbl_argentGagne = new System.Windows.Forms.Label();
+            this.txt_Tick = new System.Windows.Forms.TextBox();
             this.top.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pct_Reduire)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pct_Fermer)).BeginInit();
@@ -116,7 +105,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.line_TopLine)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.line_LeftLine)).BeginInit();
             this.grp_bottom.SuspendLayout();
-            this.grp_historique.SuspendLayout();
             this.SuspendLayout();
             // 
             // top
@@ -223,8 +211,6 @@
             this.mnu_about.Name = "mnu_about";
             this.mnu_about.Size = new System.Drawing.Size(88, 22);
             this.mnu_about.Text = "About";
-            this.mnu_about.MouseEnter += new System.EventHandler(this.saveToolStripMenuItem_MouseEnter);
-            this.mnu_about.MouseLeave += new System.EventHandler(this.saveToolStripMenuItem_MouseLeave);
             // 
             // mnu_close
             // 
@@ -234,8 +220,6 @@
             this.mnu_close.Size = new System.Drawing.Size(88, 22);
             this.mnu_close.Text = "Close";
             this.mnu_close.Click += new System.EventHandler(this.closeToolStripMenuItem_Click);
-            this.mnu_close.MouseEnter += new System.EventHandler(this.saveToolStripMenuItem_MouseEnter);
-            this.mnu_close.MouseLeave += new System.EventHandler(this.saveToolStripMenuItem_MouseLeave);
             // 
             // grp_left
             // 
@@ -601,13 +585,14 @@
             this.lbl_info.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_info.Location = new System.Drawing.Point(1, 52);
             this.lbl_info.Name = "lbl_info";
-            this.lbl_info.Size = new System.Drawing.Size(728, 27);
+            this.lbl_info.Size = new System.Drawing.Size(656, 27);
             this.lbl_info.TabIndex = 2;
             this.lbl_info.Text = "Action en cours............";
             this.lbl_info.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // grp_bottom
             // 
+            this.grp_bottom.Controls.Add(this.txt_Tick);
             this.grp_bottom.Controls.Add(this.lst_inventaire);
             this.grp_bottom.Controls.Add(this.lbl_info);
             this.grp_bottom.Controls.Add(this.lbl_inventaire);
@@ -620,143 +605,21 @@
             this.grp_bottom.TabIndex = 14;
             this.grp_bottom.TabStop = false;
             // 
-            // grp_historique
+            // txt_Tick
             // 
-            this.grp_historique.Controls.Add(this.lbl_expGagne);
-            this.grp_historique.Controls.Add(this.lbl_nbItemGagne);
-            this.grp_historique.Controls.Add(this.lbl_argentDepense);
-            this.grp_historique.Controls.Add(this.lbl_argentGagne);
-            this.grp_historique.Controls.Add(this.lbl_expacquis);
-            this.grp_historique.Controls.Add(this.lbl_itemsacquis);
-            this.grp_historique.Controls.Add(this.lbl_depense);
-            this.grp_historique.Controls.Add(this.lbl_gold);
-            this.grp_historique.Controls.Add(this.lbl_statistiquessession);
-            this.grp_historique.Controls.Add(this.lst_historique);
-            this.grp_historique.Controls.Add(this.lbl_historique);
-            this.grp_historique.Location = new System.Drawing.Point(215, 682);
-            this.grp_historique.Name = "grp_historique";
-            this.grp_historique.Size = new System.Drawing.Size(735, 289);
-            this.grp_historique.TabIndex = 15;
-            this.grp_historique.TabStop = false;
-            // 
-            // lbl_expacquis
-            // 
-            this.lbl_expacquis.AutoSize = true;
-            this.lbl_expacquis.BackColor = System.Drawing.SystemColors.Control;
-            this.lbl_expacquis.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_expacquis.Location = new System.Drawing.Point(523, 52);
-            this.lbl_expacquis.Name = "lbl_expacquis";
-            this.lbl_expacquis.Size = new System.Drawing.Size(88, 15);
-            this.lbl_expacquis.TabIndex = 18;
-            this.lbl_expacquis.Text = "# exp acquis";
-            // 
-            // lbl_itemsacquis
-            // 
-            this.lbl_itemsacquis.AutoSize = true;
-            this.lbl_itemsacquis.BackColor = System.Drawing.SystemColors.Control;
-            this.lbl_itemsacquis.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_itemsacquis.Location = new System.Drawing.Point(629, 52);
-            this.lbl_itemsacquis.Name = "lbl_itemsacquis";
-            this.lbl_itemsacquis.Size = new System.Drawing.Size(100, 15);
-            this.lbl_itemsacquis.TabIndex = 17;
-            this.lbl_itemsacquis.Text = "# items acquis";
-            // 
-            // lbl_depense
-            // 
-            this.lbl_depense.AutoSize = true;
-            this.lbl_depense.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_depense.Location = new System.Drawing.Point(436, 52);
-            this.lbl_depense.Name = "lbl_depense";
-            this.lbl_depense.Size = new System.Drawing.Size(74, 15);
-            this.lbl_depense.TabIndex = 16;
-            this.lbl_depense.Text = "$ depense";
-            // 
-            // lbl_gold
-            // 
-            this.lbl_gold.AutoSize = true;
-            this.lbl_gold.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_gold.Location = new System.Drawing.Point(369, 52);
-            this.lbl_gold.Name = "lbl_gold";
-            this.lbl_gold.Size = new System.Drawing.Size(61, 15);
-            this.lbl_gold.TabIndex = 15;
-            this.lbl_gold.Text = "$ acquis";
-            // 
-            // lbl_statistiquessession
-            // 
-            this.lbl_statistiquessession.AutoSize = true;
-            this.lbl_statistiquessession.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_statistiquessession.Location = new System.Drawing.Point(591, 16);
-            this.lbl_statistiquessession.Name = "lbl_statistiquessession";
-            this.lbl_statistiquessession.Size = new System.Drawing.Size(137, 15);
-            this.lbl_statistiquessession.TabIndex = 14;
-            this.lbl_statistiquessession.Text = "Statistiques Session";
-            // 
-            // lst_historique
-            // 
-            this.lst_historique.FormattingEnabled = true;
-            this.lst_historique.Location = new System.Drawing.Point(0, 34);
-            this.lst_historique.Name = "lst_historique";
-            this.lst_historique.Size = new System.Drawing.Size(360, 251);
-            this.lst_historique.TabIndex = 11;
-            // 
-            // lbl_historique
-            // 
-            this.lbl_historique.AutoSize = true;
-            this.lbl_historique.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_historique.Location = new System.Drawing.Point(6, 16);
-            this.lbl_historique.Name = "lbl_historique";
-            this.lbl_historique.Size = new System.Drawing.Size(73, 15);
-            this.lbl_historique.TabIndex = 12;
-            this.lbl_historique.Text = "Historique";
-            // 
-            // lbl_expGagne
-            // 
-            this.lbl_expGagne.AutoSize = true;
-            this.lbl_expGagne.BackColor = System.Drawing.SystemColors.Control;
-            this.lbl_expGagne.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_expGagne.Location = new System.Drawing.Point(523, 80);
-            this.lbl_expGagne.Name = "lbl_expGagne";
-            this.lbl_expGagne.Size = new System.Drawing.Size(88, 15);
-            this.lbl_expGagne.TabIndex = 22;
-            this.lbl_expGagne.Text = "# exp acquis";
-            // 
-            // lbl_nbItemGagne
-            // 
-            this.lbl_nbItemGagne.AutoSize = true;
-            this.lbl_nbItemGagne.BackColor = System.Drawing.SystemColors.Control;
-            this.lbl_nbItemGagne.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_nbItemGagne.Location = new System.Drawing.Point(629, 80);
-            this.lbl_nbItemGagne.Name = "lbl_nbItemGagne";
-            this.lbl_nbItemGagne.Size = new System.Drawing.Size(100, 15);
-            this.lbl_nbItemGagne.TabIndex = 21;
-            this.lbl_nbItemGagne.Text = "# items acquis";
-            // 
-            // lbl_argentDepense
-            // 
-            this.lbl_argentDepense.AutoSize = true;
-            this.lbl_argentDepense.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_argentDepense.Location = new System.Drawing.Point(436, 80);
-            this.lbl_argentDepense.Name = "lbl_argentDepense";
-            this.lbl_argentDepense.Size = new System.Drawing.Size(74, 15);
-            this.lbl_argentDepense.TabIndex = 20;
-            this.lbl_argentDepense.Text = "$ depense";
-            // 
-            // lbl_argentGagne
-            // 
-            this.lbl_argentGagne.AutoSize = true;
-            this.lbl_argentGagne.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_argentGagne.Location = new System.Drawing.Point(369, 80);
-            this.lbl_argentGagne.Name = "lbl_argentGagne";
-            this.lbl_argentGagne.Size = new System.Drawing.Size(61, 15);
-            this.lbl_argentGagne.TabIndex = 19;
-            this.lbl_argentGagne.Text = "$ acquis";
+            this.txt_Tick.Location = new System.Drawing.Point(666, 57);
+            this.txt_Tick.Name = "txt_Tick";
+            this.txt_Tick.Size = new System.Drawing.Size(63, 20);
+            this.txt_Tick.TabIndex = 13;
+            this.txt_Tick.Text = "100";
+            this.txt_Tick.TextChanged += new System.EventHandler(this.txt_Tick_TextChanged);
+            this.txt_Tick.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_Tick_KeyPress);
             // 
             // FormJeu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1167, 685);
-            this.Controls.Add(this.grp_historique);
+            this.ClientSize = new System.Drawing.Size(1167, 693);
             this.Controls.Add(this.grp_bottom);
             this.Controls.Add(this.grp_top);
             this.Controls.Add(this.grp_right);
@@ -807,8 +670,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.line_LeftLine)).EndInit();
             this.grp_bottom.ResumeLayout(false);
             this.grp_bottom.PerformLayout();
-            this.grp_historique.ResumeLayout(false);
-            this.grp_historique.PerformLayout();
             this.ResumeLayout(false);
 
 		}
@@ -861,18 +722,7 @@
 		private System.Windows.Forms.PictureBox img_bg;
 		private System.Windows.Forms.Label lbl_info;
 		private System.Windows.Forms.GroupBox grp_bottom;
-		private System.Windows.Forms.GroupBox grp_historique;
-		private System.Windows.Forms.ListBox lst_historique;
-		private System.Windows.Forms.Label lbl_historique;
-		private System.Windows.Forms.Label lbl_statistiquessession;
-		private System.Windows.Forms.Label lbl_expacquis;
-		private System.Windows.Forms.Label lbl_itemsacquis;
-		private System.Windows.Forms.Label lbl_depense;
-		private System.Windows.Forms.Label lbl_gold;
-        private System.Windows.Forms.Label lbl_expGagne;
-        private System.Windows.Forms.Label lbl_nbItemGagne;
-        private System.Windows.Forms.Label lbl_argentDepense;
-        private System.Windows.Forms.Label lbl_argentGagne;
+        private System.Windows.Forms.TextBox txt_Tick;
     }
 }
 

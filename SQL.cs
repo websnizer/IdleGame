@@ -49,26 +49,6 @@ namespace IdleGame
             return true;
         }
 
-        public void test()
-        {
-            m_cnx.Open();
-
-            string requete = "SELECT * FROM dbo.Personnages WHERE PerNiv = 0;";
-
-            SqlCommand cmd = new SqlCommand(requete, m_cnx);
-            cmd.CommandType = CommandType.Text;
-
-            SqlDataReader reader = cmd.ExecuteReader();
-
-            DataTable table = organiserResultats(reader);
-
-            int rows = table.Rows.Count;
-            string nom = table.Rows[0].Field<string>("PerNom");
-
-            reader.Close();
-            m_cnx.Close();
-        }
-
         public void executerProc(string p_proc) //Exécuter une procédure sans paramètres
         {
             m_cnx.Open();
@@ -184,7 +164,7 @@ namespace IdleGame
             return table;
         }
 
-        public int executerAjout(string p_proc, string[] p_params, Object[] p_values) //Exécuter une procédure avec des paramètres qui retourne des données
+        public int executerProcInt(string p_proc, string[] p_params, Object[] p_values) //Exécuter une procédure avec des paramètres qui retourne des données
         {
             m_cnx.Open();
 
@@ -198,10 +178,33 @@ namespace IdleGame
             SqlDataReader reader = cmd.ExecuteReader(); //Exécuter la procédure
 
             DataTable table = organiserResultats(reader);
+
             DataRow row = table.Rows[0];
             int dernierAjout;
             Int32.TryParse((string)row.ItemArray[0], out dernierAjout);
-            //dernierAjout = (int)table.Rows[0];
+
+            reader.Close();
+            m_cnx.Close();
+
+            return dernierAjout;
+        }
+
+        public string executerProcStr(string p_proc, string p_params, Object p_values) //Exécuter une procédure avec des paramètres qui retourne des données
+        {
+            m_cnx.Open();
+
+            SqlCommand cmd = new SqlCommand(p_proc, m_cnx); //Créer la commande
+            cmd.CommandType = CommandType.StoredProcedure; //Commande de type procédure
+            cmd.Parameters.AddWithValue(p_params, p_values);
+
+            SqlDataReader reader = cmd.ExecuteReader(); //Exécuter la procédure
+
+            DataTable table = organiserResultats(reader);
+
+            DataRow row = table.Rows[0];
+            string dernierAjout;
+            dernierAjout = (string)row.ItemArray[0];
+
             reader.Close();
             m_cnx.Close();
 

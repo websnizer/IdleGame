@@ -338,6 +338,7 @@
             this.txt_standard.TabIndex = 14;
             this.txt_standard.Text = "Rechercher personnage standard";
             this.txt_standard.Enter += new System.EventHandler(this.txt_standard_Enter);
+            this.txt_standard.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txt_standard_KeyDown);
             // 
             // txt_hardcore
             // 
@@ -349,6 +350,7 @@
             this.txt_hardcore.TabIndex = 15;
             this.txt_hardcore.Text = "Rechercher personnage hardcore";
             this.txt_hardcore.Enter += new System.EventHandler(this.txt_standard_Enter);
+            this.txt_hardcore.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txt_hardcore_KeyDown);
             // 
             // pct_goStandard
             // 

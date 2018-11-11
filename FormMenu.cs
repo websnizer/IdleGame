@@ -16,7 +16,7 @@ namespace IdleGame
 	public partial class FormMenu : Form
 	{
 		IdleGame m_idlegame; //Référence au créateur
-        ExecIdleGame m_executeur;
+        ExecIdleGame m_executeur; //Executeur pour SQL
         int m_ID; //ID du joueur selectionné dans un des listbox
 
 		//Colors
@@ -50,6 +50,83 @@ namespace IdleGame
 
         private void rechercheHardcore(object sender, EventArgs e)
         {
+            rechercheHC();
+        }
+
+        private void rechercheStandard(object sender, EventArgs e)
+        {
+            rechercheSC();
+        }
+
+        private void btn_loadgame_Click(object sender, EventArgs e)
+        {
+            if (m_ID > 0)
+                m_idlegame.ShowJeu(m_ID);
+            else
+                MessageBox.Show("Veuillez selectionner un joueur avant.");
+        }
+
+        private void lbl_cancelSC_Click(object sender, EventArgs e)
+        {
+            txt_standard.Text = "";
+            rechercheSC();
+        }
+
+        private void lbl_cancelHC_Click(object sender, EventArgs e)
+        {
+            txt_hardcore.Text = "";
+            rechercheHC();
+        }
+
+        private void pct_goStandard_MouseMove(object sender, MouseEventArgs e)
+        {
+            ((PictureBox)sender).Image = global::IdleGame.Properties.Resources.okhover;
+        }
+
+        private void pct_goStandard_MouseLeave(object sender, EventArgs e)
+        {
+            ((PictureBox)sender).Image = global::IdleGame.Properties.Resources.ok;
+        }
+
+        private void btn_exit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void txt_standard_Enter(object sender, EventArgs e)
+        {
+            TextBox snd = (TextBox)sender;
+            snd.Clear();
+        }
+
+        private void lst_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            ListBox snd = (ListBox)sender;
+            if (snd.SelectedIndex >= 0)
+                Int32.TryParse(snd.SelectedValue.ToString(), out m_ID);
+        }
+
+        private void lst_Click(object sender, EventArgs e)
+        {
+            ListBox snd = (ListBox)sender;
+            ListBox otherbox = (snd == lst_hardcore) ? lst_standard : lst_hardcore;
+            otherbox.SelectedIndex = -1;
+        }
+
+        private void txt_standard_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+                rechercheSC();
+        }
+
+        private void txt_hardcore_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+                rechercheHC();
+        }
+
+        private void rechercheHC()
+        {
             m_ID = 0;
             DataTable joueurHC = m_executeur.rechercheJoueurHardcore(txt_hardcore.Text);
             lst_hardcore.ValueMember = "PerID";
@@ -57,7 +134,7 @@ namespace IdleGame
             lst_hardcore.DataSource = joueurHC;
         }
 
-        private void rechercheStandard(object sender, EventArgs e)
+        private void rechercheSC()
         {
             m_ID = 0;
             DataTable joueurSC = m_executeur.rechercheJoueurStandard(txt_standard.Text);
@@ -65,12 +142,6 @@ namespace IdleGame
             lst_standard.DisplayMember = "PerNom";
             lst_standard.DataSource = joueurSC;
         }
-
-
-
-
-
-
 
 
 
@@ -244,59 +315,6 @@ namespace IdleGame
 		{
 			public MyRenderer() : base(new MyColors()) { }
 		}//Override des menus par défaut
-
-		private void btn_loadgame_Click(object sender, EventArgs e)
-		{
-            if (m_ID > 0)
-                m_idlegame.ShowJeu(m_ID);            
-            else
-                MessageBox.Show("Veuillez selectionner un joueur avant.");
-		}
-
-		private void lbl_cancelSC_Click(object sender, EventArgs e)
-		{
-			txt_standard.Text = "";
-		}
-
-		private void lbl_cancelHC_Click(object sender, EventArgs e)
-		{
-			txt_hardcore.Text = "";
-		}
-
-		private void pct_goStandard_MouseMove(object sender, MouseEventArgs e)
-		{
-			((PictureBox)sender).Image = global::IdleGame.Properties.Resources.okhover;
-		}
-
-		private void pct_goStandard_MouseLeave(object sender, EventArgs e)
-		{
-			((PictureBox)sender).Image = global::IdleGame.Properties.Resources.ok;
-		}
-
-		private void btn_exit_Click(object sender, EventArgs e)
-		{
-			Application.Exit();
-		}
-
-        private void txt_standard_Enter(object sender, EventArgs e)
-        {
-            TextBox snd = (TextBox)sender;
-            snd.Clear();
-        }
-
-        private void lst_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            ListBox snd = (ListBox)sender;
-            if (snd.SelectedIndex >= 0)
-                Int32.TryParse(snd.SelectedValue.ToString(), out m_ID);
-        }
-
-        private void lst_Click(object sender, EventArgs e)
-        {
-            ListBox snd = (ListBox)sender;
-            ListBox otherbox = (snd == lst_hardcore) ? lst_standard : lst_hardcore;
-            otherbox.SelectedIndex = -1;
-        }
 
         private class MyColors : ProfessionalColorTable
 		{
