@@ -128,6 +128,42 @@ namespace IdleGame
 
             return m_sql.executerProcInt("sc_AjoutPerso", nomsParams, valeursParams);
         }
+        public DataTable equipementsMarchand(int p_id)
+        {
+            return m_sql.executerProcData("sp_obtenirEquipMarchand", "PersoID", p_id);
+        }
+        public void buyEquip(int p_id, int p_equipid)
+        {
+            string[] nomsParams = new string[2];
+            Object[] valeursParams = new Object[2];
+
+            nomsParams[0] = "PersoID";
+            nomsParams[1] = "EquID";
+            valeursParams[0] = p_id;
+            valeursParams[1] = p_equipid;
+
+            m_sql.executerProcData("sp_ajouterEquipementJoueur", nomsParams, valeursParams);
+        }
+        public void skipAchat(int p_id)
+        {
+            m_sql.executerProc("sp_SkipEtat", "PersoID", p_id);
+        }
+        public void supprimeMarchand(int p_id)
+        {
+            m_sql.executerProc("sp_SupprimeMarchand", "PersoID", p_id);
+        }
+        public void ajusteArgent(int p_id, int p_argent)
+        {
+            string[] nomsParams = new string[2];
+            Object[] valeursParams = new Object[2];
+
+            nomsParams[0] = "PersoID";
+            nomsParams[1] = "Argent";
+            valeursParams[0] = p_id;
+            valeursParams[1] = p_argent;
+
+            m_sql.executerProcData("sp_ajusteArgent", nomsParams, valeursParams);
+        }
 
         //Avertir le server de continuer la boucle d'action du joueur
         public string DoIt(int p_id)
@@ -135,4 +171,6 @@ namespace IdleGame
             return m_sql.executerProcStr("sc_EnJeu", "PersoID", p_id);
         }
     }
+
+    
 }

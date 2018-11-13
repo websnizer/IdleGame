@@ -302,10 +302,16 @@ namespace IdleGame
         //Changer d'image de la scrollbar à tous les X milisecondes
         private void tick(object sender, EventArgs e)
 		{
-            
             if (img_statusbar.Image == m_allstatusbar[34]) //Si la barre est pleine
             {
                 string msg = m_executeur.DoIt(m_id);
+                if (msg == "Vous négogiez avec le marchand.")
+                {
+                    time_statusbar.Stop();
+                    FormChoixEquipement choixEquipement = new FormChoixEquipement(m_id);
+                    choixEquipement.ShowDialog();
+                    time_statusbar.Start();
+                }
                 UpdateTout();
                 GestionImage(msg);
                 lbl_info.Text = msg;
@@ -414,15 +420,11 @@ namespace IdleGame
 
 
         //Changer le tick
-        private void txt_Tick_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
-        }
-        private void txt_Tick_TextChanged(object sender, EventArgs e)
+        private void nud_Tick2_ValueChanged(object sender, EventArgs e)
         {
             int interval;
-            Int32.TryParse(txt_Tick.Text, out interval);
-            time_statusbar.Interval = (interval > 5) ? interval : 5 ;
+            Int32.TryParse(nud_Tick2.Text, out interval);
+            time_statusbar.Interval = (interval > 5) ? interval : 5;
         }
 
 
@@ -610,7 +612,6 @@ namespace IdleGame
 		{
 			public MyRenderer() : base(new MyColors()) { }
 		}//Override des menus par défaut
-
         private class MyColors : ProfessionalColorTable
 		{
 			public override Color MenuItemSelected

@@ -24,3 +24,4 @@ E:\Session 5\bd\TP #2\IdleGame\obj\Debug\IdleGame.csproj.GenerateResource.cache
 E:\Session 5\bd\TP #2\IdleGame\obj\Debug\IdleGame.csproj.CoreCompileInputs.cache
 E:\Session 5\bd\TP #2\IdleGame\obj\Debug\IdleGame.exe
 E:\Session 5\bd\TP #2\IdleGame\obj\Debug\IdleGame.pdb
+E:\Session 5\bd\TP #2\IdleGame\obj\Debug\IdleGame.FormChoixEquipement.resources
