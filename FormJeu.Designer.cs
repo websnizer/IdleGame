@@ -78,6 +78,7 @@
             this.grp_bottom = new System.Windows.Forms.GroupBox();
             this.lbl_vitesse = new System.Windows.Forms.Label();
             this.nud_Tick2 = new System.Windows.Forms.NumericUpDown();
+            this.pct_marchand = new System.Windows.Forms.PictureBox();
             this.top.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pct_Reduire)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pct_Fermer)).BeginInit();
@@ -107,6 +108,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.line_LeftLine)).BeginInit();
             this.grp_bottom.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nud_Tick2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pct_marchand)).BeginInit();
             this.SuspendLayout();
             // 
             // top
@@ -524,6 +526,7 @@
             // 
             // grp_top
             // 
+            this.grp_top.Controls.Add(this.pct_marchand);
             this.grp_top.Controls.Add(this.img_bg);
             this.grp_top.Location = new System.Drawing.Point(215, 37);
             this.grp_top.Name = "grp_top";
@@ -641,6 +644,17 @@
             0});
             this.nud_Tick2.ValueChanged += new System.EventHandler(this.nud_Tick2_ValueChanged);
             // 
+            // pct_marchand
+            // 
+            this.pct_marchand.Image = global::IdleGame.Properties.Resources.marchand;
+            this.pct_marchand.Location = new System.Drawing.Point(17, 16);
+            this.pct_marchand.Name = "pct_marchand";
+            this.pct_marchand.Size = new System.Drawing.Size(298, 285);
+            this.pct_marchand.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pct_marchand.TabIndex = 2;
+            this.pct_marchand.TabStop = false;
+            this.pct_marchand.Visible = false;
+            // 
             // FormJeu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -697,6 +711,7 @@
             this.grp_bottom.ResumeLayout(false);
             this.grp_bottom.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nud_Tick2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pct_marchand)).EndInit();
             this.ResumeLayout(false);
 
 		}
@@ -751,6 +766,7 @@
 		private System.Windows.Forms.GroupBox grp_bottom;
         private System.Windows.Forms.NumericUpDown nud_Tick2;
         private System.Windows.Forms.Label lbl_vitesse;
+        private System.Windows.Forms.PictureBox pct_marchand;
     }
 }
 

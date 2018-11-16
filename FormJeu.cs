@@ -27,6 +27,7 @@ namespace IdleGame
          */
         public FormJeu(IdleGame p_idlegame, int p_id)
 		{
+            
             //Initialisation des paramètres de bases
             m_id = p_id;
 			m_idlegame = p_idlegame;
@@ -43,8 +44,9 @@ namespace IdleGame
 			RemplirListeVilles();
             UpdateTout();
             AvancementBarre();
-
-           lbl_info.Text = m_executeur.DoIt(m_id);
+            pct_marchand.Parent = img_bg;
+            pct_marchand.BackColor = Color.Transparent;
+            lbl_info.Text = m_executeur.DoIt(m_id);
         }
 
         //Remplir le pannel des stats (for, dex, con) du joueur
@@ -291,18 +293,37 @@ namespace IdleGame
             int city = (int)Math.Floor((double)(m_niv / 5));
             city = (city < m_allcities.Count) ? (int)Math.Floor((double)(m_niv / 5)) : m_allcities.Count - 1;
             //Changer l'image selon les informations provenant du server
-            if ( p_msg.Contains("appercevez") || p_msg.Contains("monstre"))
-                img_bg.Image = global::IdleGame.Properties.Resources.monstre;
-            else if ( p_msg.Contains("aventure") || p_msg.Contains("nouvel") || p_msg.Contains("recherche"))
+            if (p_msg.Contains("appercevez") || p_msg.Contains("monstre"))
+            {
+                pct_marchand.Visible = true;
+                pct_marchand.Image = global::IdleGame.Properties.Resources.monstre;
+            }
+            else if (p_msg.Contains("aventure") || p_msg.Contains("nouvel") || p_msg.Contains("recherche"))
+            {
+                pct_marchand.Visible = true;
+                pct_marchand.Image = global::IdleGame.Properties.Resources.footprint;
                 img_bg.Image = (m_niv <= 50) ? m_allcartes[0] : m_allcartes[1];
-            else if (p_msg.Contains("personnage est mort") )
+            }
+            else if (p_msg.Contains("personnage est mort"))
+            {
+                pct_marchand.Visible = false;
                 img_bg.Image = global::IdleGame.Properties.Resources.dead;
+            }
             else if (p_msg.Contains("marchand") || p_msg.Contains("vendez"))
-                img_bg.Image = global::IdleGame.Properties.Resources.marchand;
+            {
+                pct_marchand.Visible = true;
+                pct_marchand.Image = global::IdleGame.Properties.Resources.marchand;
+            }
             else if (p_msg.Contains("guérisseur"))
-                img_bg.Image = global::IdleGame.Properties.Resources.guerisseur;
-            else if ( p_msg.Contains("village") )
+            {
+                pct_marchand.Visible = true;
+                pct_marchand.Image = global::IdleGame.Properties.Resources.guerisseur;
+            }
+            else if (p_msg.Contains("village"))
+            {
+                pct_marchand.Visible = false;
                 img_bg.Image = m_allcities[city];
+            }
         }
 
         //Changer d'image de la scrollbar à tous les X milisecondes
@@ -313,10 +334,10 @@ namespace IdleGame
                 string msg = m_executeur.DoIt(m_id);
                 if (msg == "Vous négogiez avec le marchand pour acheter des équipements.")
                 {
-                    time_statusbar.Stop();
-                    FormChoixEquipement choixEquipement = new FormChoixEquipement(m_id);
-                    choixEquipement.ShowDialog();
-                    time_statusbar.Start();
+                    //time_statusbar.Stop();
+                    //FormChoixEquipement choixEquipement = new FormChoixEquipement(m_id);
+                    //choixEquipement.ShowDialog();
+                    //time_statusbar.Start();
                 }
 
                 UpdateTout();

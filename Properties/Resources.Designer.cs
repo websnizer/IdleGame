@@ -1083,6 +1083,16 @@ namespace IdleGame.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        public static System.Drawing.Bitmap footprint {
+            get {
+                object obj = ResourceManager.GetObject("footprint", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         public static System.Drawing.Bitmap guerisseur {
             get {
                 object obj = ResourceManager.GetObject("guerisseur", resourceCulture);
@@ -1186,16 +1196,6 @@ namespace IdleGame.Properties {
         public static System.Drawing.Bitmap sword {
             get {
                 object obj = ResourceManager.GetObject("sword", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        public static System.Drawing.Bitmap todel {
-            get {
-                object obj = ResourceManager.GetObject("todel", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
