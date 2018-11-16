@@ -189,7 +189,7 @@ namespace IdleGame
             return dernierAjout;
         }
 
-        public string executerProcStr(string p_proc, string p_params, Object p_values) //Exécuter une procédure avec des paramètres qui retourne des données
+        public string executerProcStr(string p_proc, string p_params, Object p_values) //Exécuter une procédure avec un paramètres qui retourne des données
         {
             m_cnx.Open();
 

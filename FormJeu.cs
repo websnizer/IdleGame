@@ -145,7 +145,7 @@ namespace IdleGame
 
             //Ajouter la Difficulte dans le listview
             string Difficulte = (string)row["PerDifficulte"];
-            string diffstr = (Difficulte == "1") ? "Normal" : "Easy"; 
+            string diffstr = (Difficulte == "1") ? "Normal" : "Easy";
             string[] statDifficulte = { "Difficulte", diffstr };
             var itemDifficulte = new ListViewItem(statDifficulte);
             lst_persoInfo.Items.Add(itemDifficulte);
@@ -291,11 +291,17 @@ namespace IdleGame
             int city = (int)Math.Floor((double)(m_niv / 5));
             city = (city < m_allcities.Count) ? (int)Math.Floor((double)(m_niv / 5)) : m_allcities.Count - 1;
             //Changer l'image selon les informations provenant du server
-            if ( p_msg.Contains("Combat") )
+            if ( p_msg.Contains("appercevez") || p_msg.Contains("monstre"))
                 img_bg.Image = global::IdleGame.Properties.Resources.monstre;
-            else if ( p_msg.Contains("MAP") )
+            else if ( p_msg.Contains("aventure") || p_msg.Contains("nouvel") || p_msg.Contains("recherche"))
                 img_bg.Image = (m_niv <= 50) ? m_allcartes[0] : m_allcartes[1];
-            else if ( p_msg.Contains("") )
+            else if (p_msg.Contains("personnage est mort") )
+                img_bg.Image = global::IdleGame.Properties.Resources.dead;
+            else if (p_msg.Contains("marchand") || p_msg.Contains("vendez"))
+                img_bg.Image = global::IdleGame.Properties.Resources.marchand;
+            else if (p_msg.Contains("guérisseur"))
+                img_bg.Image = global::IdleGame.Properties.Resources.guerisseur;
+            else if ( p_msg.Contains("village") )
                 img_bg.Image = m_allcities[city];
         }
 
@@ -305,13 +311,14 @@ namespace IdleGame
             if (img_statusbar.Image == m_allstatusbar[34]) //Si la barre est pleine
             {
                 string msg = m_executeur.DoIt(m_id);
-                if (msg == "Vous négogiez avec le marchand.")
+                if (msg == "Vous négogiez avec le marchand pour acheter des équipements.")
                 {
                     time_statusbar.Stop();
                     FormChoixEquipement choixEquipement = new FormChoixEquipement(m_id);
                     choixEquipement.ShowDialog();
                     time_statusbar.Start();
                 }
+
                 UpdateTout();
                 GestionImage(msg);
                 lbl_info.Text = msg;

@@ -168,7 +168,7 @@ namespace IdleGame
         //Avertir le server de continuer la boucle d'action du joueur
         public string DoIt(int p_id)
         {
-            return m_sql.executerProcStr("sc_EnJeu", "PersoID", p_id);
+            return m_sql.executerProcStr("sp_Go2WOW", "PersoID", p_id);
         }
     }
 

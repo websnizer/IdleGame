@@ -462,5 +462,14 @@
   <ItemGroup>
     <None Include="images\sword.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="images\marchand.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\dead.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\guerisseur.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
