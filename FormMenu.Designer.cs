@@ -37,8 +37,8 @@
             this.pct_icon = new System.Windows.Forms.PictureBox();
             this.lbl_title = new System.Windows.Forms.Label();
             this.mnu_main = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.mnu_about = new System.Windows.Forms.ToolStripMenuItem();
-            this.mnu_close = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnu_nouvellepartie = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnu_quitter = new System.Windows.Forms.ToolStripMenuItem();
             this.btn_exit = new System.Windows.Forms.PictureBox();
             this.btn_loadgame = new System.Windows.Forms.PictureBox();
             this.btn_newgame = new System.Windows.Forms.PictureBox();
@@ -164,35 +164,36 @@
             // 
             this.mnu_main.BackColor = System.Drawing.Color.Firebrick;
             this.mnu_main.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.mnu_about,
-            this.mnu_close});
+            this.mnu_nouvellepartie,
+            this.mnu_quitter});
             this.mnu_main.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.Table;
             this.mnu_main.Name = "contextMenuStrip1";
             this.mnu_main.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
             this.mnu_main.ShowImageMargin = false;
-            this.mnu_main.Size = new System.Drawing.Size(89, 48);
+            this.mnu_main.Size = new System.Drawing.Size(156, 70);
             this.mnu_main.Text = "Menu";
             // 
-            // mnu_about
+            // mnu_nouvellepartie
             // 
-            this.mnu_about.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mnu_about.ForeColor = System.Drawing.Color.White;
-            this.mnu_about.Name = "mnu_about";
-            this.mnu_about.Size = new System.Drawing.Size(88, 22);
-            this.mnu_about.Text = "About";
-            this.mnu_about.MouseEnter += new System.EventHandler(this.saveToolStripMenuItem_MouseEnter);
-            this.mnu_about.MouseLeave += new System.EventHandler(this.saveToolStripMenuItem_MouseLeave);
+            this.mnu_nouvellepartie.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mnu_nouvellepartie.ForeColor = System.Drawing.Color.White;
+            this.mnu_nouvellepartie.Name = "mnu_nouvellepartie";
+            this.mnu_nouvellepartie.Size = new System.Drawing.Size(155, 22);
+            this.mnu_nouvellepartie.Text = "Nouvelle partie";
+            this.mnu_nouvellepartie.Click += new System.EventHandler(this.mnu_nouvellepartie_Click);
+            this.mnu_nouvellepartie.MouseEnter += new System.EventHandler(this.saveToolStripMenuItem_MouseEnter);
+            this.mnu_nouvellepartie.MouseLeave += new System.EventHandler(this.saveToolStripMenuItem_MouseLeave);
             // 
-            // mnu_close
+            // mnu_quitter
             // 
-            this.mnu_close.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mnu_close.ForeColor = System.Drawing.Color.White;
-            this.mnu_close.Name = "mnu_close";
-            this.mnu_close.Size = new System.Drawing.Size(88, 22);
-            this.mnu_close.Text = "Close";
-            this.mnu_close.Click += new System.EventHandler(this.closeToolStripMenuItem_Click);
-            this.mnu_close.MouseEnter += new System.EventHandler(this.saveToolStripMenuItem_MouseEnter);
-            this.mnu_close.MouseLeave += new System.EventHandler(this.saveToolStripMenuItem_MouseLeave);
+            this.mnu_quitter.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mnu_quitter.ForeColor = System.Drawing.Color.White;
+            this.mnu_quitter.Name = "mnu_quitter";
+            this.mnu_quitter.Size = new System.Drawing.Size(155, 22);
+            this.mnu_quitter.Text = "Quitter";
+            this.mnu_quitter.Click += new System.EventHandler(this.closeToolStripMenuItem_Click);
+            this.mnu_quitter.MouseEnter += new System.EventHandler(this.saveToolStripMenuItem_MouseEnter);
+            this.mnu_quitter.MouseLeave += new System.EventHandler(this.saveToolStripMenuItem_MouseLeave);
             // 
             // btn_exit
             // 
@@ -315,18 +316,18 @@
             this.lbl_standard.AutoSize = true;
             this.lbl_standard.Location = new System.Drawing.Point(150, 134);
             this.lbl_standard.Name = "lbl_standard";
-            this.lbl_standard.Size = new System.Drawing.Size(108, 13);
+            this.lbl_standard.Size = new System.Drawing.Size(145, 13);
             this.lbl_standard.TabIndex = 12;
-            this.lbl_standard.Text = "Personnage standard";
+            this.lbl_standard.Text = "Personnages difficulté:normal";
             // 
             // lbl_hardcore
             // 
             this.lbl_hardcore.AutoSize = true;
             this.lbl_hardcore.Location = new System.Drawing.Point(390, 134);
             this.lbl_hardcore.Name = "lbl_hardcore";
-            this.lbl_hardcore.Size = new System.Drawing.Size(109, 13);
+            this.lbl_hardcore.Size = new System.Drawing.Size(135, 13);
             this.lbl_hardcore.TabIndex = 13;
-            this.lbl_hardcore.Text = "Personnage hardcore";
+            this.lbl_hardcore.Text = "Personnages difficulté:hard";
             // 
             // txt_standard
             // 
@@ -336,7 +337,7 @@
             this.txt_standard.Name = "txt_standard";
             this.txt_standard.Size = new System.Drawing.Size(195, 20);
             this.txt_standard.TabIndex = 14;
-            this.txt_standard.Text = "Rechercher personnage standard";
+            this.txt_standard.Text = "Rechercher personnage normal";
             this.txt_standard.Enter += new System.EventHandler(this.txt_standard_Enter);
             this.txt_standard.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txt_standard_KeyDown);
             // 
@@ -348,7 +349,7 @@
             this.txt_hardcore.Name = "txt_hardcore";
             this.txt_hardcore.Size = new System.Drawing.Size(195, 20);
             this.txt_hardcore.TabIndex = 15;
-            this.txt_hardcore.Text = "Rechercher personnage hardcore";
+            this.txt_hardcore.Text = "Rechercher personnage hard";
             this.txt_hardcore.Enter += new System.EventHandler(this.txt_standard_Enter);
             this.txt_hardcore.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txt_hardcore_KeyDown);
             // 
@@ -467,8 +468,8 @@
 		private System.Windows.Forms.PictureBox pct_Fermer;
 		private System.Windows.Forms.PictureBox pct_Reduire;
 		private System.Windows.Forms.ContextMenuStrip mnu_main;
-		private System.Windows.Forms.ToolStripMenuItem mnu_about;
-		private System.Windows.Forms.ToolStripMenuItem mnu_close;
+		private System.Windows.Forms.ToolStripMenuItem mnu_nouvellepartie;
+		private System.Windows.Forms.ToolStripMenuItem mnu_quitter;
 		private System.Windows.Forms.PictureBox LeftLine;
 		private System.Windows.Forms.PictureBox TopLine;
 		private System.Windows.Forms.PictureBox RightLine;

@@ -128,10 +128,12 @@ namespace IdleGame
 
             return m_sql.executerProcInt("sc_AjoutPerso", nomsParams, valeursParams);
         }
+        //Récupérer les equipements temporaire du marchand
         public DataTable equipementsMarchand(int p_id)
         {
             return m_sql.executerProcData("sp_obtenirEquipMarchand", "PersoID", p_id);
         }
+        //Acheter un équipement précis avec le id du joueur et le id de l'équipement
         public void buyEquip(int p_id, int p_equipid)
         {
             string[] nomsParams = new string[2];
@@ -144,14 +146,17 @@ namespace IdleGame
 
             m_sql.executerProcData("sp_ajouterEquipementJoueur", nomsParams, valeursParams);
         }
+        //Skip l'achat automatique
         public void skipAchat(int p_id)
         {
             m_sql.executerProc("sp_SkipEtat", "PersoID", p_id);
         }
+        //Supprimer un équipement acheter avec le id du joueur et le id de l'équipement
         public void supprimeMarchand(int p_id)
         {
             m_sql.executerProc("sp_SupprimeMarchand", "PersoID", p_id);
         }
+        //Ajuster l'argent du personnage lors d'un achat
         public void ajusteArgent(int p_id, int p_argent)
         {
             string[] nomsParams = new string[2];
@@ -164,6 +169,33 @@ namespace IdleGame
 
             m_sql.executerProcData("sp_ajusteArgent", nomsParams, valeursParams);
         }
+        //Augmenter une statistique déterminée
+        public void augmenterStat(int p_id, int p_stat)
+        {
+            string[] nomsParams = new string[2];
+            Object[] valeursParams = new Object[2];
+
+            nomsParams[0] = "PersoID";
+            nomsParams[1] = "Stat";
+            valeursParams[0] = p_id;
+            valeursParams[1] = p_stat;
+
+            m_sql.executerProcData("sp_AugmenterStat", nomsParams, valeursParams);
+        }
+        //Augmenter une statistique au hasard
+        public void augmenterStatHasard(int p_id)
+        {
+            string nomsParams = "PersoID";
+            int valeursParams = p_id;
+
+            m_sql.executerProcData("sp_AugmenterStatHasard", nomsParams, valeursParams);
+        }
+        //Récupérer les PV max et PV actuel d'un monstre
+        public DataTable pvMonstre(int p_id)
+        {  
+            return m_sql.executerProcData("sp_obtenirPvMonstre", "PersoID", p_id);
+        }
+
 
         //Avertir le server de continuer la boucle d'action du joueur
         public string DoIt(int p_id)

@@ -37,8 +37,7 @@
             this.pct_icon = new System.Windows.Forms.PictureBox();
             this.lbl_title = new System.Windows.Forms.Label();
             this.mnu_main = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.mnu_about = new System.Windows.Forms.ToolStripMenuItem();
-            this.mnu_close = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnu_quitter = new System.Windows.Forms.ToolStripMenuItem();
             this.BottomLine = new System.Windows.Forms.PictureBox();
             this.RightLine = new System.Windows.Forms.PictureBox();
             this.TopLine = new System.Windows.Forms.PictureBox();
@@ -46,10 +45,6 @@
             this.tab_info = new System.Windows.Forms.TabControl();
             this.page_info = new System.Windows.Forms.TabPage();
             this.lbl_info = new System.Windows.Forms.Label();
-            this.grp_recherche = new System.Windows.Forms.GroupBox();
-            this.btn_recherche = new System.Windows.Forms.Button();
-            this.cmb_champ = new System.Windows.Forms.ComboBox();
-            this.txt_recheche = new System.Windows.Forms.TextBox();
             this.lbl_difficulte = new System.Windows.Forms.Label();
             this.cmb_difficulte = new System.Windows.Forms.ComboBox();
             this.cmb_classe = new System.Windows.Forms.ComboBox();
@@ -59,7 +54,6 @@
             this.txt_Nom = new System.Windows.Forms.TextBox();
             this.lbl_nom = new System.Windows.Forms.Label();
             this.page_stats = new System.Windows.Forms.TabPage();
-            this.lbl_totbon = new System.Windows.Forms.Label();
             this.lbl_chabon = new System.Windows.Forms.Label();
             this.lbl_sagbon = new System.Windows.Forms.Label();
             this.lbl_intbon = new System.Windows.Forms.Label();
@@ -68,10 +62,10 @@
             this.lbl_strbon = new System.Windows.Forms.Label();
             this.txt_str = new System.Windows.Forms.TextBox();
             this.lbl_statsperso = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lbl_bonus = new System.Windows.Forms.Label();
             this.txt_totalstat = new System.Windows.Forms.TextBox();
             this.lbl_total = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.txt_cha = new System.Windows.Forms.TextBox();
             this.lbl_cha = new System.Windows.Forms.Label();
             this.txt_sag = new System.Windows.Forms.TextBox();
@@ -83,11 +77,8 @@
             this.txt_dex = new System.Windows.Forms.TextBox();
             this.lbl_dex = new System.Windows.Forms.Label();
             this.lbl_str = new System.Windows.Forms.Label();
-            this.page_competences = new System.Windows.Forms.TabPage();
-            this.lbl_infocomp = new System.Windows.Forms.Label();
             this.btn_ok = new System.Windows.Forms.PictureBox();
             this.btn_reset = new System.Windows.Forms.PictureBox();
-            this.btn_cancelRecherche = new System.Windows.Forms.Button();
             this.top.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pct_Reduire)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pct_Fermer)).BeginInit();
@@ -100,10 +91,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.LeftLine)).BeginInit();
             this.tab_info.SuspendLayout();
             this.page_info.SuspendLayout();
-            this.grp_recherche.SuspendLayout();
             this.page_stats.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.page_competences.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btn_ok)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_reset)).BeginInit();
             this.SuspendLayout();
@@ -196,35 +185,24 @@
             // 
             this.mnu_main.BackColor = System.Drawing.Color.Firebrick;
             this.mnu_main.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.mnu_about,
-            this.mnu_close});
+            this.mnu_quitter});
             this.mnu_main.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.Table;
             this.mnu_main.Name = "contextMenuStrip1";
             this.mnu_main.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
             this.mnu_main.ShowImageMargin = false;
-            this.mnu_main.Size = new System.Drawing.Size(89, 48);
+            this.mnu_main.Size = new System.Drawing.Size(96, 26);
             this.mnu_main.Text = "Menu";
             // 
-            // mnu_about
+            // mnu_quitter
             // 
-            this.mnu_about.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mnu_about.ForeColor = System.Drawing.Color.White;
-            this.mnu_about.Name = "mnu_about";
-            this.mnu_about.Size = new System.Drawing.Size(88, 22);
-            this.mnu_about.Text = "About";
-            this.mnu_about.MouseEnter += new System.EventHandler(this.saveToolStripMenuItem_MouseEnter);
-            this.mnu_about.MouseLeave += new System.EventHandler(this.saveToolStripMenuItem_MouseLeave);
-            // 
-            // mnu_close
-            // 
-            this.mnu_close.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mnu_close.ForeColor = System.Drawing.Color.White;
-            this.mnu_close.Name = "mnu_close";
-            this.mnu_close.Size = new System.Drawing.Size(88, 22);
-            this.mnu_close.Text = "Close";
-            this.mnu_close.Click += new System.EventHandler(this.closeToolStripMenuItem_Click);
-            this.mnu_close.MouseEnter += new System.EventHandler(this.saveToolStripMenuItem_MouseEnter);
-            this.mnu_close.MouseLeave += new System.EventHandler(this.saveToolStripMenuItem_MouseLeave);
+            this.mnu_quitter.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mnu_quitter.ForeColor = System.Drawing.Color.White;
+            this.mnu_quitter.Name = "mnu_quitter";
+            this.mnu_quitter.Size = new System.Drawing.Size(95, 22);
+            this.mnu_quitter.Text = "Quitter";
+            this.mnu_quitter.Click += new System.EventHandler(this.closeToolStripMenuItem_Click);
+            this.mnu_quitter.MouseEnter += new System.EventHandler(this.saveToolStripMenuItem_MouseEnter);
+            this.mnu_quitter.MouseLeave += new System.EventHandler(this.saveToolStripMenuItem_MouseLeave);
             // 
             // BottomLine
             // 
@@ -262,17 +240,15 @@
             // 
             this.tab_info.Controls.Add(this.page_info);
             this.tab_info.Controls.Add(this.page_stats);
-            this.tab_info.Controls.Add(this.page_competences);
-            this.tab_info.Location = new System.Drawing.Point(3, 48);
+            this.tab_info.Location = new System.Drawing.Point(3, 44);
             this.tab_info.Name = "tab_info";
             this.tab_info.SelectedIndex = 0;
-            this.tab_info.Size = new System.Drawing.Size(259, 317);
+            this.tab_info.Size = new System.Drawing.Size(259, 264);
             this.tab_info.TabIndex = 5;
             // 
             // page_info
             // 
             this.page_info.Controls.Add(this.lbl_info);
-            this.page_info.Controls.Add(this.grp_recherche);
             this.page_info.Controls.Add(this.lbl_difficulte);
             this.page_info.Controls.Add(this.cmb_difficulte);
             this.page_info.Controls.Add(this.cmb_classe);
@@ -284,62 +260,21 @@
             this.page_info.Location = new System.Drawing.Point(4, 22);
             this.page_info.Name = "page_info";
             this.page_info.Padding = new System.Windows.Forms.Padding(3);
-            this.page_info.Size = new System.Drawing.Size(251, 291);
+            this.page_info.Size = new System.Drawing.Size(251, 238);
             this.page_info.TabIndex = 0;
             this.page_info.Text = "Information";
             this.page_info.UseVisualStyleBackColor = true;
             // 
             // lbl_info
             // 
+            this.lbl_info.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_info.ForeColor = System.Drawing.Color.Red;
-            this.lbl_info.Location = new System.Drawing.Point(6, 116);
+            this.lbl_info.Location = new System.Drawing.Point(6, 150);
             this.lbl_info.Name = "lbl_info";
-            this.lbl_info.Size = new System.Drawing.Size(233, 31);
+            this.lbl_info.Size = new System.Drawing.Size(233, 85);
             this.lbl_info.TabIndex = 13;
-            this.lbl_info.Text = "Si votre personnage meurt il perd 10% de son expérience et 50% de son argent.";
+            this.lbl_info.Text = "Si votre personnage meurt il perd 20% de son expérience et 20% de son argent.";
             this.lbl_info.Visible = false;
-            // 
-            // grp_recherche
-            // 
-            this.grp_recherche.Controls.Add(this.btn_cancelRecherche);
-            this.grp_recherche.Controls.Add(this.btn_recherche);
-            this.grp_recherche.Controls.Add(this.cmb_champ);
-            this.grp_recherche.Controls.Add(this.txt_recheche);
-            this.grp_recherche.Location = new System.Drawing.Point(7, 157);
-            this.grp_recherche.Name = "grp_recherche";
-            this.grp_recherche.Size = new System.Drawing.Size(237, 123);
-            this.grp_recherche.TabIndex = 12;
-            this.grp_recherche.TabStop = false;
-            this.grp_recherche.Text = "Recherche";
-            // 
-            // btn_recherche
-            // 
-            this.btn_recherche.Location = new System.Drawing.Point(10, 72);
-            this.btn_recherche.Name = "btn_recherche";
-            this.btn_recherche.Size = new System.Drawing.Size(221, 25);
-            this.btn_recherche.TabIndex = 2;
-            this.btn_recherche.Text = "Go";
-            this.btn_recherche.UseVisualStyleBackColor = true;
-            this.btn_recherche.Click += new System.EventHandler(this.btn_recherche_Click);
-            // 
-            // cmb_champ
-            // 
-            this.cmb_champ.FormattingEnabled = true;
-            this.cmb_champ.Items.AddRange(new object[] {
-            "Race",
-            "Classe"});
-            this.cmb_champ.Location = new System.Drawing.Point(10, 45);
-            this.cmb_champ.Name = "cmb_champ";
-            this.cmb_champ.Size = new System.Drawing.Size(221, 21);
-            this.cmb_champ.TabIndex = 1;
-            this.cmb_champ.Text = "Selectionner un champ";
-            // 
-            // txt_recheche
-            // 
-            this.txt_recheche.Location = new System.Drawing.Point(10, 19);
-            this.txt_recheche.Name = "txt_recheche";
-            this.txt_recheche.Size = new System.Drawing.Size(221, 20);
-            this.txt_recheche.TabIndex = 0;
             // 
             // lbl_difficulte
             // 
@@ -348,14 +283,16 @@
             this.lbl_difficulte.Name = "lbl_difficulte";
             this.lbl_difficulte.Size = new System.Drawing.Size(51, 13);
             this.lbl_difficulte.TabIndex = 11;
-            this.lbl_difficulte.Text = "Difficulte:";
+            this.lbl_difficulte.Text = "Difficulté:";
             // 
             // cmb_difficulte
             // 
+            this.cmb_difficulte.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.cmb_difficulte.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.cmb_difficulte.FormattingEnabled = true;
             this.cmb_difficulte.Items.AddRange(new object[] {
-            "Easy",
-            "Normal"});
+            "Normal",
+            "Hard"});
             this.cmb_difficulte.Location = new System.Drawing.Point(63, 84);
             this.cmb_difficulte.Name = "cmb_difficulte";
             this.cmb_difficulte.Size = new System.Drawing.Size(179, 21);
@@ -364,6 +301,8 @@
             // 
             // cmb_classe
             // 
+            this.cmb_classe.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.cmb_classe.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.cmb_classe.FormattingEnabled = true;
             this.cmb_classe.Location = new System.Drawing.Point(63, 58);
             this.cmb_classe.Name = "cmb_classe";
@@ -372,6 +311,8 @@
             // 
             // cmb_race
             // 
+            this.cmb_race.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.cmb_race.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.cmb_race.FormattingEnabled = true;
             this.cmb_race.Location = new System.Drawing.Point(63, 32);
             this.cmb_race.Name = "cmb_race";
@@ -417,7 +358,6 @@
             // 
             // page_stats
             // 
-            this.page_stats.Controls.Add(this.lbl_totbon);
             this.page_stats.Controls.Add(this.lbl_chabon);
             this.page_stats.Controls.Add(this.lbl_sagbon);
             this.page_stats.Controls.Add(this.lbl_intbon);
@@ -426,10 +366,10 @@
             this.page_stats.Controls.Add(this.lbl_strbon);
             this.page_stats.Controls.Add(this.txt_str);
             this.page_stats.Controls.Add(this.lbl_statsperso);
+            this.page_stats.Controls.Add(this.pictureBox1);
             this.page_stats.Controls.Add(this.lbl_bonus);
             this.page_stats.Controls.Add(this.txt_totalstat);
             this.page_stats.Controls.Add(this.lbl_total);
-            this.page_stats.Controls.Add(this.pictureBox1);
             this.page_stats.Controls.Add(this.txt_cha);
             this.page_stats.Controls.Add(this.lbl_cha);
             this.page_stats.Controls.Add(this.txt_sag);
@@ -443,19 +383,10 @@
             this.page_stats.Controls.Add(this.lbl_str);
             this.page_stats.Location = new System.Drawing.Point(4, 22);
             this.page_stats.Name = "page_stats";
-            this.page_stats.Size = new System.Drawing.Size(251, 291);
+            this.page_stats.Size = new System.Drawing.Size(251, 238);
             this.page_stats.TabIndex = 1;
             this.page_stats.Text = "Stats";
             this.page_stats.UseVisualStyleBackColor = true;
-            // 
-            // lbl_totbon
-            // 
-            this.lbl_totbon.Location = new System.Drawing.Point(162, 202);
-            this.lbl_totbon.Name = "lbl_totbon";
-            this.lbl_totbon.Size = new System.Drawing.Size(57, 13);
-            this.lbl_totbon.TabIndex = 25;
-            this.lbl_totbon.Text = "0";
-            this.lbl_totbon.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lbl_chabon
             // 
@@ -516,6 +447,7 @@
             this.txt_str.CausesValidation = false;
             this.txt_str.Location = new System.Drawing.Point(75, 44);
             this.txt_str.Name = "txt_str";
+            this.txt_str.ReadOnly = true;
             this.txt_str.Size = new System.Drawing.Size(57, 20);
             this.txt_str.TabIndex = 3;
             // 
@@ -527,6 +459,17 @@
             this.lbl_statsperso.TabIndex = 18;
             this.lbl_statsperso.Text = "Statistiques personnage";
             this.lbl_statsperso.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::IdleGame.Properties.Resources.dice;
+            this.pictureBox1.Location = new System.Drawing.Point(165, 192);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(54, 38);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox1.TabIndex = 14;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pictureBox1_MouseDown);
             // 
             // lbl_bonus
             // 
@@ -554,22 +497,12 @@
             this.lbl_total.TabIndex = 15;
             this.lbl_total.Text = "Total:";
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::IdleGame.Properties.Resources.dice;
-            this.pictureBox1.Location = new System.Drawing.Point(78, 226);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(54, 38);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBox1.TabIndex = 14;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pictureBox1_MouseDown);
-            // 
             // txt_cha
             // 
             this.txt_cha.CausesValidation = false;
             this.txt_cha.Location = new System.Drawing.Point(75, 174);
             this.txt_cha.Name = "txt_cha";
+            this.txt_cha.ReadOnly = true;
             this.txt_cha.Size = new System.Drawing.Size(57, 20);
             this.txt_cha.TabIndex = 13;
             // 
@@ -587,6 +520,7 @@
             this.txt_sag.CausesValidation = false;
             this.txt_sag.Location = new System.Drawing.Point(75, 148);
             this.txt_sag.Name = "txt_sag";
+            this.txt_sag.ReadOnly = true;
             this.txt_sag.Size = new System.Drawing.Size(57, 20);
             this.txt_sag.TabIndex = 11;
             // 
@@ -604,6 +538,7 @@
             this.txt_int.CausesValidation = false;
             this.txt_int.Location = new System.Drawing.Point(75, 122);
             this.txt_int.Name = "txt_int";
+            this.txt_int.ReadOnly = true;
             this.txt_int.Size = new System.Drawing.Size(57, 20);
             this.txt_int.TabIndex = 9;
             // 
@@ -621,6 +556,7 @@
             this.txt_con.CausesValidation = false;
             this.txt_con.Location = new System.Drawing.Point(75, 96);
             this.txt_con.Name = "txt_con";
+            this.txt_con.ReadOnly = true;
             this.txt_con.Size = new System.Drawing.Size(57, 20);
             this.txt_con.TabIndex = 7;
             // 
@@ -638,6 +574,7 @@
             this.txt_dex.CausesValidation = false;
             this.txt_dex.Location = new System.Drawing.Point(75, 70);
             this.txt_dex.Name = "txt_dex";
+            this.txt_dex.ReadOnly = true;
             this.txt_dex.Size = new System.Drawing.Size(57, 20);
             this.txt_dex.TabIndex = 5;
             // 
@@ -659,29 +596,10 @@
             this.lbl_str.TabIndex = 2;
             this.lbl_str.Text = "Force:";
             // 
-            // page_competences
-            // 
-            this.page_competences.Controls.Add(this.lbl_infocomp);
-            this.page_competences.Location = new System.Drawing.Point(4, 22);
-            this.page_competences.Name = "page_competences";
-            this.page_competences.Size = new System.Drawing.Size(251, 291);
-            this.page_competences.TabIndex = 2;
-            this.page_competences.Text = "Competences";
-            this.page_competences.UseVisualStyleBackColor = true;
-            // 
-            // lbl_infocomp
-            // 
-            this.lbl_infocomp.AutoSize = true;
-            this.lbl_infocomp.Location = new System.Drawing.Point(13, 20);
-            this.lbl_infocomp.Name = "lbl_infocomp";
-            this.lbl_infocomp.Size = new System.Drawing.Size(124, 13);
-            this.lbl_infocomp.TabIndex = 0;
-            this.lbl_infocomp.Text = "To do si on a du temps ;)";
-            // 
             // btn_ok
             // 
             this.btn_ok.Image = global::IdleGame.Properties.Resources.ok;
-            this.btn_ok.Location = new System.Drawing.Point(14, 367);
+            this.btn_ok.Location = new System.Drawing.Point(7, 314);
             this.btn_ok.Name = "btn_ok";
             this.btn_ok.Size = new System.Drawing.Size(54, 38);
             this.btn_ok.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -692,28 +610,19 @@
             // btn_reset
             // 
             this.btn_reset.Image = global::IdleGame.Properties.Resources.cancel;
-            this.btn_reset.Location = new System.Drawing.Point(195, 367);
+            this.btn_reset.Location = new System.Drawing.Point(196, 314);
             this.btn_reset.Name = "btn_reset";
             this.btn_reset.Size = new System.Drawing.Size(54, 38);
             this.btn_reset.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.btn_reset.TabIndex = 9;
             this.btn_reset.TabStop = false;
-            // 
-            // btn_cancelRecherche
-            // 
-            this.btn_cancelRecherche.Location = new System.Drawing.Point(10, 98);
-            this.btn_cancelRecherche.Name = "btn_cancelRecherche";
-            this.btn_cancelRecherche.Size = new System.Drawing.Size(221, 25);
-            this.btn_cancelRecherche.TabIndex = 3;
-            this.btn_cancelRecherche.Text = "Cancel";
-            this.btn_cancelRecherche.UseVisualStyleBackColor = true;
-            this.btn_cancelRecherche.Click += new System.EventHandler(this.btn_cancelRecherche_Click);
+            this.btn_reset.Click += new System.EventHandler(this.btn_reset_Click);
             // 
             // FormCreation
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(267, 407);
+            this.ClientSize = new System.Drawing.Size(267, 358);
             this.Controls.Add(this.tab_info);
             this.Controls.Add(this.BottomLine);
             this.Controls.Add(this.RightLine);
@@ -741,13 +650,9 @@
             this.tab_info.ResumeLayout(false);
             this.page_info.ResumeLayout(false);
             this.page_info.PerformLayout();
-            this.grp_recherche.ResumeLayout(false);
-            this.grp_recherche.PerformLayout();
             this.page_stats.ResumeLayout(false);
             this.page_stats.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.page_competences.ResumeLayout(false);
-            this.page_competences.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btn_ok)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_reset)).EndInit();
             this.ResumeLayout(false);
@@ -764,8 +669,7 @@
 		private System.Windows.Forms.PictureBox pct_Fermer;
 		private System.Windows.Forms.PictureBox pct_Reduire;
 		private System.Windows.Forms.ContextMenuStrip mnu_main;
-		private System.Windows.Forms.ToolStripMenuItem mnu_about;
-		private System.Windows.Forms.ToolStripMenuItem mnu_close;
+		private System.Windows.Forms.ToolStripMenuItem mnu_quitter;
 		private System.Windows.Forms.PictureBox LeftLine;
 		private System.Windows.Forms.PictureBox TopLine;
 		private System.Windows.Forms.PictureBox RightLine;
@@ -783,15 +687,9 @@
 		private System.Windows.Forms.ComboBox cmb_race;
 		private System.Windows.Forms.Label label2;
 		private System.Windows.Forms.Label lbl_Race;
-		private System.Windows.Forms.GroupBox grp_recherche;
-		private System.Windows.Forms.Button btn_recherche;
-		private System.Windows.Forms.ComboBox cmb_champ;
-		private System.Windows.Forms.TextBox txt_recheche;
 		private System.Windows.Forms.Label lbl_info;
 		private System.Windows.Forms.TextBox txt_str;
 		private System.Windows.Forms.Label lbl_str;
-		private System.Windows.Forms.TabPage page_competences;
-		private System.Windows.Forms.Label lbl_infocomp;
 		private System.Windows.Forms.TextBox txt_cha;
 		private System.Windows.Forms.Label lbl_cha;
 		private System.Windows.Forms.TextBox txt_sag;
@@ -805,7 +703,6 @@
 		private System.Windows.Forms.TextBox txt_totalstat;
 		private System.Windows.Forms.Label lbl_total;
 		private System.Windows.Forms.PictureBox pictureBox1;
-		private System.Windows.Forms.Label lbl_totbon;
 		private System.Windows.Forms.Label lbl_chabon;
 		private System.Windows.Forms.Label lbl_sagbon;
 		private System.Windows.Forms.Label lbl_intbon;
@@ -814,7 +711,6 @@
 		private System.Windows.Forms.Label lbl_strbon;
 		private System.Windows.Forms.Label lbl_statsperso;
 		private System.Windows.Forms.Label lbl_bonus;
-        private System.Windows.Forms.Button btn_cancelRecherche;
     }
 }
 

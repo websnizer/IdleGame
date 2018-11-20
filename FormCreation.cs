@@ -35,7 +35,7 @@ namespace IdleGame
             RemplirClasses(); 
 		}
 
-
+        //Remplir les races
         private void RemplirRaces()
         {
             //Récupéré les donnes dans la database
@@ -47,6 +47,7 @@ namespace IdleGame
             cmb_race.SelectedIndex = 0;
         }
 
+        //Remplir les classes selon la race choisie
         private void RemplirClasses()
         {
             //Récupéré les donnes dans la database
@@ -59,6 +60,7 @@ namespace IdleGame
             cmb_classe.DataSource = ClassesPossibles;
         }
 
+        //Remplir les bonus de la race choisie
         private void RemplirBonusRaces()
         {
             if (cmb_race.Items.Count >= 1)
@@ -88,11 +90,10 @@ namespace IdleGame
                 Int32.TryParse(lbl_intbon.Text, out intel);
                 Int32.TryParse(lbl_sagbon.Text, out sag);
                 Int32.TryParse(lbl_chabon.Text, out cha);
-                int total = str + dex + con + intel + sag + cha;
-                lbl_totbon.Text = total.ToString();
             }
         }
 
+        //Génerer des stats aléatoires
         private void GenererStats()
         {
             Random rng = new Random();
@@ -119,46 +120,21 @@ namespace IdleGame
                 txt_totalstat.ForeColor = Color.Black;
 
             txt_totalstat.Text = total.ToString();
-
         }
-
-        private void btn_recherche_Click(object sender, EventArgs e)
-        {
-            if (cmb_champ.SelectedIndex == 0)
-            {
-                DataTable RacesPossibles = m_executeur.rechercheRace(txt_recheche.Text);
-                cmb_race.ValueMember = "RacID";
-                cmb_race.DisplayMember = "RacNom";
-                cmb_race.DataSource = RacesPossibles;
-            }
-            else
-            {
-                if (cmb_race.SelectedIndex >= 0)
-                {
-                    int raceID;
-                    Int32.TryParse(cmb_race.SelectedValue.ToString(), out raceID);
-                    DataTable ClassesPossibles = m_executeur.rechercheClassePossible(txt_recheche.Text, raceID);
-                    cmb_classe.ValueMember = "ClaID";
-                    cmb_classe.DisplayMember = "ClaNom";
-                    cmb_classe.DataSource = ClassesPossibles;
-                }
-            }
-        }
-
+        
+        //Ajuster les classes selon la race choisie
         private void cmb_race_SelectedIndexChanged(object sender, EventArgs e)
         {
             RemplirClasses();
             RemplirBonusRaces();
         }
-
+        
+        //Ajuster le message d'information à l'utilisateur lors du changement de difficulté
         private void cmb_difficulte_SelectedIndexChanged(object sender, EventArgs e)
         {
             ComboBox snd = (ComboBox)sender;
             lbl_info.Visible = (snd.SelectedIndex == 0) ? false : true;
         }
-
-
-
 
 
 
@@ -303,22 +279,18 @@ namespace IdleGame
 		{
 			public MyRenderer() : base(new MyColors()) { }
 		}//Override des menus par défaut
-
         private void btn_cancelRecherche_Click(object sender, EventArgs e)
         {
             RemplirRaces();
         }
-
         private void txt_Nom_Enter(object sender, EventArgs e)
         {
             txt_Nom.Clear();
         }
-
         private void pictureBox1_MouseDown(object sender, MouseEventArgs e)
         {
             GenererStats();
-        }
-
+        }//Bouton generer aléatoire
         private void btn_ok_Click(object sender, EventArgs e)
         {
             int str;
@@ -342,10 +314,40 @@ namespace IdleGame
             Int32.TryParse(cmb_difficulte.SelectedIndex.ToString(), out diff);
             nom = txt_Nom.Text;
             int idPersoCreer;
-            idPersoCreer = m_executeur.creationPersonnage(nom, idRace, idClasse, str, dex, con, intel, sag, cha, diff + 1);
-            m_idlegame.ShowJeu(idPersoCreer);
-        }
 
+            try
+            {
+                erreur(str, dex, con, intel, sag, cha, idRace, idClasse, diff, nom);
+                idPersoCreer = m_executeur.creationPersonnage(nom, idRace, idClasse, str, dex, con, intel, sag, cha, diff + 1);
+                m_idlegame.ShowJeu(idPersoCreer);
+                this.Close();
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            
+        }//Bouton ok
+        private void erreur(int p_str, int p_dex, int p_con, int p_int, int p_sag, int p_cha, int p_idRace, int p_idClasse, int p_diff, string p_nom)
+        {
+            if (    p_str == null || 
+                    p_dex == null || 
+                    p_con == null || 
+                    p_int == null || 
+                    p_sag == null || 
+                    p_cha == null || 
+                    p_idRace == null || 
+                    p_idClasse == null || 
+                    p_diff == null || 
+                    p_nom == "")
+            {
+                throw new ErreurInvalide(string.Format("Impossible de créer le joueur, assurez vous d'avoir remplis tous les champs requis."));
+            }
+        }//Exception erreur
+        private void btn_reset_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
         private class MyColors : ProfessionalColorTable
 		{
 			public override Color MenuItemSelected
@@ -358,4 +360,12 @@ namespace IdleGame
 			}
 		}//Override des couleurs par défaut
 	}
+
+    public class ErreurInvalide : Exception
+    {
+        public ErreurInvalide(string message)
+           : base(message)
+        {
+        }
+    }
 }

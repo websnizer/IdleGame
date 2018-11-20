@@ -179,9 +179,9 @@ namespace IdleGame
 
             DataTable table = organiserResultats(reader);
 
-            DataRow row = table.Rows[0];
+            DataRow row = table.Rows[0]; //Récupérer la 1e ligne
             int dernierAjout;
-            Int32.TryParse((string)row.ItemArray[0], out dernierAjout);
+            Int32.TryParse((string)row.ItemArray[0], out dernierAjout); //Récupéré le dernier item ajouté
 
             reader.Close();
             m_cnx.Close();
@@ -201,9 +201,9 @@ namespace IdleGame
 
             DataTable table = organiserResultats(reader);
 
-            DataRow row = table.Rows[0];
+            DataRow row = table.Rows[0]; //Récupérer la 1e ligne
             string dernierAjout;
-            dernierAjout = (string)row.ItemArray[0];
+            dernierAjout = (string)row.ItemArray[0]; //Récupérer 
 
             reader.Close();
             m_cnx.Close();

@@ -39,3 +39,19 @@ C:\Users\websn\OneDrive\Documents\TP #2\IdleGame\obj\Debug\IdleGame.csproj.Gener
 C:\Users\websn\OneDrive\Documents\TP #2\IdleGame\obj\Debug\IdleGame.csproj.CoreCompileInputs.cache
 C:\Users\websn\OneDrive\Documents\TP #2\IdleGame\obj\Debug\IdleGame.exe
 C:\Users\websn\OneDrive\Documents\TP #2\IdleGame\obj\Debug\IdleGame.pdb
+C:\Users\websn\OneDrive\Documents\TP #2\IdleGame\obj\Debug\IdleGame.FormChoixStat.resources
+E:\IdleGame\bin\Debug\IdleGame.exe.config
+E:\IdleGame\bin\Debug\IdleGame.exe
+E:\IdleGame\bin\Debug\IdleGame.pdb
+E:\IdleGame\obj\Debug\IdleGame.csprojAssemblyReference.cache
+E:\IdleGame\obj\Debug\IdleGame.FormChoixStat.resources
+E:\IdleGame\obj\Debug\IdleGame.FormChoixEquipement.resources
+E:\IdleGame\obj\Debug\IdleGame.FormJeu.resources
+E:\IdleGame\obj\Debug\IdleGame.FormCreation.resources
+E:\IdleGame\obj\Debug\IdleGame.Blank.resources
+E:\IdleGame\obj\Debug\IdleGame.FormMenu.resources
+E:\IdleGame\obj\Debug\IdleGame.Properties.Resources.resources
+E:\IdleGame\obj\Debug\IdleGame.csproj.GenerateResource.cache
+E:\IdleGame\obj\Debug\IdleGame.csproj.CoreCompileInputs.cache
+E:\IdleGame\obj\Debug\IdleGame.exe
+E:\IdleGame\obj\Debug\IdleGame.pdb

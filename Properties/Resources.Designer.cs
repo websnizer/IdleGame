@@ -423,9 +423,39 @@ namespace IdleGame.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        public static System.Drawing.Bitmap bouton_charisme {
+            get {
+                object obj = ResourceManager.GetObject("bouton_charisme", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap bouton_constitution {
+            get {
+                object obj = ResourceManager.GetObject("bouton_constitution", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         public static System.Drawing.Bitmap bouton_create_character {
             get {
                 object obj = ResourceManager.GetObject("bouton_create_character", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap bouton_dexterite {
+            get {
+                object obj = ResourceManager.GetObject("bouton_dexterite", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -453,9 +483,29 @@ namespace IdleGame.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        public static System.Drawing.Bitmap bouton_force {
+            get {
+                object obj = ResourceManager.GetObject("bouton_force", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         public static System.Drawing.Bitmap bouton_generate {
             get {
                 object obj = ResourceManager.GetObject("bouton_generate", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap bouton_intelligence {
+            get {
+                object obj = ResourceManager.GetObject("bouton_intelligence", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -496,6 +546,16 @@ namespace IdleGame.Properties {
         public static System.Drawing.Bitmap bouton_new_game_hover {
             get {
                 object obj = ResourceManager.GetObject("bouton_new_game_hover", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap bouton_sagesse {
+            get {
+                object obj = ResourceManager.GetObject("bouton_sagesse", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
