@@ -107,18 +107,18 @@ namespace IdleGame
 		private int x, y;
 		private void CharForm_Load(object sender, EventArgs e)
 		{
-			pct_Agrandir.Left = this.Width - 60;
+			//pct_Agrandir.Left = this.Width - 60;
 			pct_Fermer.Left = this.Width - 30;
-			pct_Reduire.Left = this.Width - 90;
+			pct_Reduire.Left = this.Width - 60;
 			PlacerLignes();
 			mnu_main.BackColor = mainColor;
             InitialiseJoueur();
         }//Form Load
 		private void CharForm_Resize(object sender, EventArgs e)
 		{
-			pct_Agrandir.Left = this.Width - 60;
+			//pct_Agrandir.Left = this.Width - 60;
 			pct_Fermer.Left = this.Width - 30;
-			pct_Reduire.Left = this.Width - 90;
+			pct_Reduire.Left = this.Width - 60;
 			PlacerLignes();
 		}//Resize
 		//Lignes
@@ -197,13 +197,13 @@ namespace IdleGame
 		}//Reduire Hover
 		private void pct_Agrandir_MouseLeave(object sender, EventArgs e)
 		{
-			pct_Agrandir.Image = global::IdleGame.Properties.Resources.ss;
-			pct_Agrandir.BackColor = mainColor;
+			//pct_Agrandir.Image = global::IdleGame.Properties.Resources.ss;
+			//pct_Agrandir.BackColor = mainColor;
 		}//Agrandir Hover
 		private void pct_Agrandir_MouseMove(object sender, MouseEventArgs e)
 		{
-			pct_Agrandir.Image = global::IdleGame.Properties.Resources.ss2;
-			pct_Agrandir.BackColor = darkColor;
+			//pct_Agrandir.Image = global::IdleGame.Properties.Resources.ss2;
+			//pct_Agrandir.BackColor = darkColor;
 		}//Agrandir Hover
 		private void pct_Fermer_MouseLeave(object sender, EventArgs e)
 		{

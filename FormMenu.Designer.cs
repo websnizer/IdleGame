@@ -33,7 +33,6 @@
             this.top = new System.Windows.Forms.Panel();
             this.pct_Reduire = new System.Windows.Forms.PictureBox();
             this.pct_Fermer = new System.Windows.Forms.PictureBox();
-            this.pct_Agrandir = new System.Windows.Forms.PictureBox();
             this.pct_icon = new System.Windows.Forms.PictureBox();
             this.lbl_title = new System.Windows.Forms.Label();
             this.mnu_main = new System.Windows.Forms.ContextMenuStrip(this.components);
@@ -61,7 +60,6 @@
             this.top.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pct_Reduire)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pct_Fermer)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pct_Agrandir)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pct_icon)).BeginInit();
             this.mnu_main.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btn_exit)).BeginInit();
@@ -81,7 +79,6 @@
             this.top.BackColor = System.Drawing.Color.Firebrick;
             this.top.Controls.Add(this.pct_Reduire);
             this.top.Controls.Add(this.pct_Fermer);
-            this.top.Controls.Add(this.pct_Agrandir);
             this.top.Controls.Add(this.pct_icon);
             this.top.Controls.Add(this.lbl_title);
             this.top.Dock = System.Windows.Forms.DockStyle.Top;
@@ -118,19 +115,6 @@
             this.pct_Fermer.Click += new System.EventHandler(this.pct_Fermer_Click);
             this.pct_Fermer.MouseLeave += new System.EventHandler(this.pct_Fermer_MouseLeave);
             this.pct_Fermer.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pct_Fermer_MouseMove);
-            // 
-            // pct_Agrandir
-            // 
-            this.pct_Agrandir.Image = ((System.Drawing.Image)(resources.GetObject("pct_Agrandir.Image")));
-            this.pct_Agrandir.Location = new System.Drawing.Point(232, -1);
-            this.pct_Agrandir.Name = "pct_Agrandir";
-            this.pct_Agrandir.Size = new System.Drawing.Size(30, 36);
-            this.pct_Agrandir.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pct_Agrandir.TabIndex = 1;
-            this.pct_Agrandir.TabStop = false;
-            this.pct_Agrandir.Click += new System.EventHandler(this.pct_Agrandir_Click);
-            this.pct_Agrandir.MouseLeave += new System.EventHandler(this.pct_Agrandir_MouseLeave);
-            this.pct_Agrandir.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pct_Agrandir_MouseMove);
             // 
             // pct_icon
             // 
@@ -170,7 +154,7 @@
             this.mnu_main.Name = "contextMenuStrip1";
             this.mnu_main.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
             this.mnu_main.ShowImageMargin = false;
-            this.mnu_main.Size = new System.Drawing.Size(156, 70);
+            this.mnu_main.Size = new System.Drawing.Size(147, 48);
             this.mnu_main.Text = "Menu";
             // 
             // mnu_nouvellepartie
@@ -178,7 +162,7 @@
             this.mnu_nouvellepartie.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mnu_nouvellepartie.ForeColor = System.Drawing.Color.White;
             this.mnu_nouvellepartie.Name = "mnu_nouvellepartie";
-            this.mnu_nouvellepartie.Size = new System.Drawing.Size(155, 22);
+            this.mnu_nouvellepartie.Size = new System.Drawing.Size(146, 22);
             this.mnu_nouvellepartie.Text = "Nouvelle partie";
             this.mnu_nouvellepartie.Click += new System.EventHandler(this.mnu_nouvellepartie_Click);
             this.mnu_nouvellepartie.MouseEnter += new System.EventHandler(this.saveToolStripMenuItem_MouseEnter);
@@ -189,7 +173,7 @@
             this.mnu_quitter.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mnu_quitter.ForeColor = System.Drawing.Color.White;
             this.mnu_quitter.Name = "mnu_quitter";
-            this.mnu_quitter.Size = new System.Drawing.Size(155, 22);
+            this.mnu_quitter.Size = new System.Drawing.Size(146, 22);
             this.mnu_quitter.Text = "Quitter";
             this.mnu_quitter.Click += new System.EventHandler(this.closeToolStripMenuItem_Click);
             this.mnu_quitter.MouseEnter += new System.EventHandler(this.saveToolStripMenuItem_MouseEnter);
@@ -279,12 +263,12 @@
             // lbl_info
             // 
             this.lbl_info.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_info.Location = new System.Drawing.Point(18, 134);
+            this.lbl_info.Location = new System.Drawing.Point(12, 134);
             this.lbl_info.Name = "lbl_info";
-            this.lbl_info.Size = new System.Drawing.Size(126, 163);
+            this.lbl_info.Size = new System.Drawing.Size(139, 174);
             this.lbl_info.TabIndex = 9;
-            this.lbl_info.Text = "Veuillez choisir un personnage dans la liste et LoadGame ou Créer une nouvelle pa" +
-    "rtie.";
+            this.lbl_info.Text = "Veuillez choisir un personnage dans la liste et charger la partie ou créer une no" +
+    "uvelle partie.\r\n";
             this.lbl_info.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lst_standard
@@ -316,18 +300,18 @@
             this.lbl_standard.AutoSize = true;
             this.lbl_standard.Location = new System.Drawing.Point(150, 134);
             this.lbl_standard.Name = "lbl_standard";
-            this.lbl_standard.Size = new System.Drawing.Size(145, 13);
+            this.lbl_standard.Size = new System.Drawing.Size(151, 13);
             this.lbl_standard.TabIndex = 12;
-            this.lbl_standard.Text = "Personnages difficulté:normal";
+            this.lbl_standard.Text = "Personnages difficulté : normal";
             // 
             // lbl_hardcore
             // 
             this.lbl_hardcore.AutoSize = true;
             this.lbl_hardcore.Location = new System.Drawing.Point(390, 134);
             this.lbl_hardcore.Name = "lbl_hardcore";
-            this.lbl_hardcore.Size = new System.Drawing.Size(135, 13);
+            this.lbl_hardcore.Size = new System.Drawing.Size(141, 13);
             this.lbl_hardcore.TabIndex = 13;
-            this.lbl_hardcore.Text = "Personnages difficulté:hard";
+            this.lbl_hardcore.Text = "Personnages difficulté : hard";
             // 
             // txt_standard
             // 
@@ -441,7 +425,6 @@
             this.top.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pct_Reduire)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pct_Fermer)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pct_Agrandir)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pct_icon)).EndInit();
             this.mnu_main.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.btn_exit)).EndInit();
@@ -464,7 +447,6 @@
 		private System.Windows.Forms.Panel top;
 		private System.Windows.Forms.PictureBox pct_icon;
 		private System.Windows.Forms.Label lbl_title;
-		private System.Windows.Forms.PictureBox pct_Agrandir;
 		private System.Windows.Forms.PictureBox pct_Fermer;
 		private System.Windows.Forms.PictureBox pct_Reduire;
 		private System.Windows.Forms.ContextMenuStrip mnu_main;

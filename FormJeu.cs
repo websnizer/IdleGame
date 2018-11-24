@@ -19,11 +19,10 @@ namespace IdleGame
         int m_niv; //Le lvl du joueur
         int m_id; //Id du joueur
         
-        //To delete: STATS
+        //Statistiques de session
         int deaths = 0; //nombre de morts pendant la session
         int kills = 0; //nombre de kills pendant la session
         int sell = 0; //valeur des ventes $ pendant la session
-        int COMPTEURTODELETE = 0; //Permet d'ajuster la vitesse de boucle
 
         Color offColor = Color.FromArgb(255, 70, 131);
         Color mainColor = Color.FromArgb(178, 34, 34);
@@ -68,37 +67,37 @@ namespace IdleGame
 
             //Ajouter la Force dans le listview
             string For = (string)row["PerFor"];
-            string[] statFor = { "FOR", For };
+            string[] statFor = { "Force", For };
             var itemFor = new ListViewItem(statFor);
             lst_persoStats.Items.Add(itemFor);
 
             //Ajouter la Dexterite dans le listview
             string Dex = (string)row["PerDex"];
-            string[] statDex = { "DEX", Dex };
+            string[] statDex = { "Dextérité", Dex };
             var itemDex = new ListViewItem(statDex);
             lst_persoStats.Items.Add(itemDex);
 
             //Ajouter la Constitution dans le listview
             string Con = (string)row["PerCon"];
-            string[] statCon = { "CON", Con };
+            string[] statCon = { "Constitution", Con };
             var itemCon = new ListViewItem(statCon);
             lst_persoStats.Items.Add(itemCon);
 
             //Ajouter l'intelligence dans le listview
             string Int = (string)row["PerInt"];
-            string[] statInt = { "INT", Int };
+            string[] statInt = { "Intelligence", Int };
             var itemInt = new ListViewItem(statInt);
             lst_persoStats.Items.Add(itemInt);
 
             //Ajouter la Sagesse dans le listview
             string Sag = (string)row["PerSag"];
-            string[] statSag = { "SAG", Sag };
+            string[] statSag = { "Sagesse", Sag };
             var itemSag = new ListViewItem(statSag);
             lst_persoStats.Items.Add(itemSag);
 
             //Ajouter le Charisme dans le listview
             string Cha = (string)row["PerCha"];
-            string[] statCha = { "CHA", Cha };
+            string[] statCha = { "Charisme", Cha };
             var itemCha = new ListViewItem(statCha);
             lst_persoStats.Items.Add(itemCha);
 
@@ -144,20 +143,20 @@ namespace IdleGame
 
             //Ajouter l'Energie Actuel dans le listview
             string Energie = (string)row["PerEnActuel"];
-            string[] statEnergie = { "Energie", Energie };
+            string[] statEnergie = { "Énergie", Energie };
             var itemEnergie = new ListViewItem(statEnergie);
             lst_persoInfo.Items.Add(itemEnergie);
 
             //Ajouter l'Energie Max dans le listview
             string EnergieMax = (string)row["PerEnMax"];
-            string[] statEnergieMax = { "Energie Max", EnergieMax };
+            string[] statEnergieMax = { "Énergie Max", EnergieMax };
             var itemEnergieMax = new ListViewItem(statEnergieMax);
             lst_persoInfo.Items.Add(itemEnergieMax);
 
             //Ajouter la Difficulte dans le listview
             string Difficulte = (string)row["PerDifficulte"];
             string diffstr = (Difficulte == "1") ? "Normal" : "Hard";
-            string[] statDifficulte = { "Difficulte", diffstr };
+            string[] statDifficulte = { "Difficulté", diffstr };
             var itemDifficulte = new ListViewItem(statDifficulte);
             lst_persoInfo.Items.Add(itemDifficulte);
 
@@ -312,7 +311,7 @@ namespace IdleGame
             city = (city < m_allcities.Count) ? (int)Math.Floor((double)(m_niv / 5)) : m_allcities.Count - 1; //Si niveau trop élevé alors on affiche la derniere map de la liste
 
             //Changer l'image selon les messages provenant du server
-            if (p_msg.Contains("attaque") || p_msg.Contains("appercevez")) //Lors d'un combat
+            if (p_msg.Contains("attaque") || p_msg.Contains("appercevez") ||p_msg.Contains("action") ) //Lors d'un combat
             {
                 GererImagesPV();
                 pct_marchand.Visible = true;
@@ -367,7 +366,7 @@ namespace IdleGame
             {
                 RemplirInfoJoueur();
             }
-            else if (p_msg.Contains("Aventure réussie")) //Lorsqu'une aventure est réussie
+            else if (p_msg.Contains("Aventure réussie") || p_msg.Contains("aventure") ) //Lorsqu'une aventure est réussie
             {
                 RemplirInfoJoueur();
                 RemplirQuetes();
@@ -443,7 +442,7 @@ namespace IdleGame
             if (p_msg == ("Vous etes mort.")) //Ajout d'un death
             {
                 deaths++;
-                lbl_deathsd.Text = deaths.ToString() + " mort";
+                lbl_deathsd.Text = deaths.ToString() + " morts";
             }
             else if (p_msg.Contains("Monstre tué")) //Ajout d'un kill
             {
@@ -469,7 +468,10 @@ namespace IdleGame
                 string msg; //La réponse de la base de donnée (l'État du jeu)
                 msg = m_executeur.DoIt(m_id); //Appel au contrôleur de la base de donnée
                 lbl_info.Text = msg;
+
                 GestionImage(msg);
+                GestionStats(msg);
+                GestionUpdate(msg);
 
                 //Si le server répond que c'est le temps de choisir des items à acheter
                 if (msg == "Vous négogiez avec le marchand pour acheter des équipements.")
@@ -481,17 +483,7 @@ namespace IdleGame
                     RemplirEquipements();
                 }
 
-                GestionStats(msg);
-
-                //TODELETE: Sert à accélérer le processus. Update l'interface à toutes les X actions
-                if (COMPTEURTODELETE == 1)
-                {
-                    GestionUpdate(msg); //À garder
-                    GestionStats(msg); //À garder
-                    COMPTEURTODELETE = 0;
-                }
-                COMPTEURTODELETE ++;
-                //Fin to delete
+                
             }
 
             //Ajuster la barre d'avancement

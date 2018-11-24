@@ -200,5 +200,14 @@ namespace IdleGame
             m_executeur.skipAchat(m_id);
             this.Close();
         }
+
+        private void FormChoixEquipement_Load(object sender, EventArgs e)
+        {
+            if (!m_items)
+            {
+                m_executeur.skipAchat(m_id);
+                this.Close();
+            }
+        }
     }
 }

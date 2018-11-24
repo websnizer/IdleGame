@@ -360,12 +360,4 @@ namespace IdleGame
 			}
 		}//Override des couleurs par défaut
 	}
-
-    public class ErreurInvalide : Exception
-    {
-        public ErreurInvalide(string message)
-           : base(message)
-        {
-        }
-    }
 }

@@ -1403,6 +1403,7 @@
             this.Name = "FormChoixEquipement";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "FormChoixEquipement";
+            this.Load += new System.EventHandler(this.FormChoixEquipement_Load);
             this.pnl_item1.ResumeLayout(false);
             this.pnl_item1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btn_buy1)).EndInit();
